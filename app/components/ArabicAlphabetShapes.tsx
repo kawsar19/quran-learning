@@ -63,14 +63,14 @@ export default function ArabicAlphabetShapes() {
   return (
     <div className="space-y-6">
       {/* Desktop Table View */}
-      <div className="hidden md:block overflow-visible rounded-2xl shadow-2xl bg-white">
-        <table className="w-full">
-          <thead className="sticky top-0 z-20">
-            <tr className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg">
-              <th className="px-4 py-5 text-center text-lg font-bold">মূল রূপ</th>
-              <th className="px-4 py-5 text-center text-lg font-bold">শুরুর রূপ</th>
-              <th className="px-4 py-5 text-center text-lg font-bold">মাঝের রূপ</th>
-              <th className="px-4 py-5 text-center text-lg font-bold">শেষের রূপ</th>
+      <div className="hidden md:block overflow-visible rounded-2xl border border-gray-100 bg-white">
+        <table className="w-full" dir='rtl'>
+          <thead className="z-20">
+            <tr className="text-white">
+              <th className="sticky top-[73px] z-20 px-4 py-5 text-center text-lg font-bold bg-emerald-600 first:rounded-tr-2xl">মূল রূপ</th>
+              <th className="sticky top-[73px] z-20 px-4 py-5 text-center text-lg font-bold bg-emerald-600">শুরুর রূপ</th>
+              <th className="sticky top-[73px] z-20 px-4 py-5 text-center text-lg font-bold bg-teal-600">মাঝের রূপ</th>
+              <th className="sticky top-[73px] z-20 px-4 py-5 text-center text-lg font-bold bg-teal-600 last:rounded-tl-2xl">শেষের রূপ</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-100">
