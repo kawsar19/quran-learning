@@ -4,6 +4,7 @@ interface SukunWord {
   arabic: string
   bangla: string
   meaning: string
+  spelled: string // বাংলায় স্পেলিং
   breakdown: {
     letter: string
     sound: string
@@ -16,6 +17,7 @@ const sukunWords: SukunWord[] = [
     arabic: 'مِنْ',
     bangla: 'মিন',
     meaning: 'থেকে / From',
+    spelled: 'মিম নুন জের মিন',
     breakdown: [
       { letter: 'مِ', sound: 'মি', hasSukun: false },
       { letter: 'نْ', sound: 'ন্', hasSukun: true },
@@ -25,6 +27,7 @@ const sukunWords: SukunWord[] = [
     arabic: 'عَنْ',
     bangla: 'আন',
     meaning: 'সম্পর্কে / About',
+    spelled: 'আইন নুন জবর আন',
     breakdown: [
       { letter: 'عَ', sound: 'আ', hasSukun: false },
       { letter: 'نْ', sound: 'ন্', hasSukun: true },
@@ -34,6 +37,7 @@ const sukunWords: SukunWord[] = [
     arabic: 'أَنْ',
     bangla: 'আন',
     meaning: 'যে / That',
+    spelled: 'আলিফ নুন জবর আন',
     breakdown: [
       { letter: 'أَ', sound: 'আ', hasSukun: false },
       { letter: 'نْ', sound: 'ন্', hasSukun: true },
@@ -43,6 +47,7 @@ const sukunWords: SukunWord[] = [
     arabic: 'لَمْ',
     bangla: 'লাম',
     meaning: 'নি / Did not',
+    spelled: 'লাম মিম জবর লাম',
     breakdown: [
       { letter: 'لَ', sound: 'লা', hasSukun: false },
       { letter: 'مْ', sound: 'ম্', hasSukun: true },
@@ -52,6 +57,7 @@ const sukunWords: SukunWord[] = [
     arabic: 'كَمْ',
     bangla: 'কাম',
     meaning: 'কত / How many',
+    spelled: 'কাফ মিম জবর কাম',
     breakdown: [
       { letter: 'كَ', sound: 'কা', hasSukun: false },
       { letter: 'مْ', sound: 'ম্', hasSukun: true },
@@ -61,6 +67,7 @@ const sukunWords: SukunWord[] = [
     arabic: 'قَدْ',
     bangla: 'ক্বাদ',
     meaning: 'নিশ্চয়ই / Indeed',
+    spelled: 'ক্বাফ দাল জবর ক্বাদ',
     breakdown: [
       { letter: 'قَ', sound: 'ক্বা', hasSukun: false },
       { letter: 'دْ', sound: 'দ্', hasSukun: true },
@@ -70,6 +77,7 @@ const sukunWords: SukunWord[] = [
     arabic: 'هَلْ',
     bangla: 'হাল',
     meaning: 'কি? / Is it?',
+    spelled: 'হা লাম জবর হাল',
     breakdown: [
       { letter: 'هَ', sound: 'হা', hasSukun: false },
       { letter: 'لْ', sound: 'ল্', hasSukun: true },
@@ -79,6 +87,7 @@ const sukunWords: SukunWord[] = [
     arabic: 'بَلْ',
     bangla: 'বাল',
     meaning: 'বরং / Rather',
+    spelled: 'বা লাম জবর বাল',
     breakdown: [
       { letter: 'بَ', sound: 'বা', hasSukun: false },
       { letter: 'لْ', sound: 'ল্', hasSukun: true },
@@ -88,6 +97,7 @@ const sukunWords: SukunWord[] = [
     arabic: 'قُلْ',
     bangla: 'ক্বুল',
     meaning: 'বলো / Say',
+    spelled: 'ক্বাফ লাম পেশ ক্বুল',
     breakdown: [
       { letter: 'قُ', sound: 'ক্বু', hasSukun: false },
       { letter: 'لْ', sound: 'ল্', hasSukun: true },
@@ -97,6 +107,7 @@ const sukunWords: SukunWord[] = [
     arabic: 'رَبْ',
     bangla: 'রাব',
     meaning: 'রব / Lord',
+    spelled: 'রা বা জবর রাব',
     breakdown: [
       { letter: 'رَ', sound: 'রা', hasSukun: false },
       { letter: 'بْ', sound: 'ব্', hasSukun: true },
@@ -106,6 +117,7 @@ const sukunWords: SukunWord[] = [
     arabic: 'حَقْ',
     bangla: 'হাক্ব',
     meaning: 'সত্য / Truth',
+    spelled: 'হা ক্বাফ জবর হাক্ব',
     breakdown: [
       { letter: 'حَ', sound: 'হা', hasSukun: false },
       { letter: 'قْ', sound: 'ক্ব্', hasSukun: true },
@@ -115,6 +127,7 @@ const sukunWords: SukunWord[] = [
     arabic: 'خَلْق',
     bangla: 'খালক্ব',
     meaning: 'সৃষ্টি / Creation',
+    spelled: 'খা লাম ক্বাফ জবর খালক্ব',
     breakdown: [
       { letter: 'خَ', sound: 'খা', hasSukun: false },
       { letter: 'لْ', sound: 'ল্', hasSukun: true },
@@ -123,11 +136,13 @@ const sukunWords: SukunWord[] = [
   },
 ]
 
+
 const threeLetterWords: SukunWord[] = [
   {
     arabic: 'مُسْلِم',
     bangla: 'মুসলিম',
     meaning: 'মুসলিম / Muslim',
+    spelled: 'মীম পেশ মু সীন সুকুন স্ লাম জের লি মীম',
     breakdown: [
       { letter: 'مُ', sound: 'মু', hasSukun: false },
       { letter: 'سْ', sound: 'স্', hasSukun: true },
@@ -139,6 +154,7 @@ const threeLetterWords: SukunWord[] = [
     arabic: 'مَسْجِد',
     bangla: 'মাসজিদ',
     meaning: 'মসজিদ / Mosque',
+    spelled: 'মীম জবর মা সীন সুকুন স্ জীম জের জি দাল',
     breakdown: [
       { letter: 'مَ', sound: 'মা', hasSukun: false },
       { letter: 'سْ', sound: 'স্', hasSukun: true },
@@ -150,6 +166,7 @@ const threeLetterWords: SukunWord[] = [
     arabic: 'مَكْتَب',
     bangla: 'মাকতাব',
     meaning: 'অফিস / Office',
+    spelled: 'মীম জবর মা কাফ সুকুন ক্ তা জবর তা বা',
     breakdown: [
       { letter: 'مَ', sound: 'মা', hasSukun: false },
       { letter: 'كْ', sound: 'ক্', hasSukun: true },
@@ -161,6 +178,7 @@ const threeLetterWords: SukunWord[] = [
     arabic: 'مَدْرَسَة',
     bangla: 'মাদরাসা',
     meaning: 'বিদ্যালয় / School',
+    spelled: 'মীম জবর মা দাল সুকুন দ্ রা জবর রা সীন জবর সা তা মারবুতা',
     breakdown: [
       { letter: 'مَ', sound: 'মা', hasSukun: false },
       { letter: 'دْ', sound: 'দ্', hasSukun: true },
@@ -173,6 +191,7 @@ const threeLetterWords: SukunWord[] = [
     arabic: 'أَكْبَر',
     bangla: 'আকবার',
     meaning: 'সবচেয়ে বড় / Greatest',
+    spelled: 'আলিফ জবর আ কাফ সুকুন ক্ বা জবর বা রা',
     breakdown: [
       { letter: 'أَ', sound: 'আ', hasSukun: false },
       { letter: 'كْ', sound: 'ক্', hasSukun: true },
@@ -184,6 +203,7 @@ const threeLetterWords: SukunWord[] = [
     arabic: 'أَصْغَر',
     bangla: 'আসগার',
     meaning: 'সবচেয়ে ছোট / Smallest',
+    spelled: 'আলিফ জবর আ সোয়াদ সুকুন স্ গাইন জবর গা রা',
     breakdown: [
       { letter: 'أَ', sound: 'আ', hasSukun: false },
       { letter: 'صْ', sound: 'স্', hasSukun: true },
@@ -195,6 +215,7 @@ const threeLetterWords: SukunWord[] = [
     arabic: 'يَعْلَم',
     bangla: "ইয়া'লাম",
     meaning: 'সে জানে / He knows',
+    spelled: "ইয়া জবর ইয়া আইন সুকুন ' লাম জবর লা মীম",
     breakdown: [
       { letter: 'يَ', sound: 'ইয়া', hasSukun: false },
       { letter: 'عْ', sound: "'", hasSukun: true },
@@ -206,6 +227,7 @@ const threeLetterWords: SukunWord[] = [
     arabic: 'يَسْمَع',
     bangla: 'ইয়াসমাউ',
     meaning: 'সে শোনে / He hears',
+    spelled: 'ইয়া জবর ইয়া সীন সুকুন স্ মীম জবর মা আইন',
     breakdown: [
       { letter: 'يَ', sound: 'ইয়া', hasSukun: false },
       { letter: 'سْ', sound: 'স্', hasSukun: true },
@@ -235,6 +257,13 @@ function WordCard({ word }: WordCardProps) {
             {word.arabic}
           </div>
           <div className="text-xl font-bold text-slate-600">{word.bangla}</div>
+        </div>
+
+        {/* Bengali Spelling */}
+        <div className="bg-gradient-to-r from-emerald-50 to-teal-50 border border-emerald-200 rounded-lg p-3 mb-4">
+          <p className="text-emerald-800 text-sm font-medium text-center leading-relaxed">
+            {word.spelled}
+          </p>
         </div>
 
         {/* Letter Breakdown */}
