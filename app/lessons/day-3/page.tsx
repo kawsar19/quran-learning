@@ -11,42 +11,68 @@ export const metadata: Metadata = {
 }
 
 const letterCombinations = [
-  // Row 1
-  { bangla: 'বা + আলিফ', arabic: 'با' },
+  // Row 1 (শুধু হরফের রূপ)
+  { bangla: 'বা (শুরুর রূপ)', arabic: 'بـ' },
+  { bangla: 'জীম (শুরুর রূপ)', arabic: 'جـ' },
+  { bangla: 'ফা (শুরুর রূপ)', arabic: 'فـ' },
+  { bangla: 'সাদ (শুরুর রূপ)', arabic: 'صـ' },
+  { bangla: 'মীম (শুরুর রূপ)', arabic: 'مـ' },
+  { bangla: 'হা (শুরুর রূপ)', arabic: 'هـ' },
+
+  // Row 2
+  { bangla: 'কাফ (শুরুর রূপ)', arabic: 'كـ' },
+  { bangla: 'শীন (শুরুর রূপ)', arabic: 'شـ' },
+  { bangla: 'আইন (শুরুর রূপ)', arabic: 'عـ' },
+  { bangla: 'লাম (শুরুর রূপ)', arabic: 'لـ' },
+  { bangla: 'বা (শুরুর রূপ)', arabic: 'بـ' },
+  { bangla: 'গাইন (শুরুর রূপ)', arabic: 'غـ' },
+
+  // Row 3
+  { bangla: 'লাম + আলিফ', arabic: 'لا' },
+  { bangla: 'ক্বাফ (শুরুর রূপ)', arabic: 'قـ' },
+  { bangla: 'সীন (শুরুর রূপ)', arabic: 'سـ' },
+  { bangla: 'হা (শুরুর রূপ)', arabic: 'حـ' },
+  { bangla: 'তা (শুরুর রূপ)', arabic: 'تـ' },
+  { bangla: 'মীম (শুরুর রূপ)', arabic: 'مـ' },
+
+  // Row 4
+  { bangla: 'দাদ (শুরুর রূপ)', arabic: 'ضـ' },
+  { bangla: 'খা (শুরুর রূপ)', arabic: 'خـ' },
+  { bangla: 'জীম (শুরুর রূপ)', arabic: 'جـ' },
+  { bangla: 'ইয়া (শুরুর রূপ)', arabic: 'يـ' },
+  { bangla: 'ছা (শুরুর রূপ)', arabic: 'ثـ' },
+  { bangla: 'হা (শুরুর রূপ)', arabic: 'هـ' },
+
+  // Row 5 (মাঝের রূপ)
+  { bangla: 'হা (মাঝের রূপ)', arabic: 'ـهـ' },
+  { bangla: 'দাদ + গাইন', arabic: 'ضغ' },
+  { bangla: 'গাইন (মাঝের রূপ)', arabic: 'ـغـ' },
+  { bangla: 'ফা (মাঝের রূপ)', arabic: 'ـفـ' },
+  { bangla: 'নূন (মাঝের রূপ)', arabic: 'ـنـ' },
+  { bangla: 'আইন (মাঝের রূপ)', arabic: 'ـعـ' },
+
+  // শব্দ (Words)
   { bangla: 'হা + বা', arabic: 'حب' },
-  { bangla: 'জীম + হা', arabic: 'جح' },
-  { bangla: 'জীম + লাম + আলিফ', arabic: 'جلا' },
+  { bangla: 'হা + জীম', arabic: 'حج' },
+  { bangla: 'জীম + লাম + দাল', arabic: 'جلد' },
   { bangla: 'মীম + আইন', arabic: 'مع' },
   { bangla: 'আইন + সাদ', arabic: 'عص' },
-  // Row 2
-  { bangla: 'য্বা + লাম', arabic: 'ظل' },
+
+  { bangla: 'যা + লাম', arabic: 'ظل' },
   { bangla: 'লাম + কাফ', arabic: 'لك' },
   { bangla: 'হা + ওয়াও', arabic: 'هو' },
   { bangla: 'লাম + হা', arabic: 'له' },
   { bangla: 'হা + মীম', arabic: 'حم' },
   { bangla: 'মীম + নূন', arabic: 'من' },
-  // Row 3
+
   { bangla: 'লাম + আলিফ', arabic: 'لا' },
-  { bangla: 'লাম + মীম + হা', arabic: 'لمح' },
-  { bangla: 'হা + ইয়া', arabic: 'حي' },
-  { bangla: 'ইয়া + সীন', arabic: 'يس' },
+  { bangla: 'লাম + কাফ', arabic: 'لك' },
+  { bangla: 'কাফ + মীম', arabic: 'كم' },
+  { bangla: 'হা + ইয়া', arabic: 'حي' },
+  { bangla: 'লাম + ইয়া + সীন', arabic: 'ليس' },
   { bangla: 'কাফ + বা', arabic: 'كب' },
-  { bangla: 'ক্বফ + ওয়াও', arabic: 'قو' },
-  // Row 4
-  { bangla: 'হা + মীম', arabic: 'هم' },
-  { bangla: 'বা + হা', arabic: 'به' },
-  { bangla: 'ইয়া + হা', arabic: 'يه' },
-  { bangla: 'তা + হা', arabic: 'ته' },
-  { bangla: 'জীম + রা', arabic: 'جر' },
-  { bangla: 'খা + যাল', arabic: 'خذ' },
-  // Row 5
-  { bangla: 'সাদ + আইন', arabic: 'صع' },
-  { bangla: 'দাদ + গাইন', arabic: 'ضغ' },
-  { bangla: 'দাদ + খা', arabic: 'ضخ' },
-  { bangla: 'ইয়া + ফা', arabic: 'يف' },
-  { bangla: 'লাম + হামযা', arabic: 'لؤ' },
-  { bangla: 'জীম + হামযা', arabic: 'جئ' },
 ]
+
 
 export default function Day3Page() {
   return (
@@ -62,7 +88,7 @@ export default function Day3Page() {
 
     
       {/* Letter Combinations Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4" dir='rtl'>
         {letterCombinations.map((item, index) => (
           <div
             key={index}
