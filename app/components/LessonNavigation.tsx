@@ -10,7 +10,7 @@ export default function LessonNavigation({ currentDay, totalDays = 30 }: LessonN
   const hasNext = currentDay < totalDays
 
   return (
-    <nav className="flex items-center justify-between py-6 border-t border-gray-200 mt-8">
+    <div className="flex items-center justify-between py-4">
       <div>
         {hasPrevious ? (
           <Link
@@ -43,6 +43,6 @@ export default function LessonNavigation({ currentDay, totalDays = 30 }: LessonN
           <span className="text-gray-300">Next &rarr;</span>
         )}
       </div>
-    </nav>
+    </div>
   )
 }
