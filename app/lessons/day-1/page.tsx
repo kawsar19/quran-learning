@@ -16,7 +16,7 @@ export default function Day1Page() {
     <LessonLayout
       dayNumber={1}
       title="Introduction to the Arabic Alphabet - আরবি বর্ণমালা পরিচিতি"
-      videoId="VIDEO_ID_HERE"
+      loomId="47bc76adf2e74c6baf572e0124736875"
     >
       <h2 className="text-2xl font-bold text-gray-800 mb-4">
         The Arabic Alphabet | আরবি বর্ণমালা

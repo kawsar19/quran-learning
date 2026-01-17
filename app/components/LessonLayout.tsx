@@ -4,11 +4,12 @@ import VideoPlayer from './VideoPlayer'
 interface LessonLayoutProps {
   dayNumber: number
   title: string
-  videoId: string
+  videoId?: string
+  loomId?: string
   children: React.ReactNode
 }
 
-export default function LessonLayout({ dayNumber, title, videoId, children }: LessonLayoutProps) {
+export default function LessonLayout({ dayNumber, title, videoId, loomId, children }: LessonLayoutProps) {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Sticky Header */}
@@ -23,7 +24,7 @@ export default function LessonLayout({ dayNumber, title, videoId, children }: Le
       <main className="flex-1">
         <article className="container mx-auto px-4 py-6 max-w-4xl">
           <section className="mb-8">
-            <VideoPlayer videoId={videoId} title={`Day ${dayNumber}: ${title}`} />
+            <VideoPlayer videoId={videoId} loomId={loomId} title={`Day ${dayNumber}: ${title}`} />
           </section>
 
           <section className="prose prose-lg max-w-none">
