@@ -1,153 +1,79 @@
 import type { Metadata } from 'next'
 import LessonLayout from '@/app/components/LessonLayout'
-import DammaWords from '@/app/components/DammaWords'
+import MixedPractice from '@/app/components/MixedPractice'
 
 export const metadata: Metadata = {
-  title: 'Day 8 - Damma Practice (দাম্মা অনুশীলন) | 30 Days Quran Learning',
-  description: 'Practice reading Arabic words with Damma vowel marks. Learn common words with Bangla pronunciation.',
-  openGraph: {
-    title: 'Day 8 - Damma Practice (দাম্মা অনুশীলন) | 30 Days Quran Learning',
-    description: 'Practice reading Arabic words with Damma vowel marks. Learn common words with Bangla pronunciation.',
-  },
+  title: 'Day 8 - Harakat & Tanween Mixed Practice | 30 Days Quran Learning',
+  description: 'Extensive practice of words combining Harakat and Tanween for better fluency.',
 }
 
 export default function Day8Page() {
   return (
     <LessonLayout
       dayNumber={8}
-      title="Damma Practice - দাম্মা অনুশীলন"
+      title="Harakat & Tanween Practice - হরকত ও তানউইন অনুশীলন"
       videoId="VIDEO_ID_HERE"
     >
       {/* Header */}
-      <div className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white p-6 rounded-2xl shadow-xl text-center mb-8">
-        <h2 className="text-2xl font-bold mb-2">দাম্মা অনুশীলন</h2>
-        <p className="text-blue-100">Damma Practice | পেশ দিয়ে শব্দ পড়া</p>
+      <div className="bg-gradient-to-r from-emerald-600 to-teal-500 text-white p-8 rounded-3xl shadow-xl text-center mb-10">
+        <h2 className="text-3xl font-bold mb-3">হরকত ও তানউইন অনুশীলন</h2>
+        <p className="text-emerald-50 text-lg opacity-90">Mixed Practice: Harakat & Tanween Combined</p>
       </div>
 
-      {/* Damma Reminder */}
-      <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-5 text-center mb-8">
-        <div
-          className="text-5xl text-blue-600 mb-2"
-          style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
-        >
-          ـُ
-        </div>
-        <h3 className="font-bold text-blue-800 text-lg">দাম্মা (পেশ) - Damma</h3>
-        <p className="text-gray-600 mt-2">
-          অক্ষরের উপরে ছোট ওয়াও (و) এর মত চিহ্ন বসে &quot;উ&quot; ধ্বনি তৈরি করে
-        </p>
-        <p className="text-gray-500 text-sm mt-1">
-          A small curl above the letter creates &quot;u&quot; sound
-        </p>
-      </div>
-
-      {/* All Three Harakat Comparison */}
-      <div className="bg-amber-50 border border-amber-200 p-4 rounded-xl mb-8">
-        <h3 className="font-bold text-amber-800 mb-3 text-center">তিন হরকত তুলনা</h3>
-        <div className="grid grid-cols-3 gap-3 text-center">
-          <div className="bg-red-50 rounded-lg p-3 border border-red-200">
-            <div
-              className="text-3xl md:text-4xl mb-1"
-              style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
-            >
-              بَ
-            </div>
-            <div className="text-red-600 font-bold">বা</div>
-            <div className="text-xs text-gray-500">ফাতহা</div>
-          </div>
-          <div className="bg-green-50 rounded-lg p-3 border border-green-200">
-            <div
-              className="text-3xl md:text-4xl mb-1"
-              style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
-            >
-              بِ
-            </div>
-            <div className="text-green-600 font-bold">বি</div>
-            <div className="text-xs text-gray-500">কাসরা</div>
-          </div>
-          <div className="bg-blue-50 rounded-lg p-3 border border-blue-200">
-            <div
-              className="text-3xl md:text-4xl mb-1"
-              style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
-            >
-              بُ
-            </div>
-            <div className="text-blue-600 font-bold">বু</div>
-            <div className="text-xs text-gray-500">দাম্মা</div>
-          </div>
-        </div>
-      </div>
-
-      {/* Instructions */}
-      <div className="bg-indigo-50 border border-indigo-200 p-4 rounded-xl mb-8">
-        <h3 className="font-bold text-indigo-800 mb-2 flex items-center gap-2">
-          <span className="text-xl">📖</span> কিভাবে পড়বেন
+      {/* Goal of the Day */}
+      <div className="bg-white border-2 border-emerald-100 rounded-3xl p-8 mb-10 shadow-sm">
+        <h3 className="text-xl font-bold text-emerald-800 mb-4 flex items-center gap-2">
+          <span className="text-2xl">🎯</span> আজকের লক্ষ্য
         </h3>
-        <ul className="text-gray-700 space-y-1 text-sm">
-          <li>• প্রতিটি অক্ষরের উপরে দাম্মা (ـُ) চিহ্ন দেখুন</li>
-          <li>• দাম্মা থাকলে অক্ষরের সাথে &quot;উ&quot; যোগ করে পড়ুন</li>
-          <li>• যেমন: بُ = ব + উ = বু</li>
-          <li>• নিচে অক্ষর বিশ্লেষণ দেখে practice করুন</li>
-        </ul>
+        <p className="text-gray-700 leading-relaxed text-lg">
+          গত কয়েকদিনে আমরা হরকত (যবর, যের, পেশ) এবং তানউইন (দুই যবর, দুই যের, দুই পেশ) শিখেছি। 
+          আজকের দিনে আমরা এই দুটি বিষয় একসাথে মিলে যে শব্দগুলো গঠিত হয়, সেগুলো বেশি বেশি করে অনুশীলন করব। 
+          এটি আপনার পড়ার গতি এবং নির্ভুলতা বাড়াতে সাহায্য করবে।
+        </p>
       </div>
 
       {/* Section Title */}
-      <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
-        <span className="bg-blue-500 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm">১</span>
-        দাম্মা দিয়ে শব্দ অনুশীলন
-      </h3>
-      <p className="text-gray-600 mb-6">
-        নিচের শব্দগুলোতে সব অক্ষরে দাম্মা আছে। প্রতিটি অক্ষর &quot;উ&quot; দিয়ে পড়ুন।
-      </p>
-
-      {/* Damma Words Component */}
-      <DammaWords />
-
-      {/* Summary Box */}
-      <div className="bg-gradient-to-r from-purple-100 to-pink-100 border border-purple-200 p-5 rounded-xl mt-8">
-        <h3 className="font-bold text-purple-800 mb-3 text-center text-lg">🎉 অভিনন্দন! তিন হরকত শেখা সম্পন্ন</h3>
-        <div className="grid grid-cols-3 gap-3 text-center mb-4">
-          <div className="bg-white rounded-lg p-2">
-            <span className="text-red-500 font-bold">ফাতহা</span>
-            <span className="text-gray-500 text-sm block">= আ</span>
-          </div>
-          <div className="bg-white rounded-lg p-2">
-            <span className="text-green-500 font-bold">কাসরা</span>
-            <span className="text-gray-500 text-sm block">= ই</span>
-          </div>
-          <div className="bg-white rounded-lg p-2">
-            <span className="text-blue-500 font-bold">দাম্মা</span>
-            <span className="text-gray-500 text-sm block">= উ</span>
-          </div>
-        </div>
-        <p className="text-center text-gray-600 text-sm">
-          এই তিনটি হরকত দিয়ে আরবি পড়ার ভিত্তি তৈরি হয়ে গেছে!
-        </p>
+      <div className="flex items-center gap-4 mb-8">
+        <div className="h-1 flex-1 bg-gradient-to-r from-transparent to-emerald-200"></div>
+        <h3 className="text-2xl font-bold text-gray-800">শব্দ অনুশীলন (Practice Words)</h3>
+        <div className="h-1 flex-1 bg-gradient-to-l from-transparent to-emerald-200"></div>
       </div>
 
-      {/* Practice Tips */}
-      <div className="bg-cyan-50 border border-cyan-200 p-5 rounded-xl mt-6">
-        <h3 className="font-bold text-cyan-800 mb-3 flex items-center gap-2">
-          <span className="text-xl">💡</span> অনুশীলনের টিপস
+      <p className="text-center text-gray-500 mb-8 text-lg">নিচের শব্দগুলো জোরে জোরে পড়ার চেষ্টা করুন</p>
+
+      {/* Mixed Practice Grid */}
+      <MixedPractice />
+
+      {/* Tips Section */}
+      <div className="mt-16 bg-gradient-to-br from-amber-50 to-orange-50 rounded-3xl p-8 border border-amber-100">
+        <h3 className="text-xl font-bold text-amber-800 mb-6 flex items-center gap-2">
+          <span className="text-2xl">💡</span> দ্রুত শেখার টিপস
         </h3>
-        <ul className="text-gray-700 space-y-2">
-          <li className="flex items-start gap-2">
-            <span className="text-cyan-500 mt-1">✓</span>
-            <span>প্রতিটি শব্দ ৩ বার করে জোরে পড়ুন</span>
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="text-cyan-500 mt-1">✓</span>
-            <span>দাম্মা দেখতে ছোট &quot;و&quot; এর মত - এটা মনে রাখুন</span>
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="text-cyan-500 mt-1">✓</span>
-            <span>Day 6, 7, 8 এর শব্দগুলো আবার পড়ুন</span>
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="text-cyan-500 mt-1">✓</span>
-            <span>পরের দিন তিন হরকত মিশ্রিত শব্দ শিখবেন</span>
-          </li>
-        </ul>
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="bg-white/80 backdrop-blur-sm p-5 rounded-2xl shadow-sm">
+            <h4 className="font-bold text-amber-900 mb-2">১. বানান করে পড়ুন</h4>
+            <p className="text-gray-600">প্রতিটি শব্দের হরফ এবং হরকত আলাদা করে প্রথমে বানান করুন, তারপর পুরো শব্দটি একসাথে বলুন।</p>
+          </div>
+          <div className="bg-white/80 backdrop-blur-sm p-5 rounded-2xl shadow-sm">
+            <h4 className="font-bold text-amber-900 mb-2">২. তানউইন লক্ষ্য করুন</h4>
+            <p className="text-gray-600">শব্দের শেষে তানউইন থাকলে &quot;ন&quot; ধ্বনিটি স্পষ্টভাবে উচ্চারণ করার চেষ্টা করুন।</p>
+          </div>
+          <div className="bg-white/80 backdrop-blur-sm p-5 rounded-2xl shadow-sm">
+            <h4 className="font-bold text-amber-900 mb-2">৩. রিদম ঠিক রাখুন</h4>
+            <p className="text-gray-600">হরকতের টানে কোনো খলল না ঘটিয়ে শব্দগুলো সহজভাবে পড়ার চেষ্টা করুন।</p>
+          </div>
+          <div className="bg-white/80 backdrop-blur-sm p-5 rounded-2xl shadow-sm">
+            <h4 className="font-bold text-amber-900 mb-2">৪. বার বার অনুশীলন</h4>
+            <p className="text-gray-600">একই লিস্ট অন্তত ৩-৪ বার পড়ুন যতক্ষণ না আপনি প্রতিটি শব্দ অনর্গল পড়তে পারছেন।</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Encouragement */}
+      <div className="mt-12 text-center p-8 bg-emerald-50 rounded-3xl border border-emerald-100">
+        <div className="text-4xl mb-4">⭐</div>
+        <h3 className="text-2xl font-bold text-emerald-800 mb-2">আপনি চমৎকার করছেন!</h3>
+        <p className="text-emerald-600">ইনশাআল্লাহ, আপনার মনোযোগ আপনাকে খুব দ্রুত কোরআন পড়ার যোগ্য করে তুলবে।</p>
       </div>
     </LessonLayout>
   )

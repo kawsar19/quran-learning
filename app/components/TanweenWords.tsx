@@ -23,6 +23,14 @@ const fathataynWords: TanweenWord[] = [
   { arabic: 'خَيْرًا', bangla: 'খাইরান', meaning: 'ভালো', tanween: 'fathatayn' },
   { arabic: 'شُكْرًا', bangla: 'শুকরান', meaning: 'ধন্যবাদ', tanween: 'fathatayn' },
   { arabic: 'كَثِيرًا', bangla: 'কাছীরান', meaning: 'অনেক', tanween: 'fathatayn' },
+  { arabic: 'رَسُولًا', bangla: 'রাসূলান', meaning: 'একজন রাসূল', tanween: 'fathatayn' },
+  { arabic: 'عَذَابًا', bangla: 'আযাদান', meaning: 'শাস্তি', tanween: 'fathatayn' },
+  { arabic: 'حِسَابًا', bangla: 'হিসাবান', meaning: 'হিসাব', tanween: 'fathatayn' },
+  { arabic: 'صَوَابًا', bangla: 'সওয়াবান', meaning: 'সঠিক', tanween: 'fathatayn' },
+  { arabic: 'طَعَامًا', bangla: 'তাআমান', meaning: 'খাবার', tanween: 'fathatayn' },
+  { arabic: 'شَرَابًا', bangla: 'শারাবান', meaning: 'পানীয়', tanween: 'fathatayn' },
+  { arabic: 'لِبَاسًا', bangla: 'লিবাসান', meaning: 'পোশাক', tanween: 'fathatayn' },
+  { arabic: 'مَعَاشًا', bangla: 'মাআশান', meaning: 'জীবিকা', tanween: 'fathatayn' },
 ]
 
 // Kasratayn words (ٍ) - "in" sound
@@ -33,12 +41,18 @@ const kasrataynWords: TanweenWord[] = [
   { arabic: 'وَلَدٍ', bangla: 'ওয়ালাদিন', meaning: 'একটি ছেলের', tanween: 'kasratayn' },
   { arabic: 'بَيْتٍ', bangla: 'বাইতিন', meaning: 'একটি ঘরের', tanween: 'kasratayn' },
   { arabic: 'رَبٍّ', bangla: 'রাব্বিন', meaning: 'একজন রবের', tanween: 'kasratayn' },
-  { arabic: 'يَوْمٍ', bangla: 'ইয়াউমিন', meaning: 'একটি দিনের', tanween: 'kasratayn' },
-  { arabic: 'قَوْمٍ', bangla: 'ক্বাউমিন', meaning: 'একটি জাতির', tanween: 'kasratayn' },
+  { arabic: 'يَوْমٍ', bangla: 'ইয়াউমিন', meaning: 'একটি দিনের', tanween: 'kasratayn' },
+  { arabic: 'قَوْমٍ', bangla: 'ক্বাউমিন', meaning: 'একটি জাতির', tanween: 'kasratayn' },
   { arabic: 'عَظِيمٍ', bangla: 'আযীমিন', meaning: 'মহান', tanween: 'kasratayn' },
   { arabic: 'كَرِيمٍ', bangla: 'কারীমিন', meaning: 'সম্মানিত', tanween: 'kasratayn' },
   { arabic: 'حَكِيمٍ', bangla: 'হাকীমিন', meaning: 'প্রজ্ঞাময়', tanween: 'kasratayn' },
   { arabic: 'عَلِيمٍ', bangla: 'আলীমিন', meaning: 'সর্বজ্ঞ', tanween: 'kasratayn' },
+  { arabic: 'نَفْسٍ', bangla: 'নাফসিন', meaning: 'প্রাণ', tanween: 'kasratayn' },
+  { arabic: 'لَهَبٍ', bangla: 'লাহাবিন', meaning: 'শিখা', tanween: 'kasratayn' },
+  { arabic: 'مَسَدٍ', bangla: 'মাসাদিন', meaning: 'খেজুরের রশি', tanween: 'kasratayn' },
+  { arabic: 'كَبَدٍ', bangla: 'কাবাদিন', meaning: 'কঠোর পরিশ্রম', tanween: 'kasratayn' },
+  { arabic: 'شَفَةٍ', bangla: 'শাফাতিন', meaning: 'ঠোঁট', tanween: 'kasratayn' },
+  { arabic: 'سَنَةٍ', bangla: 'সানাতিন', meaning: 'বছর', tanween: 'kasratayn' },
 ]
 
 // Dammatayn words (ٌ) - "un" sound
@@ -55,6 +69,12 @@ const dammataynWords: TanweenWord[] = [
   { arabic: 'كَرِيمٌ', bangla: 'কারীমুন', meaning: 'সম্মানিত', tanween: 'dammatayn' },
   { arabic: 'حَكِيمٌ', bangla: 'হাকীমুন', meaning: 'প্রজ্ঞাময়', tanween: 'dammatayn' },
   { arabic: 'عَلِيمٌ', bangla: 'আলীমুন', meaning: 'সর্বজ্ঞ', tanween: 'dammatayn' },
+  { arabic: 'قَدِيرٌ', bangla: 'ক্বদীরুন', meaning: 'সর্বশক্তিমান', tanween: 'dammatayn' },
+  { arabic: 'شَهِيدٌ', bangla: 'শাহীদুন', meaning: 'সাক্ষী', tanween: 'dammatayn' },
+  { arabic: 'خَبِيرٌ', bangla: 'খাবীরুন', meaning: 'সম্যক অবগত', tanween: 'dammatayn' },
+  { arabic: 'بَصِيرٌ', bangla: 'বাসীরুন', meaning: 'সর্বদ্রষ্টা', tanween: 'dammatayn' },
+  { arabic: 'لَطِيفٌ', bangla: 'লাতীফুন', meaning: 'মেহেরবান', tanween: 'dammatayn' },
+  { arabic: 'خَالِقٌ', bangla: 'খালিক্বুন', meaning: 'সৃষ্টিকর্তা', tanween: 'dammatayn' },
 ]
 
 const tanweenColors = {

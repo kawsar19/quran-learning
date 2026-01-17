@@ -91,13 +91,14 @@ function generateQuestion(): Question {
         displayArabic: arabicWithHarakat,
         correctAnswer: randomHarakat,
         letterName: letter.name,
-        options: shuffleArray(
-          harakatTypes.map((h) => ({
+        options: shuffleArray([
+          ...harakatTypes.map((h) => ({
             label: `${harakatInfo[h].bangla} (${harakatInfo[h].altBangla})`,
-            value: h,
+            value: h as string,
             color: h === 'fatha' ? 'red' : h === 'kasra' ? 'green' : 'blue',
-          }))
-        ).concat([{ label: 'কোন হরকত নেই', value: 'none', color: 'gray' }]),
+          })),
+          { label: 'কোন হরকত নেই', value: 'none', color: 'gray' },
+        ]),
       }
     }
 
