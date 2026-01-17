@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import LessonLayout from '@/app/components/LessonLayout'
+import LetterCombinationsQuiz from '@/app/components/LetterCombinationsQuiz'
 
 export const metadata: Metadata = {
   title: 'Day 3 - Letter Combinations | 30 Days Quran Learning',
@@ -71,6 +72,44 @@ const letterCombinations = [
   { bangla: 'হা + ইয়া', arabic: 'حي' },
   { bangla: 'লাম + ইয়া + সীন', arabic: 'ليس' },
   { bangla: 'কাফ + বা', arabic: 'كب' },
+
+    { bangla: 'ছোয়াদ + লাম + হা', arabic: 'صلح' },
+  { bangla: 'বা + ছোয়াদ + লাম', arabic: 'بصل' },
+  { bangla: 'খা + লাম + ছোয়াদ', arabic: 'خلص' },
+  { bangla: 'আইন + নূন + কাফ', arabic: 'عنك' },
+
+  { bangla: 'লাম + আইন + নূন', arabic: 'لعن' },
+  { bangla: 'শীন + ফা + আইন', arabic: 'شفع' },
+  { bangla: 'তা + জীম + দাল', arabic: 'تجد' },
+  { bangla: 'ফা + তা + হা', arabic: 'فتح' },
+  { bangla: 'নূন + আইন + তা', arabic: 'نعت' },
+
+  { bangla: 'ইয়া + সাদ + লাম', arabic: 'يصل' },
+  { bangla: 'খা + বা + রা', arabic: 'خبر' },
+  { bangla: 'কাফ + সীন + বা', arabic: 'كسب' },
+  { bangla: 'সীন + আইন + দাল', arabic: 'سعد' },
+  { bangla: 'ইয়া + সীন + রা', arabic: 'يسر' },
+
+  { bangla: 'নূন + ফা + সীন', arabic: 'نفس' },
+  { bangla: 'তা + লাম + বা', arabic: 'تلب' },
+  { bangla: 'মীম + তা + রা', arabic: 'متر' },
+  { bangla: 'হা + বা + তা', arabic: 'هبت' },
+  { bangla: 'আইন + লাম + মীম', arabic: 'علم' },
+
+  { bangla: 'ক্বাফ + লাম + মীম', arabic: 'قلم' },
+  { bangla: 'গাইন + লাম + কাফ', arabic: 'غلك' },
+  { bangla: 'হা + লাম + কাফ', arabic: 'هلك' },
+  { bangla: 'সীন + হা + মীম', arabic: 'سهم' },
+  { bangla: 'সীন + ফা + হা', arabic: 'سفه' },
+
+  { bangla: 'কাফ + নূন + তা', arabic: 'كنت' },
+  { bangla: 'সীন + কাফ + নূন', arabic: 'سكن' },
+  { bangla: 'দাদ + হা + কাফ', arabic: 'ضحك' },
+  { bangla: 'ইয়া + তা + লাম + ওয়াও', arabic: 'يتلو' },
+  { bangla: 'নূন + গাইন + মীম + তা', arabic: 'نغمت' },
+
+  { bangla: 'মীম + কাফ + তা + আইন', arabic: 'مكتع' },
+  { bangla: 'সীন + ক্বাফ + লাম + তা', arabic: 'سقلت' },
 ]
 
 
@@ -88,7 +127,7 @@ export default function Day3Page() {
 
     
       {/* Letter Combinations Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4" dir='rtl'>
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4" dir='rtl'>
         {letterCombinations.map((item, index) => (
           <div
             key={index}
@@ -120,11 +159,17 @@ export default function Day3Page() {
         ))}
       </div>
 
- 
-
-    
-
-   
+      {/* Quiz Section */}
+      <div className="mt-12">
+        <h2 className="text-2xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+          <span className="bg-teal-600 text-white w-10 h-10 rounded-full flex items-center justify-center text-lg">?</span>
+          কুইজ - অক্ষর সংযোগ যাচাই
+        </h2>
+        <p className="text-gray-600 mb-6">
+          আরবি অক্ষর সংযোগ দেখে সঠিক উত্তর নির্বাচন করুন। ২০টি প্রশ্নের উত্তর দিন।
+        </p>
+        <LetterCombinationsQuiz />
+      </div>
     </LessonLayout>
   )
 }
