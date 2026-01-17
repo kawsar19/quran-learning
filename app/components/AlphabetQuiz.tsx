@@ -168,7 +168,7 @@ export default function AlphabetQuiz() {
       <div className="text-center mb-8">
         <p className="text-gray-600 mb-4">এই অক্ষরের নাম কী?</p>
         <div
-          className="text-9xl text-gray-800 mb-2"
+          className="text-9xl text-gray-800 mb-2 leading-[1.4]"
           style={{ fontFamily: "'Scheherazade New', 'Amiri', 'Traditional Arabic', serif" }}
         >
           {question.arabic}
@@ -204,7 +204,8 @@ export default function AlphabetQuiz() {
       </div>
 
       {/* Result & Next Button */}
-      {showResult && (
+     <div className="min-h-24">
+       {showResult && (
         <div className="text-center">
           {selectedAnswer === question.correct ? (
             <p className="text-emerald-600 font-bold mb-4 text-lg">✓ সঠিক! Correct!</p>
@@ -221,6 +222,7 @@ export default function AlphabetQuiz() {
           </button>
         </div>
       )}
+     </div>
     </div>
   )
 }
