@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import LessonLayout from '@/app/components/LessonLayout'
 import HarakatLetters from '@/app/components/HarakatLetters'
+import HarakatQuiz from '@/app/components/HarakatQuiz'
 
 export const metadata: Metadata = {
   title: 'Day 5 - Harakat (Vowel Marks) | 30 Days Quran Learning',
@@ -112,7 +113,17 @@ export default function Day5Page() {
 
       <HarakatLetters />
 
-    
+      {/* Quiz Section */}
+      <div className="mt-12">
+        <h2 className="text-2xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+          <span className="bg-indigo-600 text-white w-10 h-10 rounded-full flex items-center justify-center text-lg">?</span>
+          কুইজ - হরকত যাচাই করুন
+        </h2>
+        <p className="text-gray-600 mb-6">
+          হরকত চিহ্নিত করুন এবং সঠিক উচ্চারণ নির্বাচন করুন। ২০টি প্রশ্নের উত্তর দিন।
+        </p>
+        <HarakatQuiz />
+      </div>
     </LessonLayout>
   )
 }
