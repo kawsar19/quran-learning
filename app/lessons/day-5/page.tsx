@@ -28,7 +28,7 @@ export default function Day5Page() {
      
 
       {/* Three Harakat Explanation */}
-      <div className="grid md:grid-cols-3 gap-4 mb-8">
+      <div className="grid md:grid-cols-3 gap-4 mb-8" dir='rtl'>
         <div className="bg-red-50 border-2 border-red-200 rounded-xl p-5 text-center">
           <div
             className="text-5xl text-red-600 mb-2"
@@ -88,7 +88,7 @@ export default function Day5Page() {
       </div>
 
       {/* Color Legend */}
-      <div className="bg-gray-50 border border-gray-200 p-4 mb-8 rounded-xl">
+      <div className="bg-gray-50 border border-gray-200 p-4 mb-8 rounded-xl" dir="rtl">
         <h3 className="font-bold text-gray-800 mb-3 text-center">Color Guide | রঙের নির্দেশিকা</h3>
         <div className="flex flex-wrap justify-center gap-4">
           <div className="flex items-center gap-2">

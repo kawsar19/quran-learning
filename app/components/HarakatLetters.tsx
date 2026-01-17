@@ -33,11 +33,11 @@ const letters = [
 
 export default function HarakatLetters() {
   return (
-    <div className="space-y-6">
+    <div className="space-y-6" dir="rtl">
       {letters.map((letter, index) => (
         <div key={index} className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
           {/* Letter Header */}
-          <div className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-4 py-3 flex items-center justify-between">
+          <div className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-4 py-3 flex items-center justify-between" >
             <span className="text-lg font-bold">{index + 1}. {letter.name}</span>
             <span
               className="text-3xl"
