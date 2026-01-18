@@ -109,7 +109,7 @@ function WordCard({ word }: WordCardProps) {
     <div className={`${colors.bg} rounded-xl p-4 border-2 ${colors.border} text-center hover:shadow-md transition-shadow`}>
       <div
         dir="rtl"
-        className="text-4xl md:text-5xl text-gray-800 mb-2"
+        className="text-4xl md:text-5xl text-gray-800 mb-2 leading-[1.8]"
         style={{ fontFamily: "'Scheherazade New', 'Amiri', 'Traditional Arabic', serif" }}
       >
         {word.arabic}

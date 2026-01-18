@@ -145,7 +145,7 @@ export default function Day9Page() {
         <h3 className="font-bold text-slate-800 text-lg mb-4 text-center">সকল অক্ষর সুকুন সহ</h3>
         <div
           dir="rtl"
-          className="flex flex-wrap justify-center gap-3 text-4xl text-slate-700"
+          className="flex flex-wrap justify-center gap-3 text-4xl leading-[1.6] text-slate-700"
           style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
         >
           <span className="bg-white px-3 py-2 rounded-lg shadow-sm">اْ</span>
