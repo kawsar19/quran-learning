@@ -1,122 +1,46 @@
 'use client'
-
 const fathaWords = [
-  {
-    arabic: 'بَبَ',
-    bangla: 'বাবা',
-    meaning: 'বাবা / Father',
-    breakdown: [
-      { letter: 'بَ', sound: 'বা' },
-      { letter: 'بَ', sound: 'বা' },
-    ]
-  },
-  {
-    arabic: 'مَمَ',
-    bangla: 'মামা',
-    meaning: 'মামা / Uncle',
-    breakdown: [
-      { letter: 'مَ', sound: 'মা' },
-      { letter: 'مَ', sound: 'মা' },
-    ]
-  },
-  {
-    arabic: 'دَدَ',
-    bangla: 'দাদা',
-    meaning: 'দাদা / Grandfather',
-    breakdown: [
-      { letter: 'دَ', sound: 'দা' },
-      { letter: 'دَ', sound: 'দা' },
-    ]
-  },
-  {
-    arabic: 'نَنَ',
-    bangla: 'নানা',
-    meaning: 'নানা / Maternal Grandfather',
-    breakdown: [
-      { letter: 'نَ', sound: 'না' },
-      { letter: 'نَ', sound: 'না' },
-    ]
-  },
-  {
-    arabic: 'خَلَ',
-    bangla: 'খালা',
-    meaning: 'খালা / Aunt',
-    breakdown: [
-      { letter: 'خَ', sound: 'খা' },
-      { letter: 'لَ', sound: 'লা' },
-    ]
-  },
-  {
-    arabic: 'كَمَلَ',
-    bangla: 'কামালা',
-    meaning: 'পূর্ণ করা / Complete',
-    breakdown: [
-      { letter: 'كَ', sound: 'কা' },
-      { letter: 'مَ', sound: 'মা' },
-      { letter: 'لَ', sound: 'লা' },
-    ]
-  },
-  {
-    arabic: 'سَلَمَ',
-    bangla: 'সালামা',
-    meaning: 'শান্তি / Peace',
-    breakdown: [
-      { letter: 'سَ', sound: 'সা' },
-      { letter: 'لَ', sound: 'লা' },
-      { letter: 'مَ', sound: 'মা' },
-    ]
-  },
-  {
-    arabic: 'قَلَمَ',
-    bangla: 'ক্বালামা',
-    meaning: 'কলম / Pen',
-    breakdown: [
-      { letter: 'قَ', sound: 'ক্বা' },
-      { letter: 'لَ', sound: 'লা' },
-      { letter: 'مَ', sound: 'মা' },
-    ]
-  },
-  {
-    arabic: 'كَتَبَ',
-    bangla: 'কাতাবা',
-    meaning: 'লিখেছে / Wrote',
-    breakdown: [
-      { letter: 'كَ', sound: 'কা' },
-      { letter: 'تَ', sound: 'তা' },
-      { letter: 'بَ', sound: 'বা' },
-    ]
-  },
-  {
-    arabic: 'ذَهَبَ',
-    bangla: 'যাহাবা',
-    meaning: 'গেল / Went',
-    breakdown: [
-      { letter: 'ذَ', sound: 'যা' },
-      { letter: 'هَ', sound: 'হা' },
-      { letter: 'بَ', sound: 'বা' },
-    ]
-  },
-  {
-    arabic: 'فَتَحَ',
-    bangla: 'ফাতাহা',
-    meaning: 'খুলল / Opened',
-    breakdown: [
-      { letter: 'فَ', sound: 'ফা' },
-      { letter: 'تَ', sound: 'তা' },
-      { letter: 'حَ', sound: 'হা' },
-    ]
-  },
-  {
-    arabic: 'نَصَرَ',
-    bangla: 'নাসারা',
-    meaning: 'সাহায্য করল / Helped',
-    breakdown: [
-      { letter: 'نَ', sound: 'না' },
-      { letter: 'صَ', sound: 'সা' },
-      { letter: 'رَ', sound: 'রা' },
-    ]
-  },
-]
+  { arabic: 'قَرَأَ', bangla: 'কারাআ', meaning: 'পড়েছে / Read', breakdown: [{letter:'قَ',sound:'কা'},{letter:'رَ',sound:'রা'},{letter:'أَ',sound:'আ'}] },
+  { arabic: 'ذَكَرَ', bangla: 'যাকারা', meaning: 'স্মরণ করেছে / Remembered', breakdown: [{letter:'ذَ',sound:'যা'},{letter:'كَرَ',sound:'কারা'}] },
+
+  { arabic: 'سَجَدَ', bangla: 'সাজাদা', meaning: 'সিজদা করেছে', breakdown: [{letter:'سَ',sound:'সা'},{letter:'جَ',sound:'জা'},{letter:'دَ',sound:'দা'}] },
+  { arabic: 'شَكَرَ', bangla: 'শাকারা', meaning: 'কৃতজ্ঞতা প্রকাশ করেছে', breakdown: [{letter:'شَ',sound:'শা'},{letter:'كَرَ',sound:'কারা'}] },
+
+  { arabic: 'غَفَرَ', bangla: 'গাফারা', meaning: 'ক্ষমা করেছেন', breakdown: [{letter:'غَ',sound:'গা'},{letter:'فَرَ',sound:'ফারা'}] },
+  { arabic: 'كَفَرَ', bangla: 'কাফারা', meaning: 'অস্বীকার করেছে', breakdown: [{letter:'كَ',sound:'কা'},{letter:'فَرَ',sound:'ফারা'}] },
+
+  { arabic: 'هَدَى', bangla: 'হাদা', meaning: 'পথ দেখিয়েছেন', breakdown: [{letter:'هَ',sound:'হা'},{letter:'دَى',sound:'দা'}] },
+  { arabic: 'ضَلَلَ', bangla: 'দালালা', meaning: 'পথভ্রষ্ট হয়েছে', breakdown: [{letter:'ضَ',sound:'দ্বা'},{letter:'لَ',sound:'লা'},{letter:'لَ',sound:'লা'}] },
+
+  { arabic: 'نَفَعَ', bangla: 'নাফাআ', meaning: 'উপকার করেছে', breakdown: [{letter:'نَ',sound:'না'},{letter:'فَ',sound:'ফা'},{letter:'عَ',sound:'আ'}] },
+  { arabic: 'ضَرَرَ', bangla: 'দারারা', meaning: 'ক্ষতি করেছে', breakdown: [{letter:'ضَ',sound:'দ্বা'},{letter:'رَ',sound:'রা'},{letter:'رَ',sound:'রা'}] },
+
+  { arabic: 'أَمَرَ', bangla: 'আমারা', meaning: 'আদেশ দিয়েছেন', breakdown: [{letter:'أَ',sound:'আ'},{letter:'مَ',sound:'মা'},{letter:'رَ',sound:'রা'}] },
+  { arabic: 'نَهَى', bangla: 'নাহা', meaning: 'নিষেধ করেছেন', breakdown: [{letter:'نَ',sound:'না'},{letter:'هَى',sound:'হা'}] },
+
+  { arabic: 'عَطَى', bangla: 'আতা', meaning: 'দান করেছেন', breakdown: [{letter:'عَ',sound:'আ'},{letter:'طَى',sound:'তা'}] },
+  { arabic: 'مَنَعَ', bangla: 'মানাআ', meaning: 'বাধা দিয়েছে', breakdown: [{letter:'مَ',sound:'মা'},{letter:'نَ',sound:'না'},{letter:'عَ',sound:'আ'}] },
+
+  { arabic: 'حَكَمَ', bangla: 'হাকামা', meaning: 'ফয়সালা করেছেন', breakdown: [{letter:'حَ',sound:'হা'},{letter:'كَمَ',sound:'কামা'}] },
+  { arabic: 'عَدَلَ', bangla: 'আদালা', meaning: 'ন্যায়বিচার করেছে', breakdown: [{letter:'عَ',sound:'আ'},{letter:'دَ',sound:'দা'},{letter:'لَ',sound:'লা'}] },
+
+  { arabic: 'صَبَرَ', bangla: 'সাবারা', meaning: 'ধৈর্য ধরেছে', breakdown: [{letter:'صَ',sound:'সা'},{letter:'بَرَ',sound:'বারা'}] },
+  { arabic: 'فَرِحَ', bangla: 'ফারিহা', meaning: 'খুশি হয়েছে', breakdown: [{letter:'فَ',sound:'ফা'},{letter:'رِ',sound:'রি'},{letter:'حَ',sound:'হা'}] },
+
+  { arabic: 'بَكَى', bangla: 'বাকা', meaning: 'কেঁদেছে', breakdown: [{letter:'بَ',sound:'বা'},{letter:'كَى',sound:'কা'}] },
+  { arabic: 'ضَحِكَ', bangla: 'দাহিকা', meaning: 'হেসেছে', breakdown: [{letter:'ضَ',sound:'দ্বা'},{letter:'حِ',sound:'হি'},{letter:'كَ',sound:'কা'}] },
+
+  { arabic: 'حَمِدَ', bangla: 'হামিদা', meaning: 'প্রশংসা করেছে', breakdown: [{letter:'حَ',sound:'হা'},{letter:'مِ',sound:'মি'},{letter:'دَ',sound:'দা'}] },
+  { arabic: 'سَبَحَ', bangla: 'সাবাহা', meaning: 'তাসবিহ করেছে', breakdown: [{letter:'سَ',sound:'সা'},{letter:'بَ',sound:'বা'},{letter:'حَ',sound:'হা'}] },
+
+  { arabic: 'دَعَا', bangla: 'দাআ', meaning: 'ডেকেছে / দোয়া করেছে', breakdown: [{letter:'دَ',sound:'দা'},{letter:'عَا',sound:'আ'}] },
+  { arabic: 'رَجَا', bangla: 'রাজা', meaning: 'আশা করেছে', breakdown: [{letter:'رَ',sound:'রা'},{letter:'جَا',sound:'জা'}] },
+
+  { arabic: 'خَشِيَ', bangla: 'খাশিয়া', meaning: 'ভয় করেছে', breakdown: [{letter:'خَ',sound:'খা'},{letter:'شِ',sound:'শি'},{letter:'يَ',sound:'ইয়া'}] },
+  { arabic: 'أَمِنَ', bangla: 'আমিনা', meaning: 'নিরাপদ হয়েছে', breakdown: [{letter:'أَ',sound:'আ'},{letter:'مِ',sound:'মি'},{letter:'نَ',sound:'না'}] }
+];
+
+
 
 export default function FathaWords() {
   return (
@@ -140,7 +64,7 @@ export default function FathaWords() {
             <div className="text-center mb-6">
               <div
                 dir="rtl"
-                className="text-6xl md:text-7xl text-gray-800 mb-3"
+                className="text-6xl md:text-7xl text-gray-800 mb-3 leading-[1.6]"
                 style={{ fontFamily: "'Scheherazade New', 'Amiri', 'Traditional Arabic', serif" }}
               >
                 {word.arabic}

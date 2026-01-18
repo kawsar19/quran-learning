@@ -140,7 +140,7 @@ export default function DammaWords() {
             <div className="text-center mb-6">
               <div
                 dir="rtl"
-                className="text-6xl md:text-7xl text-gray-800 mb-3"
+                className="text-6xl md:text-7xl text-gray-800 mb-3 leading-[1.6]"
                 style={{ fontFamily: "'Scheherazade New', 'Amiri', 'Traditional Arabic', serif" }}
               >
                 {word.arabic}
