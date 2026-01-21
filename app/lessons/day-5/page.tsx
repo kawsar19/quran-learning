@@ -88,23 +88,7 @@ export default function Day5Page() {
         <HarakatLetters />
       </div>
 
-      {/* Pro Tip Section */}
-      <div className="bg-gradient-to-r from-amber-500 to-orange-500 p-1 rounded-3xl mb-20 shadow-xl">
-        <div className="bg-white rounded-[1.4rem] p-8 md:p-10">
-            <div className="flex flex-col md:flex-row gap-8 items-center">
-                <div className="text-6xl">🔥</div>
-                <div className="flex-1">
-                    <h4 className="text-2xl font-black text-gray-800 mb-2">প্রো টিপ (Pro Tip)</h4>
-                    <p className="text-gray-600 text-lg leading-relaxed">
-                        হরকত পড়ার সময় খেয়াল রাখবেন উচ্চারণ যেন খুব বেশি লম্বা না হয়। 
-                        হরকত এক আলিফ পরিমাণ টানার প্রয়োজন নেই, এটি দ্রুত ও স্পষ্ট উচ্চারণ করতে হয়। 
-                        সঠিক উচ্চারণ শিখতে নিচের কুইজটি দিয়ে নিজেকে যাচাই করুন।
-                    </p>
-                </div>
-            </div>
-        </div>
-      </div>
-
+   
       {/* Quiz Section with Premium Header */}
       <div className="mt-24 space-y-12">
         <div className="text-center max-w-2xl mx-auto">
@@ -118,13 +102,7 @@ export default function Day5Page() {
         <HarakatQuiz />
       </div>
 
-      {/* Final Encouragement */}
-      <div className="mt-24 text-center py-12 px-6 bg-gray-50 rounded-[3rem] border border-gray-100">
-          <div className="text-4xl mb-4">⭐</div>
-          <p className="text-gray-400 font-bold text-xs uppercase tracking-[0.3em] mb-2 font-mono">End of Lesson</p>
-          <h3 className="text-2xl font-black text-gray-800">আপনি এগিয়ে যাচ্ছেন!</h3>
-          <p className="text-gray-500 mt-2">পরবর্তী পাঠে আমরা একই সাথে একাধিক হরকতের ব্যবহার শিখবো।</p>
-      </div>
+   
     </LessonLayout>
   )
 }

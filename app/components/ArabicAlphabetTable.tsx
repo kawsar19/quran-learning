@@ -147,23 +147,7 @@ export default function ArabicAlphabetTable() {
         </div>
       </div>
       
-      {/* Legend / Tips */}
-      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div className="bg-amber-50 rounded-xl p-4 border border-amber-100 flex items-start gap-3">
-          <div className="p-2 bg-amber-100 rounded-lg text-amber-700">💡</div>
-          <div>
-            <h4 className="font-semibold text-amber-900 text-sm italic">Pro Tip</h4>
-            <p className="text-amber-800 text-xs">Arabic is read from <strong>Right to Left</strong>. Start from the top right letter Alif (ا).</p>
-          </div>
-        </div>
-        <div className="bg-emerald-50 rounded-xl p-4 border border-emerald-100 flex items-start gap-3">
-          <div className="p-2 bg-emerald-100 rounded-lg text-emerald-700">🔊</div>
-          <div>
-            <h4 className="font-semibold text-emerald-900 text-sm">Audio Support</h4>
-            <p className="text-emerald-800 text-xs">If audio doesn't play, ensure your volume is up and wait for the file to load.</p>
-          </div>
-        </div>
-      </div>
+
     </div>
   )
 }

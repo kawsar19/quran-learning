@@ -44,51 +44,70 @@ const fathaWords = [
 
 export default function FathaWords() {
   return (
-    <div className="space-y-4">
+    <div className="space-y-6">
       {fathaWords.map((word, index) => (
         <div
           key={index}
-          className="bg-white rounded-2xl shadow-lg overflow-hidden border border-red-100 hover:shadow-xl transition-shadow"
+          className="group bg-white rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100 overflow-hidden"
         >
-          {/* Word Header */}
-          <div className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-5 py-3 flex items-center justify-between">
-            <span className="text-lg font-bold">{index + 1}. {word.meaning}</span>
-            <div className="flex items-center gap-3">
-              <span className="text-sm bg-white/20 px-3 py-1 rounded-full">{word.bangla}</span>
+          {/* Word Header - Premium Rose Gradient */}
+          <div className="bg-gradient-to-r from-rose-600 via-rose-500 to-pink-500 px-6 py-4 flex items-center justify-between">
+            <div className="flex items-center gap-4">
+              <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-white/20 text-white font-bold backdrop-blur-sm border border-white/20">
+                {index + 1}
+              </span>
+              <span className="text-xl font-bold text-white tracking-tight leading-none group-hover:translate-x-1 transition-transform">
+                {word.meaning}
+              </span>
+            </div>
+            <div className="hidden sm:flex items-center gap-2">
+              <span className="text-xs font-semibold bg-rose-900/20 text-rose-50 px-3 py-1 rounded-full border border-white/10 uppercase tracking-widest whitespace-nowrap">
+                Fatha • {word.bangla}
+              </span>
             </div>
           </div>
 
           {/* Word Content */}
-          <div className="p-5">
-            {/* Main Word */}
-            <div className="text-center mb-6">
+          <div className="p-8">
+            {/* Main Word Section */}
+            <div className="flex flex-col items-center mb-10">
               <div
                 dir="rtl"
-                className="text-6xl md:text-7xl text-gray-800 mb-3 leading-[1.6]"
+                className="text-7xl md:text-8xl text-slate-800 mb-6 leading-tight transition-all duration-500 group-hover:scale-105 group-hover:text-rose-950"
                 style={{ fontFamily: "'Scheherazade New', 'Amiri', 'Traditional Arabic', serif" }}
               >
                 {word.arabic}
               </div>
-              <div className="text-2xl font-bold text-red-600">{word.bangla}</div>
+              <div className="relative">
+                <div className="absolute inset-0 bg-rose-400 blur-2xl opacity-10 group-hover:opacity-20 transition-opacity"></div>
+                <div className="relative text-3xl font-black text-rose-600 bg-rose-50/50 px-6 py-2 rounded-2xl border border-rose-100/50">
+                  {word.bangla}
+                </div>
+              </div>
             </div>
 
-            {/* Letter Breakdown */}
-            <div className="bg-red-50 rounded-xl p-4">
-              <h4 className="text-sm font-bold text-red-700 mb-3 text-center">অক্ষর বিশ্লেষণ (Letter Breakdown)</h4>
-              <div className="flex flex-wrap justify-center gap-3" dir="rtl">
+            {/* Letter Breakdown - Premium Cards */}
+            <div className="bg-slate-50/50 rounded-3xl p-6 border border-slate-100 relative">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-white px-4 py-0.5 rounded-full border border-slate-100 text-[10px] uppercase tracking-[0.2em] font-bold text-slate-400">
+                অক্ষর বিশ্লেষণ • Breakdown
+              </div>
+              
+              <div className="flex flex-wrap justify-center gap-4 pt-2" dir="rtl">
                 {word.breakdown.map((item, i) => (
                   <div
                     key={i}
-                    className="bg-white rounded-lg p-3 text-center shadow-sm border border-red-200 min-w-[60px]"
+                    className="flex flex-col items-center bg-white rounded-2xl p-4 shadow-[0_4px_12px_rgba(0,0,0,0,03)] border border-white hover:border-rose-300 hover:shadow-rose-100 transition-all duration-300 min-w-[80px]"
                   >
                     <div
-                      className="text-3xl text-gray-800"
+                      className="text-4xl text-slate-700 mb-2"
                       style={{ fontFamily: "'Scheherazade New', 'Amiri', 'Traditional Arabic', serif" }}
                     >
                       {item.letter}
                     </div>
                     {item.sound && (
-                      <div className="text-sm font-bold text-red-600 mt-1">{item.sound}</div>
+                      <div className="text-sm font-bold text-rose-600 bg-rose-50 px-3 py-0.5 rounded-lg border border-rose-100/50">
+                        {item.sound}
+                      </div>
                     )}
                   </div>
                 ))}
@@ -100,3 +119,5 @@ export default function FathaWords() {
     </div>
   )
 }
+
+
