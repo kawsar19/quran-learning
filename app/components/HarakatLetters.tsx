@@ -33,14 +33,21 @@ const letters = [
 
 export default function HarakatLetters() {
   return (
-    <div className="space-y-6" dir="rtl">
+    <div className="space-y-8" dir="rtl">
       {letters.map((letter, index) => (
-        <div key={index} className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
-          {/* Letter Header */}
-          <div className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-4 py-3 flex items-center justify-between" >
-            <span className="text-lg font-bold">{index + 1}. {letter.name}</span>
+        <div key={index} className="group bg-white rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100 overflow-hidden">
+          {/* Letter Header - Premium Emerald Gradient */}
+          <div className="bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-500 px-6 py-4 flex items-center justify-between">
+            <div className="flex items-center gap-4">
+              <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-white/20 text-white font-bold backdrop-blur-sm border border-white/20">
+                {index + 1}
+              </span>
+              <span className="text-xl font-bold text-white tracking-tight leading-none">
+                {letter.name}
+              </span>
+            </div>
             <span
-              className="text-3xl"
+              className="text-4xl text-white group-hover:scale-110 transition-transform duration-500 drop-shadow-md"
               style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
             >
               {letter.base}
@@ -48,45 +55,45 @@ export default function HarakatLetters() {
           </div>
 
           {/* Harakat Cards */}
-          <div className="grid grid-cols-3 gap-3 p-4">
+          <div className="grid grid-cols-3 gap-4 p-6">
             {/* Fatha */}
-            <div className="bg-gradient-to-b from-red-50 to-white rounded-xl p-4 text-center border-2 border-red-100 hover:border-red-300 hover:shadow-md transition-all flex flex-col items-center">
-              <div className="text-xs font-bold text-red-600 mb-2">ফাতহা (যবর)</div>
+            <div className="relative group/card bg-rose-50/30 rounded-3xl p-5 text-center border border-rose-100/50 hover:border-rose-300 hover:bg-rose-50 transition-all duration-300 flex flex-col items-center">
+              <div className="text-[10px] uppercase tracking-widest font-black text-rose-500 mb-2">ফাতহা (যবর)</div>
               <div
-                className="text-4xl md:text-5xl text-gray-800 mt-2 mb-5"
+                className="text-5xl md:text-6xl text-slate-800 mb-6 leading-tight group-hover/card:scale-110 transition-transform duration-500"
                 style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
               >
                 {letter.fatha}
               </div>
-              <div className="text-base font-bold text-red-700 bg-red-100 rounded-full px-3 py-1">
+              <div className="mt-auto text-base font-black text-rose-600 bg-white px-4 py-1 rounded-xl shadow-sm border border-rose-100">
                 {letter.fathaSound}
               </div>
             </div>
 
             {/* Kasra */}
-            <div className="bg-gradient-to-b from-green-50 to-white rounded-xl p-4 text-center border-2 border-green-100 hover:border-green-300 hover:shadow-md transition-all flex flex-col items-center">
-              <div className="text-xs font-bold text-green-600 mb-2">কাসরা (যের)</div>
+            <div className="relative group/card bg-emerald-50/30 rounded-3xl p-5 text-center border border-emerald-100/50 hover:border-emerald-300 hover:bg-emerald-50 transition-all duration-300 flex flex-col items-center">
+              <div className="text-[10px] uppercase tracking-widest font-black text-emerald-500 mb-2">কাসরা (যের)</div>
               <div
-                className="text-4xl md:text-5xl text-gray-800 mt-2 mb-5"
+                className="text-5xl md:text-6xl text-slate-800 mb-6 leading-tight group-hover/card:scale-110 transition-transform duration-500"
                 style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
               >
                 {letter.kasra}
               </div>
-              <div className="text-base font-bold text-green-700 bg-green-100 rounded-full px-3 py-1">
+              <div className="mt-auto text-base font-black text-emerald-600 bg-white px-4 py-1 rounded-xl shadow-sm border border-emerald-100">
                 {letter.kasraSound}
               </div>
             </div>
 
             {/* Damma */}
-            <div className="bg-gradient-to-b from-blue-50 to-white rounded-xl p-4 text-center border-2 border-blue-100 hover:border-blue-300 hover:shadow-md transition-all flex flex-col items-center">
-              <div className="text-xs font-bold text-blue-600 mb-2">দাম্মা (পেশ)</div>
+            <div className="relative group/card bg-sky-50/30 rounded-3xl p-5 text-center border border-sky-100/50 hover:border-sky-300 hover:bg-sky-50 transition-all duration-300 flex flex-col items-center">
+              <div className="text-[10px] uppercase tracking-widest font-black text-sky-500 mb-2">দাম্মা (পেশ)</div>
               <div
-                className="text-4xl md:text-5xl text-gray-800 mt-2 mb-5"
+                className="text-5xl md:text-6xl text-slate-800 mb-6 leading-tight group-hover/card:scale-110 transition-transform duration-500"
                 style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
               >
                 {letter.damma}
               </div>
-              <div className="text-base font-bold text-blue-700 bg-blue-100 rounded-full px-3 py-1">
+              <div className="mt-auto text-base font-black text-sky-600 bg-white px-4 py-1 rounded-xl shadow-sm border border-sky-100">
                 {letter.dammaSound}
               </div>
             </div>
@@ -96,3 +103,4 @@ export default function HarakatLetters() {
     </div>
   )
 }
+
