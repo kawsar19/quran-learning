@@ -16,12 +16,10 @@ export default function Day2Page() {
   return (
     <LessonLayout
       dayNumber={2}
-      title="Arabic Letter Shapes - আরবি অক্ষরের রূপ"
+      title=" আরবি অক্ষরের রূপ"
       videoId="VIDEO_ID_HERE"
     >
-      <h2 className="text-2xl font-bold text-gray-800 mb-4">
-        Understanding Letter Shapes | অক্ষরের রূপ বোঝা
-      </h2>
+      
 
     
 

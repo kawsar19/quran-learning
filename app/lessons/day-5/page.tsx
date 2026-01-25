@@ -12,31 +12,21 @@ export default function Day5Page() {
   return (
     <LessonLayout
       dayNumber={5}
-      title="Harakat (Vowel Marks) - হরকত (স্বরচিহ্ন)"
+      title=" হরকত"
       videoId="VIDEO_ID_HERE"
     >
       {/* Header with Glassmorphism */}
-      <div className="relative overflow-hidden bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 text-white p-8 md:p-12 rounded-[2rem] shadow-2xl mb-12">
-        <div className="relative z-10 text-center">
-            <h2 className="text-3xl md:text-5xl font-black mb-4 tracking-tight">হরকত - Harakat</h2>
-            <p className="text-indigo-100 text-lg md:text-xl font-medium opacity-90">আরবি স্বরচিহ্ন ও সঠিক উচ্চারণ পদ্ধতি</p>
-        </div>
-        {/* Abstract background shapes for premium look */}
-        <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
-        <div className="absolute bottom-0 left-0 w-64 h-64 bg-black/10 rounded-full blur-3xl -ml-32 -mb-32"></div>
-      </div>
+     
 
       {/* Goal Section */}
       <div className="bg-white border border-indigo-50 rounded-3xl p-8 mb-12 shadow-sm relative overflow-hidden">
         <div className="absolute top-0 left-0 w-2 h-full bg-indigo-500"></div>
         <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-3">
           <span className="flex items-center justify-center w-8 h-8 bg-indigo-100 text-indigo-600 rounded-lg text-lg">💡</span>
-          আজকের পাঠ
+          হরকত কাকে বলে?
         </h3>
         <p className="text-gray-600 leading-relaxed text-lg">
-          আরবি ভাষার প্রাণ হলো হরকত। যবর, যের এবং পেশ—এই তিনটি চিহ্ন ব্যবহার করে আমরা অক্ষরকে শব্দে রূপান্তর করি। 
-          আজ আমরা শিখবো কিভাবে প্রতিটি অক্ষরের সাথে এই হরকতগুলো যুক্ত হয়ে নতুন ধ্বনি তৈরি করে। 
-          মনোযোগ দিয়ে প্রতিটি অক্ষরের উচ্চারণ শুনুন এবং অনুশীলন করুন।
+          এক যবর, এক যের, এক পেশকে হরকত বলে। হরকতের উচ্চারণ তাড়াতাড়ি পড়িতে হয়।
         </p>
       </div>
 

@@ -79,19 +79,9 @@ export default function ArabicAlphabetTable() {
         {/* Modern decorative glass background */}
         <div className="absolute -inset-1 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-3xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
         
-        <div className="relative bg-white/80 backdrop-blur-xl rounded-2xl shadow-2xl border border-emerald-100 overflow-hidden">
+        <div className="relative bg-white/80 backdrop-blur-xl rounded-2xl   overflow-hidden">
           {/* Header section of the table */}
-          <div className="bg-gradient-to-r from-emerald-700 to-emerald-800 p-6 text-white flex justify-between items-center">
-            <div>
-              <h3 className="text-2xl font-bold">The Alphabet Grid</h3>
-              <p className="text-emerald-100 text-sm">Click any letter to hear its pronunciation</p>
-            </div>
-            <div className="hidden sm:block">
-              <span className="bg-white/20 px-3 py-1 rounded-full text-xs font-medium backdrop-blur-md">
-                28 Letters
-              </span>
-            </div>
-          </div>
+       
 
           <div className="p-4 sm:p-8">
             <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-7 lg:grid-cols-7 gap-3 sm:gap-4" dir="rtl">

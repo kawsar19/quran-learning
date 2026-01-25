@@ -16,11 +16,11 @@ export default function Day1Page() {
   return (
     <LessonLayout
       dayNumber={1}
-      title="Introduction to the Arabic Alphabet - আরবি বর্ণমালা পরিচিতি"
+      title="আরবি বর্ণমালা পরিচিতি"
       loomId="47bc76adf2e74c6baf572e0124736875"
     >
       <h2 className="text-2xl font-bold text-gray-800 mb-4">
-        The Arabic Alphabet | আরবি বর্ণমালা
+        আরবি বর্ণমালা
       </h2>
 
       <div className="space-y-3 mb-6">

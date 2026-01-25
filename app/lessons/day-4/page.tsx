@@ -15,7 +15,7 @@ export default function Day4Page() {
   return (
     <LessonLayout
       dayNumber={4}
-      title="Surah Al-Fatiha - সূরা আল-ফাতিহা"
+      title=" সূরা আল-ফাতিহা"
       videoId="VIDEO_ID_HERE"
     >
       {/* Header */}

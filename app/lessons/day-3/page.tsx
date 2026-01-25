@@ -117,12 +117,10 @@ export default function Day3Page() {
   return (
     <LessonLayout
       dayNumber={3}
-      title="Letter Combinations - অক্ষর সংযোগ"
+      title="অক্ষর সংযোগ"
       videoId="VIDEO_ID_HERE"
     >
-      <h2 className="text-2xl font-bold text-gray-800 mb-4">
-        Joining Letters Together | অক্ষর একসাথে যুক্ত করা
-      </h2>
+      
 
 
     
