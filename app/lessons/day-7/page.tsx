@@ -15,13 +15,13 @@ export default function Day7Page() {
   return (
     <LessonLayout
       dayNumber={7}
-      title="Tanween - তানউইন অনুশীলন"
+      title="Tanween - তানউইন"
       videoId="VIDEO_ID_HERE"
     >
       {/* Header */}
       <div className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white p-6 rounded-2xl shadow-xl text-center mb-8">
-        <h2 className="text-2xl font-bold mb-2">তানউইন (নুনেশন)</h2>
-        <p className="text-pink-100">Tanween / Nunation | নূন এর ধ্বনি যুক্ত করা</p>
+        <h2 className="text-2xl font-bold mb-2">তানউইন </h2>
+        <p className="text-pink-100"> নূন এর ধ্বনি যুক্ত করা</p>
       </div>
 
       {/* What is Tanween */}
@@ -30,13 +30,9 @@ export default function Day7Page() {
           <span className="text-2xl">📚</span> তানউইন কী?
         </h3>
         <p className="text-gray-700 mb-3">
-          তানউইন হল দুইটি হরকত একসাথে থাকা যা শব্দের শেষে &quot;ন&quot; এর ধ্বনি যোগ করে।
-          এটি আরবি ব্যাকরণে অনির্দিষ্ট (indefinite) বোঝাতে ব্যবহৃত হয়।
+       দুই যবর ( ً  ) দুই যের ( ٍ  ) দুই পেশ ( ٌ  ) কে তানওয়ীন বলে
         </p>
-        <p className="text-gray-600 text-sm">
-          <strong>English:</strong> Tanween (nunation) adds an &quot;n&quot; sound at the end of words,
-          indicating indefiniteness in Arabic grammar.
-        </p>
+        
       </div>
 
       {/* Three Tanween Explanation */}
@@ -49,8 +45,7 @@ export default function Day7Page() {
           >
             ـًـ
           </div>
-          <h3 className="font-bold text-orange-800 text-lg">ফাতহাতাইন</h3>
-          <p className="text-orange-600 text-sm">Fathatayn (Double Fatha)</p>
+          <h3 className="font-bold text-orange-800 text-lg">দুই যবর</h3>
           <div className="bg-orange-100 rounded-lg p-2 mt-3">
             <p className="text-gray-700 font-bold text-lg">= আন / an</p>
           </div>
@@ -68,8 +63,8 @@ export default function Day7Page() {
           >
             ـٍ
           </div>
-          <h3 className="font-bold text-teal-800 text-lg">কাসরাতাইন</h3>
-          <p className="text-teal-600 text-sm">Kasratayn (Double Kasra)</p>
+          <h3 className="font-bold text-teal-800 text-lg">দুই যের</h3>
+
           <div className="bg-teal-100 rounded-lg p-2 mt-3">
             <p className="text-gray-700 font-bold text-lg">= ইন / in</p>
           </div>
@@ -87,8 +82,8 @@ export default function Day7Page() {
           >
             ـٌ
           </div>
-          <h3 className="font-bold text-violet-800 text-lg">দাম্মাতাইন</h3>
-          <p className="text-violet-600 text-sm">Dammatayn (Double Damma)</p>
+          <h3 className="font-bold text-violet-800 text-lg">দুই যের</h3>
+
           <div className="bg-violet-100 rounded-lg p-2 mt-3">
             <p className="text-gray-700 font-bold text-lg">= উন / un</p>
           </div>
@@ -155,7 +150,7 @@ export default function Day7Page() {
         </h3>
         <div className="space-y-2 text-gray-700">
           <p>
-            <strong className="text-orange-600">ফাতহাতাইন (ً)</strong> এর সাথে সাধারণত একটি আলিফ (ا) থাকে:
+            <strong className="text-orange-600">দুই যবর (ً)</strong> এর সাথে সাধারণত একটি আলিফ (ا) থাকে:
             <span
               className="text-2xl mx-2"
               style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
@@ -164,7 +159,7 @@ export default function Day7Page() {
             </span>
           </p>
           <p>
-            <strong className="text-teal-600">কাসরাতাইন (ٍ)</strong> ও <strong className="text-violet-600">দাম্মাতাইন (ٌ)</strong> এর সাথে আলিফ লাগে না।
+            <strong className="text-teal-600">দুই যের (ٍ)</strong> ও <strong className="text-violet-600">দুই পেশ (ٌ)</strong> এর সাথে আলিফ লাগে না।
           </p>
         </div>
       </div>
@@ -176,16 +171,16 @@ export default function Day7Page() {
         </h3>
         <ul className="text-gray-700 space-y-1 text-sm">
           <li>• শব্দের শেষে তানউইন চিহ্ন দেখুন</li>
-          <li>• <span className="text-orange-600 font-medium">ফাতহাতাইন (ً)</span> = শব্দের শেষে &quot;আন&quot; যোগ করুন</li>
-          <li>• <span className="text-teal-600 font-medium">কাসরাতাইন (ٍ)</span> = শব্দের শেষে &quot;ইন&quot; যোগ করুন</li>
-          <li>• <span className="text-violet-600 font-medium">দাম্মাতাইন (ٌ)</span> = শব্দের শেষে &quot;উন&quot; যোগ করুন</li>
+          <li>• <span className="text-orange-600 font-medium">দুই যবর(ً)</span> = শব্দের শেষে &quot;আন&quot; যোগ করুন</li>
+          <li>• <span className="text-teal-600 font-medium">দুই যের (ٍ)</span> = শব্দের শেষে &quot;ইন&quot; যোগ করুন</li>
+          <li>• <span className="text-violet-600 font-medium">দুই পেশ (ٌ)</span> = শব্দের শেষে &quot;উন&quot; যোগ করুন</li>
         </ul>
       </div>
 
       {/* Section Title */}
       <h3 className="text-xl font-bold text-gray-800 mb-6 flex items-center gap-2">
         <span className="bg-pink-500 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm">১</span>
-        তানউইন শব্দ অনুশীলন (৩৬টি শব্দ)
+        তানউইন শব্দ অনুশীলন
       </h3>
 
       {/* Tanween Words Component */}
