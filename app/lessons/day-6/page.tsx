@@ -16,16 +16,6 @@ export default function Day6Page() {
   return (
     <LessonLayout dayNumber={6} title=" হরকত অনুশীলন" videoId="VIDEO_ID_HERE">
       {/* Header with Premium Gradient */}
-      <div className="relative overflow-hidden bg-gradient-to-br from-purple-600 via-pink-500 to-rose-500 text-white p-8 md:p-12 rounded-[2rem] shadow-2xl mb-12">
-        <div className="relative z-10 text-center">
-          <h2 className="text-3xl md:text-5xl font-black mb-4 tracking-tight">
-            {" "}
-            হরকত অনুশীলন
-          </h2>
-        </div>
-        <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
-        <div className="absolute bottom-0 left-0 w-64 h-64 bg-black/10 rounded-full blur-3xl -ml-32 -mb-32"></div>
-      </div>
 
       {/* Three Harakat Overview Table-like Cards */}
       <div className="grid md:grid-cols-3 gap-6 mb-12">
