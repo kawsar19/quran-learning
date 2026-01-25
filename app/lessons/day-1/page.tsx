@@ -19,7 +19,7 @@ export default function Day1Page() {
     <LessonLayout
       dayNumber={1}
       title="আরবি বর্ণমালা পরিচিতি"
-      loomId="47bc76adf2e74c6baf572e0124736875"
+      jumpshareId="jaWwq9h2Qvvn6n9LBpEV"
     >
       <h2 className="text-2xl font-bold text-gray-800 mb-6">হরফের পরিচয়</h2>
 
