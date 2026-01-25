@@ -496,16 +496,7 @@ export default function Day5Page() {
 
       {/* Quiz Section */}
       <div className="mt-16">
-        <div className="text-center max-w-2xl mx-auto mb-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3">
-            স্ব-মূল্যায়ন কুইজ
-          </h2>
-          <div className="h-1 w-20 bg-gradient-to-r from-emerald-500 to-teal-500 mx-auto rounded-full mb-4"></div>
-          <p className="text-gray-600">
-            আপনি হরকত কতটা শিখতে পেরেছেন তা যাচাই করতে নিচের প্রশ্নের সঠিক উত্তর
-            দিন।
-          </p>
-        </div>
+
         <HarakatQuiz />
       </div>
     </LessonLayout>
