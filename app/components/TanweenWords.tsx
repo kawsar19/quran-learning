@@ -128,7 +128,7 @@ export default function TanweenWords() {
         <div className="bg-gradient-to-r from-orange-500 to-amber-500 text-white p-4 rounded-xl mb-4">
           <div className="flex items-center justify-between">
             <div>
-              <h3 className="text-xl font-bold">ফাতহাতাইন (তানউইন ফাতহা)</h3>
+              <h3 className="text-xl font-bold">দুই যবর</h3>
               <p className="text-orange-100 text-sm">Fathatayn - Double Fatha</p>
             </div>
             <div className="text-right">
@@ -154,7 +154,7 @@ export default function TanweenWords() {
         <div className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white p-4 rounded-xl mb-4">
           <div className="flex items-center justify-between">
             <div>
-              <h3 className="text-xl font-bold">কাসরাতাইন (তানউইন কাসরা)</h3>
+              <h3 className="text-xl font-bold">দুই যের</h3>
               <p className="text-teal-100 text-sm">Kasratayn - Double Kasra</p>
             </div>
             <div className="text-right">
@@ -180,7 +180,7 @@ export default function TanweenWords() {
         <div className="bg-gradient-to-r from-violet-500 to-purple-500 text-white p-4 rounded-xl mb-4">
           <div className="flex items-center justify-between">
             <div>
-              <h3 className="text-xl font-bold">দাম্মাতাইন (তানউইন দাম্মা)</h3>
+              <h3 className="text-xl font-bold">দুই পেশ</h3>
               <p className="text-violet-100 text-sm">Dammatayn - Double Damma</p>
             </div>
             <div className="text-right">

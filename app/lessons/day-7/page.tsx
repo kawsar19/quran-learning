@@ -192,7 +192,8 @@ export default function Day7Page() {
           একই শব্দ - তিন রূপ
         </h3>
         <p className="text-center text-gray-600 text-sm mb-4">
-          লক্ষ্য করুন একই শব্দ তিন তানউইনে কিভাবে পড়া হয়
+          লক্ষ্য করুন একই শব্দ তিন
+          তানউইনে কিভাবে পড়া হয়
         </p>
 
         <div className="grid md:grid-cols-3 gap-4">
