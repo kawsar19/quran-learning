@@ -161,11 +161,8 @@ export default function Day3Page() {
       <div className="mt-12">
         <h2 className="text-2xl font-bold text-gray-800 mb-4 flex items-center gap-2">
           <span className="bg-teal-600 text-white w-10 h-10 rounded-full flex items-center justify-center text-lg">?</span>
-          কুইজ - অক্ষর সংযোগ যাচাই
+          কুইজ 
         </h2>
-        <p className="text-gray-600 mb-6">
-          আরবি অক্ষর সংযোগ দেখে সঠিক উত্তর নির্বাচন করুন। ২০টি প্রশ্নের উত্তর দিন।
-        </p>
         <LetterCombinationsQuiz />
       </div>
     </LessonLayout>
