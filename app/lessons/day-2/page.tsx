@@ -1,16 +1,18 @@
-import type { Metadata } from 'next'
-import LessonLayout from '@/app/components/LessonLayout'
-import ArabicAlphabetShapes from '@/app/components/ArabicAlphabetShapes'
-import ArabicShapesQuiz from '@/app/components/ArabicShapesQuiz'
+import type { Metadata } from "next";
+import LessonLayout from "@/app/components/LessonLayout";
+import ArabicAlphabetShapes from "@/app/components/ArabicAlphabetShapes";
+import ArabicShapesQuiz from "@/app/components/ArabicShapesQuiz";
 
 export const metadata: Metadata = {
-  title: 'Day 2 - Arabic Letter Shapes | 30 Days Quran Learning',
-  description: 'Learn the different shapes of Arabic letters - Independent, Initial, Medial, and Final forms. Day 2 of the 30 Days Quran Learning program.',
+  title: "Day 2 - Arabic Letter Shapes | 30 Days Quran Learning",
+  description:
+    "Learn the different shapes of Arabic letters - Independent, Initial, Medial, and Final forms. Day 2 of the 30 Days Quran Learning program.",
   openGraph: {
-    title: 'Day 2 - Arabic Letter Shapes | 30 Days Quran Learning',
-    description: 'Learn the different shapes of Arabic letters - Independent, Initial, Medial, and Final forms. Day 2 of the 30 Days Quran Learning program.',
+    title: "Day 2 - Arabic Letter Shapes | 30 Days Quran Learning",
+    description:
+      "Learn the different shapes of Arabic letters - Independent, Initial, Medial, and Final forms. Day 2 of the 30 Days Quran Learning program.",
   },
-}
+};
 
 export default function Day2Page() {
   return (
@@ -18,19 +20,21 @@ export default function Day2Page() {
       dayNumber={2}
       title=" আরবি অক্ষরের রূপ"
       videoId="VIDEO_ID_HERE"
+      jumpshareId="UwL2GwVSMSXK4Lnaugmd"
     >
-      
       <ArabicAlphabetShapes />
 
       {/* Quiz Section */}
       <div className="mt-12">
         <h2 className="text-2xl font-bold text-gray-800 mb-4 flex items-center gap-2">
-          <span className="bg-purple-600 text-white w-10 h-10 rounded-full flex items-center justify-center text-lg">?</span>
-          কুইজ 
+          <span className="bg-purple-600 text-white w-10 h-10 rounded-full flex items-center justify-center text-lg">
+            ?
+          </span>
+          কুইজ
         </h2>
 
         <ArabicShapesQuiz />
       </div>
     </LessonLayout>
-  )
+  );
 }
