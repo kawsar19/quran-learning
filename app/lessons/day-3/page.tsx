@@ -120,7 +120,7 @@ export default function Day3Page() {
       dayNumber={3}
       title="অক্ষর সংযোগ"
       videoId="VIDEO_ID_HERE"
-      jumpshareId=""
+      jumpshareId="V9RhzMeFpmdUhiWvwfKB"
     >
       {/* Letter Combinations Grid */}
       <div
