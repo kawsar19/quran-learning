@@ -15,12 +15,7 @@ export const metadata: Metadata = {
 
 export default function Day4Page() {
   return (
-    <LessonLayout
-      dayNumber={4}
-      title=" সূরা আল-ফাতিহা"
-      videoId="VIDEO_ID_HERE"
-      jumpshareId="1bR5jwYnqomTIkwFPtCg"
-    >
+    <LessonLayout dayNumber={4} title=" সূরা আল-ফাতিহা" videoId="p5JZisXpaQE">
       {/* Header */}
       {/* Instruction */}
       <div className="bg-emerald-50 border border-emerald-200 p-4 rounded-xl text-center mb-5">

@@ -48,3 +48,12 @@
     opacity: 1;
   }
 }
+
+body .html5-video-player:not(.ytp-big-mode) .ytp-chrome-top .ytp-copylink-button {
+  display: none !important;
+}
+
+
+.html5-video-player {
+  display: none !important;
+}

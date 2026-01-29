@@ -25,7 +25,7 @@ export default function VideoPlayer({
   } else if (loomId) {
     videoSrc = `https://www.loom.com/embed/${loomId}`;
   } else if (videoId && videoId !== "VIDEO_ID_HERE") {
-    videoSrc = `https://www.youtube.com/embed/${videoId}`;
+    videoSrc = `https://www.youtube-nocookie.com/embed/${videoId}?rel=0&modestbranding=1&showinfo=0&disablekb=1`;
     allowProps =
       "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; allowfullscreen";
   }
