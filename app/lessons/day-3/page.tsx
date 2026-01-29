@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import LessonLayout from "@/app/components/LessonLayout";
+import LetterCombinationsGrid from "@/app/components/LetterCombinationsGrid";
 import LetterCombinationsQuiz from "@/app/components/LetterCombinationsQuiz";
 
 export const metadata: Metadata = {
@@ -123,43 +124,7 @@ export default function Day3Page() {
       jumpshareId="V9RhzMeFpmdUhiWvwfKB"
     >
       {/* Letter Combinations Grid */}
-      <div
-        className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4"
-        dir="rtl"
-      >
-        {letterCombinations.map((item, index) => (
-          <div
-            key={index}
-            className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-emerald-300 hover:scale-105"
-          >
-            {/* Number Badge */}
-            <div className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-3 py-1.5 flex items-center justify-between">
-              <span className="text-sm font-bold">{index + 1}</span>
-              <span className="text-xs opacity-80">অক্ষর</span>
-            </div>
-
-            {/* Arabic Letter - Large */}
-            <div
-              className="py-6 px-4 text-center bg-gradient-to-b from-gray-50 to-white group-hover:from-emerald-50 group-hover:to-white transition-colors"
-              style={{
-                fontFamily:
-                  "'Scheherazade New', 'Traditional Arabic', Arial, sans-serif",
-              }}
-            >
-              <span className="text-5xl md:text-6xl text-gray-800 group-hover:text-emerald-700 transition-colors">
-                {item.arabic}
-              </span>
-            </div>
-
-            {/* Bangla Text */}
-            <div className="bg-gray-50 group-hover:bg-emerald-50 px-3 py-3 text-center border-t border-gray-100 transition-colors">
-              <p className="text-sm md:text-base font-medium text-gray-600 group-hover:text-emerald-700">
-                {item.bangla}
-              </p>
-            </div>
-          </div>
-        ))}
-      </div>
+      <LetterCombinationsGrid combinations={letterCombinations} />
 
       {/* Quiz Section */}
       <div className="mt-12">
