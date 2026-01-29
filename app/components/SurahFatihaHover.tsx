@@ -1,6 +1,78 @@
 'use client'
 
+import { useRef, useCallback, useEffect } from 'react'
+
+const AUDIO_SRC = '/audios/Arabic 1.m4a'
+
+const LETTER_AUDIO: Record<string, { start: number; end: number }> = {
+  ا: { start: 2, end: 3 },
+  ب: { start: 3.5, end: 4.7 },
+  ت: { start: 5, end: 6.8 },
+  ث: { start: 6.8, end: 8.7 },
+  ج: { start: 8.7, end: 10.5 },
+  ح: { start: 10.6, end: 12.6 },
+  خ: { start: 12.7, end: 14.6 },
+  د: { start: 14.7, end: 16.6 },
+  ذ: { start: 16.7, end: 18.6 },
+  ر: { start: 18.7, end: 20.6 },
+  ز: { start: 20.7, end: 22.6 },
+  س: { start: 22.7, end: 24.6 },
+  ش: { start: 24.7, end: 26.6 },
+  ص: { start: 27, end: 30 },
+  ض: { start: 30, end: 32.5 },
+  ط: { start: 32.5, end: 34.5 },
+  ظ: { start: 34.5, end: 36.5 },
+  ع: { start: 36.5, end: 39 },
+  غ: { start: 39, end: 42.5 },
+  ف: { start: 42.5, end: 44.5 },
+  ق: { start: 44.5, end: 47 },
+  ك: { start: 47.2, end: 49 },
+  ل: { start: 49, end: 52 },
+  م: { start: 52, end: 55 },
+  ن: { start: 55, end: 57 },
+  ه: { start: 59.5, end: 62.5 },
+  و: { start: 57.5, end: 59.7 },
+  ي: { start: 66, end: 69 },
+}
+
 export default function SurahFatihaHover() {
+  const audioRef = useRef<HTMLAudioElement | null>(null)
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  const playLetter = useCallback((letter: string) => {
+    const seg = LETTER_AUDIO[letter]
+    if (!seg) return
+
+    if (audioRef.current) audioRef.current.pause()
+    if (timerRef.current) clearTimeout(timerRef.current)
+
+    if (!audioRef.current) {
+      audioRef.current = new Audio(AUDIO_SRC)
+    }
+    const audio = audioRef.current
+    audio.currentTime = seg.start
+    audio.play().catch(console.error)
+
+    timerRef.current = setTimeout(() => {
+      audio.pause()
+    }, (seg.end - seg.start) * 1000)
+  }, [])
+
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      const target = e.target as HTMLElement
+      if (target.classList.contains('haraf')) {
+        const letter = target.textContent?.trim()
+        if (letter) playLetter(letter)
+      }
+    }
+    document.addEventListener('click', handler)
+    return () => {
+      document.removeEventListener('click', handler)
+      if (audioRef.current) audioRef.current.pause()
+      if (timerRef.current) clearTimeout(timerRef.current)
+    }
+  }, [playLetter])
   return (
     <div className="space-y-6">
       {/* Bismillah */}
