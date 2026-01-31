@@ -1,4 +1,5 @@
 "use client";
+
 const fathaWords = [
   {
     arabic: "قَرَأَ",
@@ -525,7 +526,9 @@ const fathaWords = [
 export default function FathaWords() {
   return (
     <div className="space-y-6">
-      {fathaWords.map((word, index) => (
+      {fathaWords.map((word, index) => {
+        if (!word) return null;
+        return (
         <div
           key={index}
           className="group bg-white rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100 overflow-hidden"
@@ -604,7 +607,8 @@ export default function FathaWords() {
             </div>
           </div>
         </div>
-      ))}
+        );
+      })}
     </div>
   );
 }
