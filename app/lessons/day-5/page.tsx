@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import LessonLayout from "@/app/components/LessonLayout";
 import HarakatQuiz from "@/app/components/HarakatQuiz";
+import HarakatAudioGrid from "@/app/components/HarakatAudioGrid";
 
 export const metadata: Metadata = {
   title: "Day 5 - Harakat (Vowel Marks) | 30 Days Quran Learning",
@@ -380,30 +381,7 @@ export default function Day5Page() {
             </p>
           </div>
         </div>
-        <div
-          className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-7 gap-3"
-          dir="rtl"
-        >
-          {letters.map((letter, index) => (
-            <div
-              key={index}
-              className="bg-gradient-to-br from-red-50 to-rose-50 border border-red-100 rounded-xl p-3 text-center hover:shadow-lg hover:border-red-300 transition-all"
-            >
-              <div
-                className="text-3xl md:text-4xl text-gray-800 mb-2"
-                style={{
-                  fontFamily: "'Scheherazade New', 'Amiri', serif",
-                  lineHeight: `2`,
-                }}
-              >
-                {letter.fatha}
-              </div>
-              <div className="text-sm font-bold text-red-600 bg-white rounded-lg py-1 px-2">
-                {letter.fathaSound}
-              </div>
-            </div>
-          ))}
-        </div>
+        <HarakatAudioGrid letters={letters} type="fatha" />
       </div>
 
       {/* ZER / KASRA Section */}
@@ -424,30 +402,7 @@ export default function Day5Page() {
             </p>
           </div>
         </div>
-        <div
-          className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-7 gap-3"
-          dir="rtl"
-        >
-          {letters.map((letter, index) => (
-            <div
-              key={index}
-              className="bg-gradient-to-br from-emerald-50 to-teal-50 border border-emerald-100 rounded-xl p-3 text-center hover:shadow-lg hover:border-emerald-300 transition-all"
-            >
-              <div
-                className="text-3xl md:text-4xl text-gray-800 mb-2"
-                style={{
-                  fontFamily: "'Scheherazade New', 'Amiri', serif",
-                  lineHeight: "2",
-                }}
-              >
-                {letter.kasra}
-              </div>
-              <div className="text-sm font-bold text-emerald-600 bg-white rounded-lg py-1 px-2">
-                {letter.kasraSound}
-              </div>
-            </div>
-          ))}
-        </div>
+        <HarakatAudioGrid letters={letters} type="kasra" />
       </div>
 
       {/* PESH / DAMMA Section */}
