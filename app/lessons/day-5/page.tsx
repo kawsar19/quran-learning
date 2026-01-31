@@ -320,9 +320,7 @@ export default function Day5Page() {
             ـَ
           </div>
           <h3 className="font-bold text-gray-800 text-lg mb-1">ফাতহা (যবর)</h3>
-          <p className="text-red-600 font-semibold text-sm mb-3">
-            Fatha / Zabar
-          </p>
+
           <p className="text-gray-600 text-sm">
             অক্ষরের উপরে বসে <strong>&quot;আ&quot;</strong> ধ্বনি তৈরি করে।
           </p>
@@ -337,9 +335,7 @@ export default function Day5Page() {
             ـِ
           </div>
           <h3 className="font-bold text-gray-800 text-lg mb-1">কাসরা (যের)</h3>
-          <p className="text-emerald-600 font-semibold text-sm mb-3">
-            Kasra / Zer
-          </p>
+
           <p className="text-gray-600 text-sm">
             অক্ষরের নিচে বসে <strong>&quot;ই&quot;</strong> ধ্বনি তৈরি করে।
           </p>
@@ -354,9 +350,7 @@ export default function Day5Page() {
             ـُ
           </div>
           <h3 className="font-bold text-gray-800 text-lg mb-1">দাম্মা (পেশ)</h3>
-          <p className="text-blue-600 font-semibold text-sm mb-3">
-            Damma / Pesh
-          </p>
+
           <p className="text-gray-600 text-sm">
             অক্ষরের উপরে বসে <strong>&quot;উ&quot;</strong> ধ্বনি তৈরি করে।
           </p>
@@ -451,7 +445,6 @@ export default function Day5Page() {
 
       {/* Quiz Section */}
       <div className="mt-16">
-
         <HarakatQuiz />
       </div>
     </LessonLayout>
