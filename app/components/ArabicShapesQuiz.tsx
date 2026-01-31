@@ -294,7 +294,7 @@ export default function ArabicShapesQuiz() {
         {question.displayArabic && (
           <div
             className="text-8xl md:text-9xl text-gray-800 py-4 bg-white rounded-xl shadow-inner"
-            style={{ fontFamily: "'Scheherazade New', 'Amiri', 'Traditional Arabic', serif" }}
+            style={{ fontFamily: "'Amiri Quran', serif" }}
           >
             {question.displayArabic}
           </div>
@@ -327,7 +327,7 @@ export default function ArabicShapesQuiz() {
               {option.arabic && (
                 <div
                   className="text-3xl mb-1"
-                  style={{ fontFamily: "'Scheherazade New', 'Amiri', 'Traditional Arabic', serif" }}
+                  style={{ fontFamily: "'Amiri Quran', serif" }}
                 >
                   {option.arabic}
                 </div>

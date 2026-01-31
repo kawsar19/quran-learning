@@ -48,7 +48,7 @@ export default function HarakatLetters() {
             </div>
             <span
               className="text-4xl text-white group-hover:scale-110 transition-transform duration-500 drop-shadow-md"
-              style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+              style={{ fontFamily: "'Amiri Quran', serif" }}
             >
               {letter.base}
             </span>
@@ -61,7 +61,7 @@ export default function HarakatLetters() {
               <div className="text-[10px] uppercase tracking-widest font-black text-rose-500 mb-2">ফাতহা (যবর)</div>
               <div
                 className="text-5xl md:text-6xl text-slate-800 mb-6 leading-tight group-hover/card:scale-110 transition-transform duration-500"
-                style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+                style={{ fontFamily: "'Amiri Quran', serif" }}
               >
                 {letter.fatha}
               </div>
@@ -75,7 +75,7 @@ export default function HarakatLetters() {
               <div className="text-[10px] uppercase tracking-widest font-black text-emerald-500 mb-2">কাসরা (যের)</div>
               <div
                 className="text-5xl md:text-6xl text-slate-800 mb-6 leading-tight group-hover/card:scale-110 transition-transform duration-500"
-                style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+                style={{ fontFamily: "'Amiri Quran', serif" }}
               >
                 {letter.kasra}
               </div>
@@ -89,7 +89,7 @@ export default function HarakatLetters() {
               <div className="text-[10px] uppercase tracking-widest font-black text-sky-500 mb-2">দাম্মা (পেশ)</div>
               <div
                 className="text-5xl md:text-6xl text-slate-800 mb-6 leading-tight group-hover/card:scale-110 transition-transform duration-500"
-                style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+                style={{ fontFamily: "'Amiri Quran', serif" }}
               >
                 {letter.damma}
               </div>

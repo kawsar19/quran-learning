@@ -110,7 +110,7 @@ function WordCard({ word }: WordCardProps) {
       <div
         dir="rtl"
         className="text-4xl md:text-5xl text-gray-800 mb-2 leading-[1.8]"
-        style={{ fontFamily: "'Scheherazade New', 'Amiri', 'Traditional Arabic', serif" }}
+        style={{ fontFamily: "'Amiri Quran', serif" }}
       >
         {word.arabic}
       </div>
@@ -134,7 +134,7 @@ export default function TanweenWords() {
             <div className="text-right">
               <div
                 className="text-4xl"
-                style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+                style={{ fontFamily: "'Amiri Quran', serif" }}
               >
                 ـً
               </div>
@@ -160,7 +160,7 @@ export default function TanweenWords() {
             <div className="text-right">
               <div
                 className="text-4xl"
-                style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+                style={{ fontFamily: "'Amiri Quran', serif" }}
               >
                 ـٍ
               </div>
@@ -186,7 +186,7 @@ export default function TanweenWords() {
             <div className="text-right">
               <div
                 className="text-4xl"
-                style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+                style={{ fontFamily: "'Amiri Quran', serif" }}
               >
                 ـٌ
               </div>

@@ -126,7 +126,7 @@ export default function Day11Page() {
           <div className="bg-white rounded-xl p-4 text-center shadow-sm border-2 border-red-200">
             <div
               className="text-6xl text-red-600 mb-2"
-              style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+              style={{ fontFamily: "'Amiri Quran', serif" }}
             >
               ا
             </div>
@@ -135,7 +135,7 @@ export default function Day11Page() {
             <div className="mt-3 p-2 bg-red-50 rounded-lg">
               <span
                 className="text-3xl text-red-700"
-                style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+                style={{ fontFamily: "'Amiri Quran', serif" }}
               >
                 بَا
               </span>
@@ -147,7 +147,7 @@ export default function Day11Page() {
           <div className="bg-white rounded-xl p-4 text-center shadow-sm border-2 border-blue-200">
             <div
               className="text-6xl text-blue-600 mb-2"
-              style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+              style={{ fontFamily: "'Amiri Quran', serif" }}
             >
               و
             </div>
@@ -156,7 +156,7 @@ export default function Day11Page() {
             <div className="mt-3 p-2 bg-blue-50 rounded-lg">
               <span
                 className="text-3xl text-blue-700"
-                style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+                style={{ fontFamily: "'Amiri Quran', serif" }}
               >
                 بُو
               </span>
@@ -168,7 +168,7 @@ export default function Day11Page() {
           <div className="bg-white rounded-xl p-4 text-center shadow-sm border-2 border-green-200">
             <div
               className="text-6xl text-green-600 mb-2"
-              style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+              style={{ fontFamily: "'Amiri Quran', serif" }}
             >
               ي
             </div>
@@ -177,7 +177,7 @@ export default function Day11Page() {
             <div className="mt-3 p-2 bg-green-50 rounded-lg">
               <span
                 className="text-3xl text-green-700"
-                style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+                style={{ fontFamily: "'Amiri Quran', serif" }}
               >
                 بِي
               </span>
@@ -220,14 +220,14 @@ export default function Day11Page() {
           <div className="flex items-center justify-center gap-4 mb-4">
             <span
               className="text-4xl text-red-600"
-              style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+              style={{ fontFamily: "'Amiri Quran', serif" }}
             >
               ـَ
             </span>
             <span className="text-2xl text-gray-500">+</span>
             <span
               className="text-4xl text-red-600"
-              style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+              style={{ fontFamily: "'Amiri Quran', serif" }}
             >
               ا
             </span>
@@ -245,7 +245,7 @@ export default function Day11Page() {
               >
                 <div
                   className="text-3xl text-gray-800 mb-1"
-                  style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+                  style={{ fontFamily: "'Amiri Quran', serif" }}
                 >
                   {item.withMadd}
                 </div>
@@ -266,14 +266,14 @@ export default function Day11Page() {
           <div className="flex items-center justify-center gap-4 mb-4">
             <span
               className="text-4xl text-blue-600"
-              style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+              style={{ fontFamily: "'Amiri Quran', serif" }}
             >
               ـُ
             </span>
             <span className="text-2xl text-gray-500">+</span>
             <span
               className="text-4xl text-blue-600"
-              style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+              style={{ fontFamily: "'Amiri Quran', serif" }}
             >
               و
             </span>
@@ -291,7 +291,7 @@ export default function Day11Page() {
               >
                 <div
                   className="text-3xl text-gray-800 mb-1"
-                  style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+                  style={{ fontFamily: "'Amiri Quran', serif" }}
                 >
                   {item.withMadd}
                 </div>
@@ -312,14 +312,14 @@ export default function Day11Page() {
           <div className="flex items-center justify-center gap-4 mb-4">
             <span
               className="text-4xl text-green-600"
-              style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+              style={{ fontFamily: "'Amiri Quran', serif" }}
             >
               ـِ
             </span>
             <span className="text-2xl text-gray-500">+</span>
             <span
               className="text-4xl text-green-600"
-              style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+              style={{ fontFamily: "'Amiri Quran', serif" }}
             >
               ي
             </span>
@@ -337,7 +337,7 @@ export default function Day11Page() {
               >
                 <div
                   className="text-3xl text-gray-800 mb-1"
-                  style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+                  style={{ fontFamily: "'Amiri Quran', serif" }}
                 >
                   {item.withMadd}
                 </div>
@@ -363,7 +363,7 @@ export default function Day11Page() {
                 <th className="p-3 text-teal-700">উচ্চারণ</th>
               </tr>
             </thead>
-            <tbody style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}>
+            <tbody style={{ fontFamily: "'Amiri Quran', serif" }}>
               <tr className="border-b border-gray-200 bg-red-50">
                 <td className="p-3">
                   <span className="text-3xl text-gray-600">بَ</span>
@@ -411,7 +411,7 @@ export default function Day11Page() {
                 <div
                   dir="rtl"
                   className="text-3xl text-gray-800"
-                  style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+                  style={{ fontFamily: "'Amiri Quran', serif" }}
                 >
                   {item.word}
                 </div>
@@ -427,7 +427,7 @@ export default function Day11Page() {
               }`}>
                 মাদ্দ: {item.maddType} (<span
                   className="text-lg"
-                  style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+                  style={{ fontFamily: "'Amiri Quran', serif" }}
                 >{item.maddLetter}</span>)
               </div>
             </div>
@@ -445,7 +445,7 @@ export default function Day11Page() {
             <div
               dir="rtl"
               className="text-2xl md:text-3xl text-gray-800 mb-3 text-center leading-loose"
-              style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+              style={{ fontFamily: "'Amiri Quran', serif" }}
             >
               بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيمِ
             </div>
@@ -458,7 +458,7 @@ export default function Day11Page() {
             <div
               dir="rtl"
               className="text-2xl md:text-3xl text-gray-800 mb-3 text-center leading-loose"
-              style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+              style={{ fontFamily: "'Amiri Quran', serif" }}
             >
               الْحَمْدُ لِلّٰهِ رَبِّ الْعٰلَمِينَ
             </div>
@@ -476,7 +476,7 @@ export default function Day11Page() {
           <div className="bg-gray-700 rounded-lg p-4">
             <div
               className="text-3xl mb-2"
-              style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+              style={{ fontFamily: "'Amiri Quran', serif" }}
             >
               ـَا
             </div>
@@ -486,7 +486,7 @@ export default function Day11Page() {
           <div className="bg-gray-700 rounded-lg p-4">
             <div
               className="text-3xl mb-2"
-              style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+              style={{ fontFamily: "'Amiri Quran', serif" }}
             >
               ـُو
             </div>
@@ -496,7 +496,7 @@ export default function Day11Page() {
           <div className="bg-gray-700 rounded-lg p-4">
             <div
               className="text-3xl mb-2"
-              style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+              style={{ fontFamily: "'Amiri Quran', serif" }}
             >
               ـِي
             </div>

@@ -108,7 +108,7 @@ export default function Day13Page() {
       <div className="bg-gradient-to-r from-cyan-600 via-teal-500 to-emerald-500 text-white p-8 rounded-3xl shadow-xl text-center mb-10">
         <h2
           className="text-4xl font-bold mb-3"
-          style={{ fontFamily: "'Scheherazade New', serif" }}
+          style={{ fontFamily: "'Amiri Quran', serif" }}
         >
           اَلْإِخْفَاء
         </h2>
@@ -174,7 +174,7 @@ export default function Day13Page() {
             <div className="text-center mt-3">
               <span
                 className="text-4xl text-gray-800"
-                style={{ fontFamily: "'Scheherazade New', serif" }}
+                style={{ fontFamily: "'Amiri Quran', serif" }}
               >
                 اَنْتَ
               </span>
@@ -222,7 +222,7 @@ export default function Day13Page() {
           <div
             dir="rtl"
             className="text-center text-white text-3xl md:text-4xl leading-loose"
-            style={{ fontFamily: "'Scheherazade New', serif" }}
+            style={{ fontFamily: "'Amiri Quran', serif" }}
           >
             ت ، ث ، ج ، د ، ذ ، ز ، س ، ش ، ص ، ض ، ط ، ظ ، ف ، ق ، ك
           </div>
@@ -236,7 +236,7 @@ export default function Day13Page() {
             >
               <div
                 className="text-4xl text-cyan-600 mb-2"
-                style={{ fontFamily: "'Scheherazade New', serif" }}
+                style={{ fontFamily: "'Amiri Quran', serif" }}
               >
                 {letter.arabic}
               </div>
@@ -256,7 +256,7 @@ export default function Day13Page() {
           <div className="bg-gray-700/50 rounded-xl p-4 inline-block">
             <span
               className="text-3xl"
-              style={{ fontFamily: "'Scheherazade New', serif" }}
+              style={{ fontFamily: "'Amiri Quran', serif" }}
             >
               نْ / ً ٍ ٌ
             </span>
@@ -290,7 +290,7 @@ export default function Day13Page() {
               <div className="flex items-center justify-between mb-2">
                 <span
                   className="bg-cyan-500 text-white text-sm px-2 py-1 rounded-lg"
-                  style={{ fontFamily: "'Scheherazade New', serif" }}
+                  style={{ fontFamily: "'Amiri Quran', serif" }}
                 >
                   {example.letter}
                 </span>
@@ -300,7 +300,7 @@ export default function Day13Page() {
                 dir="rtl"
                 className="text-3xl text-gray-800 mb-2 text-center"
                 style={{
-                  fontFamily: "'Scheherazade New', serif",
+                  fontFamily: "'Amiri Quran', serif",
                   lineHeight: "1.8",
                 }}
               >
@@ -327,7 +327,7 @@ export default function Day13Page() {
             <div
               dir="rtl"
               className="text-3xl text-gray-800 mb-3 text-center leading-loose"
-              style={{ fontFamily: "'Scheherazade New', serif" }}
+              style={{ fontFamily: "'Amiri Quran', serif" }}
             >
               يَوْمَ يَتَذَكَّرُ الْاِنْسَانُ
             </div>
@@ -340,7 +340,7 @@ export default function Day13Page() {
             <div
               dir="rtl"
               className="text-3xl text-gray-800 mb-3 text-center leading-loose"
-              style={{ fontFamily: "'Scheherazade New', serif" }}
+              style={{ fontFamily: "'Amiri Quran', serif" }}
             >
               مَاءً ثَجَّاجًا
             </div>
@@ -353,7 +353,7 @@ export default function Day13Page() {
             <div
               dir="rtl"
               className="text-3xl text-gray-800 mb-3 text-center leading-loose"
-              style={{ fontFamily: "'Scheherazade New', serif" }}
+              style={{ fontFamily: "'Amiri Quran', serif" }}
             >
               عَيْنًا جَارِيَةً
             </div>

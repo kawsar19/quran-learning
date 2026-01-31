@@ -83,14 +83,14 @@ export default function Day12Page() {
           <strong>নরম</strong> বা <strong>কোমল</strong>। যখন{" "}
           <span
             className="text-2xl text-orange-600 mx-1"
-            style={{ fontFamily: "'Scheherazade New', serif" }}
+            style={{ fontFamily: "'Amiri Quran', serif" }}
           >
             وْ
           </span>{" "}
           (ওয়াও সাকিন) অথবা{" "}
           <span
             className="text-2xl text-orange-600 mx-1"
-            style={{ fontFamily: "'Scheherazade New', serif" }}
+            style={{ fontFamily: "'Amiri Quran', serif" }}
           >
             يْ
           </span>{" "}
@@ -111,7 +111,7 @@ export default function Day12Page() {
         <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-2 border-blue-200 rounded-2xl p-6 text-center">
           <div
             className="text-7xl text-blue-600 mb-4"
-            style={{ fontFamily: "'Scheherazade New', serif" }}
+            style={{ fontFamily: "'Amiri Quran', serif" }}
           >
             وْ
           </div>
@@ -129,7 +129,7 @@ export default function Day12Page() {
               উদাহরণ:{" "}
               <span
                 className="text-xl"
-                style={{ fontFamily: "'Scheherazade New', serif" }}
+                style={{ fontFamily: "'Amiri Quran', serif" }}
               >
                 خَوْف
               </span>{" "}
@@ -142,7 +142,7 @@ export default function Day12Page() {
         <div className="bg-gradient-to-br from-purple-50 to-pink-50 border-2 border-purple-200 rounded-2xl p-6 text-center">
           <div
             className="text-7xl text-purple-600 mb-4"
-            style={{ fontFamily: "'Scheherazade New', serif" }}
+            style={{ fontFamily: "'Amiri Quran', serif" }}
           >
             يْ
           </div>
@@ -160,7 +160,7 @@ export default function Day12Page() {
               উদাহরণ:{" "}
               <span
                 className="text-xl"
-                style={{ fontFamily: "'Scheherazade New', serif" }}
+                style={{ fontFamily: "'Amiri Quran', serif" }}
               >
                 بَيْت
               </span>{" "}
@@ -184,11 +184,11 @@ export default function Day12Page() {
                 <th className="p-3 text-rose-700">মদ্দ</th>
               </tr>
             </thead>
-            <tbody style={{ fontFamily: "'Scheherazade New', serif" }}>
+            <tbody style={{ fontFamily: "'Amiri Quran', serif" }}>
               <tr className="border-b border-rose-100">
                 <td
                   className="p-3 text-gray-700"
-                  style={{ fontFamily: "system-ui" }}
+                  style={{ fontFamily: "'Tiro Bangla', serif" }}
                 >
                   আগের হরফে
                 </td>
@@ -198,7 +198,7 @@ export default function Day12Page() {
               <tr className="border-b border-rose-100">
                 <td
                   className="p-3 text-gray-700"
-                  style={{ fontFamily: "system-ui" }}
+                  style={{ fontFamily: "'Tiro Bangla', serif" }}
                 >
                   ওয়াও উদাহরণ
                 </td>
@@ -212,7 +212,7 @@ export default function Day12Page() {
               <tr>
                 <td
                   className="p-3 text-gray-700"
-                  style={{ fontFamily: "system-ui" }}
+                  style={{ fontFamily: "'Tiro Bangla', serif" }}
                 >
                   ইয়া উদাহরণ
                 </td>
@@ -232,7 +232,7 @@ export default function Day12Page() {
       <div className="mb-12">
         <div className="flex items-center gap-4 mb-6">
           <div className="w-14 h-14 bg-blue-500 text-white rounded-2xl flex items-center justify-center text-2xl font-black shadow-lg">
-            <span style={{ fontFamily: "'Scheherazade New', serif" }}>وْ</span>
+            <span style={{ fontFamily: "'Amiri Quran', serif" }}>وْ</span>
           </div>
           <div>
             <h3 className="text-2xl font-bold text-gray-800">
@@ -251,7 +251,7 @@ export default function Day12Page() {
                 dir="rtl"
                 className="text-4xl text-gray-800 mb-2"
                 style={{
-                  fontFamily: "'Scheherazade New', serif",
+                  fontFamily: "'Amiri Quran', serif",
                   lineHeight: "1.8",
                 }}
               >
@@ -270,7 +270,7 @@ export default function Day12Page() {
       <div className="mb-12">
         <div className="flex items-center gap-4 mb-6">
           <div className="w-14 h-14 bg-purple-500 text-white rounded-2xl flex items-center justify-center text-2xl font-black shadow-lg">
-            <span style={{ fontFamily: "'Scheherazade New', serif" }}>يْ</span>
+            <span style={{ fontFamily: "'Amiri Quran', serif" }}>يْ</span>
           </div>
           <div>
             <h3 className="text-2xl font-bold text-gray-800">
@@ -289,7 +289,7 @@ export default function Day12Page() {
                 dir="rtl"
                 className="text-4xl text-gray-800 mb-2"
                 style={{
-                  fontFamily: "'Scheherazade New', serif",
+                  fontFamily: "'Amiri Quran', serif",
                   lineHeight: "1.8",
                 }}
               >
@@ -314,7 +314,7 @@ export default function Day12Page() {
             <div
               dir="rtl"
               className="text-3xl text-gray-800 mb-3 text-center leading-loose"
-              style={{ fontFamily: "'Scheherazade New', serif" }}
+              style={{ fontFamily: "'Amiri Quran', serif" }}
             >
               لَا رَيْبَ فِيْهِ
             </div>
@@ -327,7 +327,7 @@ export default function Day12Page() {
             <div
               dir="rtl"
               className="text-3xl text-gray-800 mb-3 text-center leading-loose"
-              style={{ fontFamily: "'Scheherazade New', serif" }}
+              style={{ fontFamily: "'Amiri Quran', serif" }}
             >
               مٰلِكِ يَوْمِ الدِّيْنِ
             </div>
@@ -340,7 +340,7 @@ export default function Day12Page() {
             <div
               dir="rtl"
               className="text-3xl text-gray-800 mb-3 text-center leading-loose"
-              style={{ fontFamily: "'Scheherazade New', serif" }}
+              style={{ fontFamily: "'Amiri Quran', serif" }}
             >
               وَاللَّيْلِ اِذَا يَغْشٰى
             </div>
@@ -361,7 +361,7 @@ export default function Day12Page() {
           <div className="bg-gray-700/50 rounded-xl p-4">
             <div
               className="text-4xl mb-2"
-              style={{ fontFamily: "'Scheherazade New', serif" }}
+              style={{ fontFamily: "'Amiri Quran', serif" }}
             >
               ـَوْ
             </div>
@@ -373,7 +373,7 @@ export default function Day12Page() {
           <div className="bg-gray-700/50 rounded-xl p-4">
             <div
               className="text-4xl mb-2"
-              style={{ fontFamily: "'Scheherazade New', serif" }}
+              style={{ fontFamily: "'Amiri Quran', serif" }}
             >
               ـَيْ
             </div>

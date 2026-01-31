@@ -169,7 +169,7 @@ export default function AlphabetQuiz() {
         <p className="text-gray-600 mb-4">এই অক্ষরের নাম কী?</p>
         <div
           className="text-9xl text-gray-800 mb-2 leading-[1.4]"
-          style={{ fontFamily: "'Scheherazade New', 'Amiri', 'Traditional Arabic', serif" }}
+          style={{ fontFamily: "'Amiri Quran', serif" }}
         >
           {question.arabic}
         </div>

@@ -294,7 +294,7 @@ export default function LetterCombinationsQuiz() {
         {question.displayArabic && (
           <div
             className="text-7xl md:text-8xl text-gray-800 py-6 bg-white rounded-xl shadow-inner"
-            style={{ fontFamily: "'Scheherazade New', 'Amiri', 'Traditional Arabic', serif" }}
+            style={{ fontFamily: "'Amiri Quran', serif" }}
           >
             {question.displayArabic}
           </div>
@@ -327,7 +327,7 @@ export default function LetterCombinationsQuiz() {
               {option.arabic && (
                 <div
                   className="text-3xl mb-1"
-                  style={{ fontFamily: "'Scheherazade New', 'Amiri', 'Traditional Arabic', serif" }}
+                  style={{ fontFamily: "'Amiri Quran', serif" }}
                 >
                   {option.arabic}
                 </div>

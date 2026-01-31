@@ -322,7 +322,7 @@ export default function ShiddatQuiz() {
               <div className="relative bg-white border-2 border-purple-100 px-10 py-8 rounded-3xl shadow-sm">
                 <span
                   className="text-7xl md:text-8xl text-gray-800 leading-none select-none"
-                  style={{ fontFamily: "'Scheherazade New', 'Amiri', 'Traditional Arabic', serif" }}
+                  style={{ fontFamily: "'Amiri Quran', serif" }}
                 >
                   {question.displayArabic}
                 </span>
@@ -354,7 +354,7 @@ export default function ShiddatQuiz() {
                 {option.arabic && (
                   <div
                     className={`text-3xl md:text-4xl mb-2 transition-transform duration-300 ${!showResult ? 'group-hover:scale-110' : ''}`}
-                    style={{ fontFamily: "'Scheherazade New', 'Amiri', 'Traditional Arabic', serif" }}
+                    style={{ fontFamily: "'Amiri Quran', serif" }}
                   >
                     {option.arabic}
                   </div>

@@ -192,7 +192,7 @@ export default function MixedHarakatWords() {
               <div
                 dir="rtl"
                 className="text-7xl md:text-8xl text-slate-800 mb-6 leading-tight transition-all duration-500 group-hover:scale-105 group-hover:text-indigo-950"
-                style={{ fontFamily: "'Scheherazade New', 'Amiri', 'Traditional Arabic', serif" }}
+                style={{ fontFamily: "'Amiri Quran', serif" }}
               >
                 {word.arabic}
               </div>
@@ -220,7 +220,7 @@ export default function MixedHarakatWords() {
                     >
                       <div
                         className="text-4xl text-slate-800 mb-1"
-                        style={{ fontFamily: "'Scheherazade New', 'Amiri', 'Traditional Arabic', serif" }}
+                        style={{ fontFamily: "'Amiri Quran', serif" }}
                       >
                         {item.letter}
                       </div>

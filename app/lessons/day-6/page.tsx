@@ -22,7 +22,7 @@ export default function Day6Page() {
         <div className="bg-white border border-red-100 rounded-3xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
           <div
             className="text-5xl text-red-500 mb-4"
-            style={{ fontFamily: "'Scheherazade New', 'Amiri', serif" }}
+            style={{ fontFamily: "'Amiri Quran', serif" }}
           >
             ـَ
           </div>
@@ -33,7 +33,7 @@ export default function Day6Page() {
           <div className="bg-red-50 rounded-2xl py-3 px-4 flex items-center justify-center gap-3">
             <span
               className="text-3xl text-gray-800"
-              style={{ fontFamily: "'Scheherazade New', serif" }}
+              style={{ fontFamily: "'Amiri Quran', serif" }}
             >
               بَ
             </span>
@@ -45,7 +45,7 @@ export default function Day6Page() {
         <div className="bg-white border border-emerald-100 rounded-3xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
           <div
             className="text-5xl text-emerald-500 mb-4"
-            style={{ fontFamily: "'Scheherazade New', 'Amiri', serif" }}
+            style={{ fontFamily: "'Amiri Quran', serif" }}
           >
             ـِ
           </div>
@@ -56,7 +56,7 @@ export default function Day6Page() {
           <div className="bg-emerald-50 rounded-2xl py-3 px-4 flex items-center justify-center gap-3">
             <span
               className="text-3xl text-gray-800"
-              style={{ fontFamily: "'Scheherazade New', serif" }}
+              style={{ fontFamily: "'Amiri Quran', serif" }}
             >
               بِ
             </span>
@@ -68,7 +68,7 @@ export default function Day6Page() {
         <div className="bg-white border border-blue-100 rounded-3xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
           <div
             className="text-5xl text-blue-500 mb-4"
-            style={{ fontFamily: "'Scheherazade New', 'Amiri', serif" }}
+            style={{ fontFamily: "'Amiri Quran', serif" }}
           >
             ـُ
           </div>
@@ -79,7 +79,7 @@ export default function Day6Page() {
           <div className="bg-blue-50 rounded-2xl py-3 px-4 flex items-center justify-center gap-3">
             <span
               className="text-3xl text-gray-800"
-              style={{ fontFamily: "'Scheherazade New', serif" }}
+              style={{ fontFamily: "'Amiri Quran', serif" }}
             >
               بُ
             </span>

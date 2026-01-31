@@ -524,7 +524,7 @@ export default function HarakatQuiz() {
                   className="text-8xl md:text-9xl text-gray-800 leading-none select-none leading-[1.3] md:leading-[1.8]"
                   style={{
                     fontFamily:
-                      "'Scheherazade New', 'Amiri', 'Traditional Arabic', serif",
+                      "'Amiri Quran', serif",
                   }}
                 >
                   {question.displayArabic}
@@ -571,7 +571,7 @@ export default function HarakatQuiz() {
                     className={`text-4xl md:text-5xl mb-2 transition-transform duration-300 ${!showResult ? "group-hover:scale-110" : ""}`}
                     style={{
                       fontFamily:
-                        "'Scheherazade New', 'Amiri', 'Traditional Arabic', serif",
+                        "'Amiri Quran', serif",
                       lineHeight: "2",
                     }}
                   >

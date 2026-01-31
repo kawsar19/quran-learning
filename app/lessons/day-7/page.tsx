@@ -34,7 +34,7 @@ export default function Day7Page() {
           <span className="text-2xl">📚</span> তানউইন কী?
         </h3>
         <p className="text-gray-700 mb-3">
-          দুই যবর ( ً ) দুই যের ( ٍ ) দুই পেশ ( ٌ ) কে তানওয়ীন বলে
+          দুই যবর ({"\u00A0\u00A0ً\u00A0\u00A0"}) দুই যের ({"\u00A0\u00A0ٍ\u00A0\u00A0"}) দুই পেশ ({"\u00A0\u00A0ٌ\u00A0\u00A0"}) কে তানওয়ীন বলে
         </p>
       </div>
 
@@ -45,7 +45,7 @@ export default function Day7Page() {
           <div
             className="text-5xl text-orange-600 mb-2"
             style={{
-              fontFamily: "'Scheherazade New', 'Traditional Arabic', serif",
+              fontFamily: "'Amiri Quran', serif",
             }}
           >
             ـًـ
@@ -66,7 +66,7 @@ export default function Day7Page() {
           <div
             className="text-5xl text-teal-600 mb-2"
             style={{
-              fontFamily: "'Scheherazade New', 'Traditional Arabic', serif",
+              fontFamily: "'Amiri Quran', serif",
             }}
           >
             ـٍ
@@ -88,7 +88,7 @@ export default function Day7Page() {
           <div
             className="text-5xl text-violet-600 mb-2"
             style={{
-              fontFamily: "'Scheherazade New', 'Traditional Arabic', serif",
+              fontFamily: "'Amiri Quran', serif",
             }}
           >
             ـٌ
@@ -123,7 +123,7 @@ export default function Day7Page() {
             </thead>
             <tbody
               style={{
-                fontFamily: "'Scheherazade New', 'Traditional Arabic', serif",
+                fontFamily: "'Amiri Quran', serif",
               }}
             >
               <tr className="border-b border-gray-200">
@@ -132,7 +132,7 @@ export default function Day7Page() {
                 </td>
                 <td
                   className="p-3 text-red-600 font-bold"
-                  style={{ fontFamily: "system-ui" }}
+                  style={{ fontFamily: "'Tiro Bangla', serif" }}
                 >
                   বা
                 </td>
@@ -141,7 +141,7 @@ export default function Day7Page() {
                 </td>
                 <td
                   className="p-3 text-orange-600 font-bold"
-                  style={{ fontFamily: "system-ui" }}
+                  style={{ fontFamily: "'Tiro Bangla', serif" }}
                 >
                   বান
                 </td>
@@ -152,7 +152,7 @@ export default function Day7Page() {
                 </td>
                 <td
                   className="p-3 text-green-600 font-bold"
-                  style={{ fontFamily: "system-ui" }}
+                  style={{ fontFamily: "'Tiro Bangla', serif" }}
                 >
                   বি
                 </td>
@@ -161,7 +161,7 @@ export default function Day7Page() {
                 </td>
                 <td
                   className="p-3 text-teal-600 font-bold"
-                  style={{ fontFamily: "system-ui" }}
+                  style={{ fontFamily: "'Tiro Bangla', serif" }}
                 >
                   বিন
                 </td>
@@ -172,7 +172,7 @@ export default function Day7Page() {
                 </td>
                 <td
                   className="p-3 text-blue-600 font-bold"
-                  style={{ fontFamily: "system-ui" }}
+                  style={{ fontFamily: "'Tiro Bangla', serif" }}
                 >
                   বু
                 </td>
@@ -181,7 +181,7 @@ export default function Day7Page() {
                 </td>
                 <td
                   className="p-3 text-violet-600 font-bold"
-                  style={{ fontFamily: "system-ui" }}
+                  style={{ fontFamily: "'Tiro Bangla', serif" }}
                 >
                   বুন
                 </td>
@@ -198,20 +198,20 @@ export default function Day7Page() {
         </h3>
         <div className="space-y-2 text-gray-700">
           <p>
-            <strong className="text-orange-600">দুই যবর (ً)</strong> এর সাথে
-            সাধারণত একটি আলিফ (ا) থাকে:
+            <strong className="text-orange-600">দুই যবর ({"\u00A0ً\u00A0"})</strong> এর সাথে
+            সাধারণত একটি আলিফ ({"\u00A0ا\u00A0"}) থাকে:
             <span
               className="text-2xl mx-2"
               style={{
-                fontFamily: "'Scheherazade New', 'Traditional Arabic', serif",
+                fontFamily: "'Amiri Quran', serif",
               }}
             >
               كِتَابًا
             </span>
           </p>
           <p>
-            <strong className="text-teal-600">দুই যের (ٍ)</strong> ও{" "}
-            <strong className="text-violet-600">দুই পেশ (ٌ)</strong> এর সাথে
+            <strong className="text-teal-600">দুই যের ({"\u00A0ٍ\u00A0"})</strong> ও{" "}
+            <strong className="text-violet-600">দুই পেশ ({"\u00A0ٌ\u00A0"})</strong> এর সাথে
             আলিফ লাগে না।
           </p>
         </div>
@@ -225,15 +225,15 @@ export default function Day7Page() {
         <ul className="text-gray-700 space-y-1 text-sm">
           <li>• শব্দের শেষে তানউইন চিহ্ন দেখুন</li>
           <li>
-            • <span className="text-orange-600 font-medium">দুই যবর(ً)</span> =
+            • <span className="text-orange-600 font-medium">দুই যবর({"\u00A0ً\u00A0"})</span> =
             শব্দের শেষে &quot;আন&quot; যোগ করুন
           </li>
           <li>
-            • <span className="text-teal-600 font-medium">দুই যের (ٍ)</span> =
+            • <span className="text-teal-600 font-medium">দুই যের ({"\u00A0ٍ\u00A0"})</span> =
             শব্দের শেষে &quot;ইন&quot; যোগ করুন
           </li>
           <li>
-            • <span className="text-violet-600 font-medium">দুই পেশ (ٌ)</span> =
+            • <span className="text-violet-600 font-medium">দুই পেশ ({"\u00A0ٌ\u00A0"})</span> =
             শব্দের শেষে &quot;উন&quot; যোগ করুন
           </li>
         </ul>
@@ -271,7 +271,7 @@ export default function Day7Page() {
                   className="text-2xl"
                   style={{
                     fontFamily:
-                      "'Scheherazade New', 'Traditional Arabic', serif",
+                      "'Amiri Quran', serif",
                   }}
                 >
                   كِتَابًا
@@ -283,7 +283,7 @@ export default function Day7Page() {
                   className="text-2xl"
                   style={{
                     fontFamily:
-                      "'Scheherazade New', 'Traditional Arabic', serif",
+                      "'Amiri Quran', serif",
                   }}
                 >
                   كِتَابٍ
@@ -295,7 +295,7 @@ export default function Day7Page() {
                   className="text-2xl"
                   style={{
                     fontFamily:
-                      "'Scheherazade New', 'Traditional Arabic', serif",
+                      "'Amiri Quran', serif",
                   }}
                 >
                   كِتَابٌ
@@ -316,7 +316,7 @@ export default function Day7Page() {
                   className="text-2xl"
                   style={{
                     fontFamily:
-                      "'Scheherazade New', 'Traditional Arabic', serif",
+                      "'Amiri Quran', serif",
                   }}
                 >
                   وَلَدًا
@@ -328,7 +328,7 @@ export default function Day7Page() {
                   className="text-2xl"
                   style={{
                     fontFamily:
-                      "'Scheherazade New', 'Traditional Arabic', serif",
+                      "'Amiri Quran', serif",
                   }}
                 >
                   وَلَدٍ
@@ -340,7 +340,7 @@ export default function Day7Page() {
                   className="text-2xl"
                   style={{
                     fontFamily:
-                      "'Scheherazade New', 'Traditional Arabic', serif",
+                      "'Amiri Quran', serif",
                   }}
                 >
                   وَلَدٌ
@@ -361,7 +361,7 @@ export default function Day7Page() {
                   className="text-2xl"
                   style={{
                     fontFamily:
-                      "'Scheherazade New', 'Traditional Arabic', serif",
+                      "'Amiri Quran', serif",
                   }}
                 >
                   بَيْتًا
@@ -373,7 +373,7 @@ export default function Day7Page() {
                   className="text-2xl"
                   style={{
                     fontFamily:
-                      "'Scheherazade New', 'Traditional Arabic', serif",
+                      "'Amiri Quran', serif",
                   }}
                 >
                   بَيْتٍ
@@ -385,7 +385,7 @@ export default function Day7Page() {
                   className="text-2xl"
                   style={{
                     fontFamily:
-                      "'Scheherazade New', 'Traditional Arabic', serif",
+                      "'Amiri Quran', serif",
                   }}
                 >
                   بَيْتٌ
@@ -408,7 +408,7 @@ export default function Day7Page() {
               dir="rtl"
               className="text-3xl text-gray-800 mb-2 text-center"
               style={{
-                fontFamily: "'Scheherazade New', 'Traditional Arabic', serif",
+                fontFamily: "'Amiri Quran', serif",
               }}
             >
               بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيمِ
@@ -424,7 +424,7 @@ export default function Day7Page() {
               dir="rtl"
               className="text-3xl text-gray-800 mb-2 text-center"
               style={{
-                fontFamily: "'Scheherazade New', 'Traditional Arabic', serif",
+                fontFamily: "'Amiri Quran', serif",
               }}
             >
               هُدًى لِّلْمُتَّقِينَ
@@ -439,7 +439,7 @@ export default function Day7Page() {
               dir="rtl"
               className="text-3xl text-gray-800 mb-2 text-center"
               style={{
-                fontFamily: "'Scheherazade New', 'Traditional Arabic', serif",
+                fontFamily: "'Amiri Quran', serif",
               }}
             >
               وَمَا هُوَ بِمَجْنُونٍ

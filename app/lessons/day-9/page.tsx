@@ -39,7 +39,7 @@ export default function Day9Page() {
           <span
             className="text-2xl align-middle"
             style={{
-              fontFamily: "'Scheherazade New', 'Traditional Arabic', serif",
+              fontFamily: "'Amiri Quran', serif",
             }}
           >
             ْ
@@ -58,7 +58,7 @@ export default function Day9Page() {
         <div
           className="text-8xl text-slate-700 mb-4"
           style={{
-            fontFamily: "'Scheherazade New', 'Traditional Arabic', serif",
+            fontFamily: "'Amiri Quran', serif",
           }}
         >
           ـْـ
@@ -87,7 +87,7 @@ export default function Day9Page() {
             </thead>
             <tbody
               style={{
-                fontFamily: "'Scheherazade New', 'Traditional Arabic', serif",
+                fontFamily: "'Amiri Quran', serif",
               }}
             >
               <tr className="border-b border-gray-200 bg-red-50">
@@ -96,7 +96,7 @@ export default function Day9Page() {
                 </td>
                 <td
                   className="p-3 text-red-600 font-bold"
-                  style={{ fontFamily: "system-ui" }}
+                  style={{ fontFamily: "'Tiro Bangla', serif" }}
                 >
                   বা
                 </td>
@@ -105,7 +105,7 @@ export default function Day9Page() {
                 </td>
                 <td
                   className="p-3 text-slate-700 font-bold"
-                  style={{ fontFamily: "system-ui" }}
+                  style={{ fontFamily: "'Tiro Bangla', serif" }}
                 >
                   ব্
                 </td>
@@ -116,7 +116,7 @@ export default function Day9Page() {
                 </td>
                 <td
                   className="p-3 text-green-600 font-bold"
-                  style={{ fontFamily: "system-ui" }}
+                  style={{ fontFamily: "'Tiro Bangla', serif" }}
                 >
                   মি
                 </td>
@@ -125,7 +125,7 @@ export default function Day9Page() {
                 </td>
                 <td
                   className="p-3 text-slate-700 font-bold"
-                  style={{ fontFamily: "system-ui" }}
+                  style={{ fontFamily: "'Tiro Bangla', serif" }}
                 >
                   ম্
                 </td>
@@ -136,7 +136,7 @@ export default function Day9Page() {
                 </td>
                 <td
                   className="p-3 text-blue-600 font-bold"
-                  style={{ fontFamily: "system-ui" }}
+                  style={{ fontFamily: "'Tiro Bangla', serif" }}
                 >
                   নু
                 </td>
@@ -145,7 +145,7 @@ export default function Day9Page() {
                 </td>
                 <td
                   className="p-3 text-slate-700 font-bold"
-                  style={{ fontFamily: "system-ui" }}
+                  style={{ fontFamily: "'Tiro Bangla', serif" }}
                 >
                   ন্
                 </td>
@@ -177,7 +177,7 @@ export default function Day9Page() {
             <span
               className="text-2xl mx-1"
               style={{
-                fontFamily: "'Scheherazade New', 'Traditional Arabic', serif",
+                fontFamily: "'Amiri Quran', serif",
               }}
             >
               مِنْ
@@ -209,7 +209,7 @@ export default function Day9Page() {
           dir="rtl"
           className="flex flex-wrap justify-center gap-3 text-4xl leading-[1.6] text-slate-700"
           style={{
-            fontFamily: "'Scheherazade New', 'Traditional Arabic', serif",
+            fontFamily: "'Amiri Quran', serif",
           }}
         >
           <span className="bg-white px-3 py-2 rounded-lg shadow-sm">اْ</span>
@@ -266,7 +266,7 @@ export default function Day9Page() {
               dir="rtl"
               className="text-3xl text-gray-800 mb-3 text-center leading-loose"
               style={{
-                fontFamily: "'Scheherazade New', 'Traditional Arabic', serif",
+                fontFamily: "'Amiri Quran', serif",
               }}
             >
               قُلْ هُوَ اللهُ أَحَدٌ
@@ -285,7 +285,7 @@ export default function Day9Page() {
                   className="text-xl"
                   style={{
                     fontFamily:
-                      "'Scheherazade New', 'Traditional Arabic', serif",
+                      "'Amiri Quran', serif",
                   }}
                 >
                   قُلْ
@@ -295,7 +295,7 @@ export default function Day9Page() {
                   className="text-xl"
                   style={{
                     fontFamily:
-                      "'Scheherazade New', 'Traditional Arabic', serif",
+                      "'Amiri Quran', serif",
                   }}
                 >
                   لْ
@@ -311,7 +311,7 @@ export default function Day9Page() {
               dir="rtl"
               className="text-3xl text-gray-800 mb-3 text-center leading-loose"
               style={{
-                fontFamily: "'Scheherazade New', 'Traditional Arabic', serif",
+                fontFamily: "'Amiri Quran', serif",
               }}
             >
               الْحَمْدُ لِلّٰهِ رَبِّ الْعٰلَمِينَ
@@ -330,7 +330,7 @@ export default function Day9Page() {
                   className="text-xl"
                   style={{
                     fontFamily:
-                      "'Scheherazade New', 'Traditional Arabic', serif",
+                      "'Amiri Quran', serif",
                   }}
                 >
                   الْحَمْدُ
@@ -340,7 +340,7 @@ export default function Day9Page() {
                   className="text-xl"
                   style={{
                     fontFamily:
-                      "'Scheherazade New', 'Traditional Arabic', serif",
+                      "'Amiri Quran', serif",
                   }}
                 >
                   لْ
@@ -350,7 +350,7 @@ export default function Day9Page() {
                   className="text-xl"
                   style={{
                     fontFamily:
-                      "'Scheherazade New', 'Traditional Arabic', serif",
+                      "'Amiri Quran', serif",
                   }}
                 >
                   مْ
@@ -366,7 +366,7 @@ export default function Day9Page() {
               dir="rtl"
               className="text-3xl text-gray-800 mb-3 text-center leading-loose"
               style={{
-                fontFamily: "'Scheherazade New', 'Traditional Arabic', serif",
+                fontFamily: "'Amiri Quran', serif",
               }}
             >
               بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيمِ
@@ -385,7 +385,7 @@ export default function Day9Page() {
                   className="text-xl"
                   style={{
                     fontFamily:
-                      "'Scheherazade New', 'Traditional Arabic', serif",
+                      "'Amiri Quran', serif",
                   }}
                 >
                   بِسْمِ
@@ -395,7 +395,7 @@ export default function Day9Page() {
                   className="text-xl"
                   style={{
                     fontFamily:
-                      "'Scheherazade New', 'Traditional Arabic', serif",
+                      "'Amiri Quran', serif",
                   }}
                 >
                   سْ
@@ -405,7 +405,7 @@ export default function Day9Page() {
                   className="text-xl mx-1"
                   style={{
                     fontFamily:
-                      "'Scheherazade New', 'Traditional Arabic', serif",
+                      "'Amiri Quran', serif",
                   }}
                 >
                   الرَّحْمٰنِ
@@ -415,7 +415,7 @@ export default function Day9Page() {
                   className="text-xl"
                   style={{
                     fontFamily:
-                      "'Scheherazade New', 'Traditional Arabic', serif",
+                      "'Amiri Quran', serif",
                   }}
                 >
                   حْ
@@ -431,7 +431,7 @@ export default function Day9Page() {
               dir="rtl"
               className="text-3xl text-gray-800 mb-3 text-center leading-loose"
               style={{
-                fontFamily: "'Scheherazade New', 'Traditional Arabic', serif",
+                fontFamily: "'Amiri Quran', serif",
               }}
             >
               وَالْعَصْرِ ۙ إِنَّ الْإِنسَانَ لَفِي خُسْرٍ
@@ -450,7 +450,7 @@ export default function Day9Page() {
                   className="text-xl"
                   style={{
                     fontFamily:
-                      "'Scheherazade New', 'Traditional Arabic', serif",
+                      "'Amiri Quran', serif",
                   }}
                 >
                   الْعَصْرِ
@@ -460,7 +460,7 @@ export default function Day9Page() {
                   className="text-xl"
                   style={{
                     fontFamily:
-                      "'Scheherazade New', 'Traditional Arabic', serif",
+                      "'Amiri Quran', serif",
                   }}
                 >
                   خُسْرٍ

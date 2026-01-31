@@ -187,7 +187,7 @@ export default function LetterCombinationsGrid({
             }`}
             style={{
               fontFamily:
-                "'Scheherazade New', 'Traditional Arabic', Arial, sans-serif",
+                "'Amiri Quran', serif",
             }}
           >
             <span

@@ -150,7 +150,7 @@ export default function KasraWords() {
               <div
                 dir="rtl"
                 className="text-7xl md:text-8xl text-slate-800 mb-6 leading-tight transition-all duration-500 group-hover:scale-105 group-hover:text-emerald-950"
-                style={{ fontFamily: "'Scheherazade New', 'Amiri', 'Traditional Arabic', serif" }}
+                style={{ fontFamily: "'Amiri Quran', serif" }}
               >
                 {word.arabic}
               </div>
@@ -176,7 +176,7 @@ export default function KasraWords() {
                   >
                     <div
                       className="text-4xl text-slate-700 mb-2"
-                      style={{ fontFamily: "'Scheherazade New', 'Amiri', 'Traditional Arabic', serif" }}
+                      style={{ fontFamily: "'Amiri Quran', serif" }}
                     >
                       {item.letter}
                     </div>

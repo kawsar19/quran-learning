@@ -52,7 +52,7 @@ export default function MixedPractice() {
           <div 
             dir="rtl"
             className="text-4xl md:text-5xl text-gray-800 mb-3 group-hover:scale-110 transition-transform"
-            style={{ fontFamily: "'Scheherazade New', 'Amiri', 'Traditional Arabic', serif" }}
+            style={{ fontFamily: "'Amiri Quran', serif" }}
           >
             {word.arabic}
           </div>

@@ -236,7 +236,7 @@ export default function HarakatAudioGrid({
                 isActive ? "animate-pulse" : ""
               }`}
               style={{
-                fontFamily: "'Scheherazade New', 'Amiri', serif",
+                fontFamily: "'Amiri Quran', serif",
                 lineHeight: "2",
               }}
             >

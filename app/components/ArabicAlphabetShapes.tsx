@@ -357,7 +357,7 @@ export default function ArabicAlphabetShapes() {
                     }`}
                     style={{
                       fontFamily:
-                        "'Scheherazade New', 'Traditional Arabic', Arial, sans-serif",
+                        "'Amiri Quran', serif",
                     }}
                   >
                     <span className="text-5xl">{letter.independent}</span>
@@ -374,7 +374,7 @@ export default function ArabicAlphabetShapes() {
                     }`}
                     style={{
                       fontFamily:
-                        "'Scheherazade New', 'Traditional Arabic', Arial, sans-serif",
+                        "'Amiri Quran', serif",
                     }}
                   >
                     <span
@@ -397,7 +397,7 @@ export default function ArabicAlphabetShapes() {
                     }`}
                     style={{
                       fontFamily:
-                        "'Scheherazade New', 'Traditional Arabic', Arial, sans-serif",
+                        "'Amiri Quran', serif",
                     }}
                   >
                     <span
@@ -418,7 +418,7 @@ export default function ArabicAlphabetShapes() {
                     }`}
                     style={{
                       fontFamily:
-                        "'Scheherazade New', 'Traditional Arabic', Arial, sans-serif",
+                        "'Amiri Quran', serif",
                     }}
                   >
                     <span className="text-5xl">{letter.final}</span>
@@ -458,7 +458,7 @@ export default function ArabicAlphabetShapes() {
                     }`}
                     style={{
                       fontFamily:
-                        "'Scheherazade New', 'Traditional Arabic', Arial, sans-serif",
+                        "'Amiri Quran', serif",
                     }}
                   >
                     <span className="text-4xl">{letter.independent}</span>
@@ -480,7 +480,7 @@ export default function ArabicAlphabetShapes() {
                     }`}
                     style={{
                       fontFamily:
-                        "'Scheherazade New', 'Traditional Arabic', Arial, sans-serif",
+                        "'Amiri Quran', serif",
                     }}
                   >
                     <span
@@ -508,7 +508,7 @@ export default function ArabicAlphabetShapes() {
                     }`}
                     style={{
                       fontFamily:
-                        "'Scheherazade New', 'Traditional Arabic', Arial, sans-serif",
+                        "'Amiri Quran', serif",
                     }}
                   >
                     <span
@@ -532,7 +532,7 @@ export default function ArabicAlphabetShapes() {
                     }`}
                     style={{
                       fontFamily:
-                        "'Scheherazade New', 'Traditional Arabic', Arial, sans-serif",
+                        "'Amiri Quran', serif",
                     }}
                   >
                     <span className="text-4xl">{letter.final}</span>

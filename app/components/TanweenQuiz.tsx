@@ -380,7 +380,7 @@ export default function TanweenQuiz() {
                   className="text-6xl md:text-7xl text-gray-800 leading-none select-none"
                   style={{
                     fontFamily:
-                      "'Scheherazade New', 'Amiri', 'Traditional Arabic', serif",
+                      "'Amiri Quran', serif",
                     lineHeight: "1.8",
                   }}
                 >
@@ -429,7 +429,7 @@ export default function TanweenQuiz() {
                     className={`text-3xl md:text-4xl transition-transform duration-300 ${!showResult ? "group-hover:scale-110" : ""} ${!option.label ? "mb-0" : "mb-2"}`}
                     style={{
                       fontFamily:
-                        "'Scheherazade New', 'Amiri', 'Traditional Arabic', serif",
+                        "'Amiri Quran', serif",
                       lineHeight: "1.8",
                     }}
                   >

@@ -73,7 +73,7 @@ export default function Day10Page() {
           <div
             dir="rtl"
             className="text-4xl text-purple-700 font-bold mb-2"
-            style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+            style={{ fontFamily: "'Amiri Quran', serif" }}
           >
             أَجِدُ قَطٍ بَكَتْ
           </div>
@@ -90,7 +90,7 @@ export default function Day10Page() {
             >
               <div
                 className="text-4xl text-purple-700 mb-1"
-                style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+                style={{ fontFamily: "'Amiri Quran', serif" }}
               >
                 {item.letter}
               </div>
@@ -154,7 +154,7 @@ export default function Day10Page() {
                 <td className="p-3">
                   <span
                     className="text-2xl text-purple-700"
-                    style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+                    style={{ fontFamily: "'Amiri Quran', serif" }}
                   >
                     رَبِّ ، الْحَقُّ ، أَشَدُّ
                   </span>
@@ -162,7 +162,7 @@ export default function Day10Page() {
                 <td className="p-3">
                   <span
                     className="text-2xl text-teal-700"
-                    style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+                    style={{ fontFamily: "'Amiri Quran', serif" }}
                   >
                     الرَّحْمٰنِ ، يَسْمَعُ ، الْعَزِيزُ
                   </span>
@@ -190,7 +190,7 @@ export default function Day10Page() {
                 <div
                   dir="rtl"
                   className="text-3xl text-gray-800"
-                  style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+                  style={{ fontFamily: "'Amiri Quran', serif" }}
                 >
                   {item.word}
                 </div>
@@ -202,14 +202,14 @@ export default function Day10Page() {
               <div
                 dir="rtl"
                 className="text-lg text-emerald-700 bg-emerald-50 px-2 py-1 rounded mb-2"
-                style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+                style={{ fontFamily: "'Amiri Quran', serif" }}
               >
                 {item.source}
               </div>
               <div className="text-xs text-purple-600 bg-purple-50 px-2 py-1 rounded inline-block">
                 শিদ্দাত অক্ষর: <span
                   className="text-lg"
-                  style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+                  style={{ fontFamily: "'Amiri Quran', serif" }}
                 >{item.highlightLetter}</span>
               </div>
             </div>
@@ -228,7 +228,7 @@ export default function Day10Page() {
         <div
           dir="rtl"
           className="flex flex-wrap justify-center gap-4 text-5xl leading-[1.6] text-purple-700"
-          style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+          style={{ fontFamily: "'Amiri Quran', serif" }}
         >
           <span className="bg-white px-4 py-3 rounded-xl shadow-sm border-2 border-purple-200">أَ</span>
           <span className="bg-white px-4 py-3 rounded-xl shadow-sm border-2 border-purple-200">جَّ</span>
@@ -252,7 +252,7 @@ export default function Day10Page() {
             <div
               dir="rtl"
               className="text-3xl text-gray-800 mb-3 text-center leading-loose"
-              style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+              style={{ fontFamily: "'Amiri Quran', serif" }}
             >
               الْحَمْدُ لِلّٰهِ رَبِّ الْعٰلَمِينَ
             </div>
@@ -264,7 +264,7 @@ export default function Day10Page() {
               <p className="text-purple-800 text-sm text-center">
                 <span
                   className="text-xl"
-                  style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+                  style={{ fontFamily: "'Amiri Quran', serif" }}
                 >رَبِّ</span> - بّ (বা) তাশদীদ সহ শিদ্দাত - দুইবার জোর দিয়ে পড়ুন
               </p>
             </div>
@@ -275,7 +275,7 @@ export default function Day10Page() {
             <div
               dir="rtl"
               className="text-3xl text-gray-800 mb-3 text-center leading-loose"
-              style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+              style={{ fontFamily: "'Amiri Quran', serif" }}
             >
               إِنَّ اللهَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ
             </div>
@@ -287,7 +287,7 @@ export default function Day10Page() {
               <p className="text-purple-800 text-sm text-center">
                 <span
                   className="text-xl"
-                  style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+                  style={{ fontFamily: "'Amiri Quran', serif" }}
                 >كُلِّ</span> - كّ (কাফ) তাশদীদ সহ শিদ্দাত
               </p>
             </div>
@@ -298,7 +298,7 @@ export default function Day10Page() {
             <div
               dir="rtl"
               className="text-3xl text-gray-800 mb-3 text-center leading-loose"
-              style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+              style={{ fontFamily: "'Amiri Quran', serif" }}
             >
               وَالْحَقُّ أَقُولُ
             </div>
@@ -310,7 +310,7 @@ export default function Day10Page() {
               <p className="text-purple-800 text-sm text-center">
                 <span
                   className="text-xl"
-                  style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+                  style={{ fontFamily: "'Amiri Quran', serif" }}
                 >الْحَقُّ</span> - قّ (ক্বাফ) তাশদীদ সহ শিদ্দাত - দুইবার জোর দিয়ে পড়ুন
               </p>
             </div>
@@ -321,7 +321,7 @@ export default function Day10Page() {
             <div
               dir="rtl"
               className="text-3xl text-gray-800 mb-3 text-center leading-loose"
-              style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+              style={{ fontFamily: "'Amiri Quran', serif" }}
             >
               وَلِلّٰهِ الْعِزَّةُ وَلِرَسُولِهِ
             </div>
@@ -333,7 +333,7 @@ export default function Day10Page() {
               <p className="text-purple-800 text-sm text-center">
                 <span
                   className="text-xl"
-                  style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+                  style={{ fontFamily: "'Amiri Quran', serif" }}
                 >الْعِزَّةُ</span> - এখানে زّ তাশদীদ আছে (রাখাওয়াত অক্ষর - তুলনা করুন)
               </p>
             </div>
@@ -344,7 +344,7 @@ export default function Day10Page() {
             <div
               dir="rtl"
               className="text-3xl text-gray-800 mb-3 text-center leading-loose"
-              style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+              style={{ fontFamily: "'Amiri Quran', serif" }}
             >
               إِنَّا فَتَحْنَا لَكَ فَتْحًا مُّبِينًا
             </div>
@@ -356,10 +356,10 @@ export default function Day10Page() {
               <p className="text-purple-800 text-sm text-center">
                 <span
                   className="text-xl"
-                  style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+                  style={{ fontFamily: "'Amiri Quran', serif" }}
                 >مُّبِينًا</span> - مّ তাশদীদ, এবং <span
                   className="text-xl"
-                  style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+                  style={{ fontFamily: "'Amiri Quran', serif" }}
                 >ب</span> শিদ্দাত অক্ষর
               </p>
             </div>
@@ -381,7 +381,7 @@ export default function Day10Page() {
             <div
               dir="rtl"
               className="text-3xl text-purple-700 text-center mb-2"
-              style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+              style={{ fontFamily: "'Amiri Quran', serif" }}
             >
               ب
             </div>
@@ -396,7 +396,7 @@ export default function Day10Page() {
             <div
               dir="rtl"
               className="text-3xl text-purple-700 text-center mb-2"
-              style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+              style={{ fontFamily: "'Amiri Quran', serif" }}
             >
               ت ، د ، ط
             </div>
@@ -411,7 +411,7 @@ export default function Day10Page() {
             <div
               dir="rtl"
               className="text-3xl text-purple-700 text-center mb-2"
-              style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+              style={{ fontFamily: "'Amiri Quran', serif" }}
             >
               ج
             </div>
@@ -426,7 +426,7 @@ export default function Day10Page() {
             <div
               dir="rtl"
               className="text-3xl text-purple-700 text-center mb-2"
-              style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+              style={{ fontFamily: "'Amiri Quran', serif" }}
             >
               ق ، ك
             </div>
@@ -442,7 +442,7 @@ export default function Day10Page() {
           <div className="bg-gray-700 rounded-lg p-3">
             <div
               className="text-2xl mb-1"
-              style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+              style={{ fontFamily: "'Amiri Quran', serif" }}
             >
               أَجِدُ
             </div>
@@ -451,7 +451,7 @@ export default function Day10Page() {
           <div className="bg-gray-700 rounded-lg p-3">
             <div
               className="text-2xl mb-1"
-              style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+              style={{ fontFamily: "'Amiri Quran', serif" }}
             >
               قَطٍ
             </div>
@@ -460,7 +460,7 @@ export default function Day10Page() {
           <div className="bg-gray-700 rounded-lg p-3">
             <div
               className="text-2xl mb-1"
-              style={{ fontFamily: "'Scheherazade New', 'Traditional Arabic', serif" }}
+              style={{ fontFamily: "'Amiri Quran', serif" }}
             >
               بَكَتْ
             </div>

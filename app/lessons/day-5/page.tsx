@@ -315,7 +315,7 @@ export default function Day5Page() {
         <div className="bg-gradient-to-br from-red-50 to-rose-100 border border-red-200 rounded-2xl p-6 text-center">
           <div
             className="w-16 h-16 bg-red-500 text-white rounded-xl flex items-center justify-center text-4xl mb-4 mx-auto shadow-lg"
-            style={{ fontFamily: "'Scheherazade New', 'Amiri', serif" }}
+            style={{ fontFamily: "'Amiri Quran', serif" }}
           >
             ـَ
           </div>
@@ -330,7 +330,7 @@ export default function Day5Page() {
         <div className="bg-gradient-to-br from-emerald-50 to-teal-100 border border-emerald-200 rounded-2xl p-6 text-center">
           <div
             className="w-16 h-16 bg-emerald-500 text-white rounded-xl flex items-center justify-center text-4xl mb-4 mx-auto shadow-lg"
-            style={{ fontFamily: "'Scheherazade New', 'Amiri', serif" }}
+            style={{ fontFamily: "'Amiri Quran', serif" }}
           >
             ـِ
           </div>
@@ -345,7 +345,7 @@ export default function Day5Page() {
         <div className="bg-gradient-to-br from-blue-50 to-sky-100 border border-blue-200 rounded-2xl p-6 text-center">
           <div
             className="w-16 h-16 bg-blue-500 text-white rounded-xl flex items-center justify-center text-4xl mb-4 mx-auto shadow-lg"
-            style={{ fontFamily: "'Scheherazade New', 'Amiri', serif" }}
+            style={{ fontFamily: "'Amiri Quran', serif" }}
           >
             ـُ
           </div>
@@ -362,7 +362,7 @@ export default function Day5Page() {
         <div className="flex items-center gap-3 mb-6">
           <div
             className="w-12 h-12 bg-red-500 text-white rounded-xl flex items-center justify-center text-2xl shadow-md"
-            style={{ fontFamily: "'Scheherazade New', 'Amiri', serif" }}
+            style={{ fontFamily: "'Amiri Quran', serif" }}
           >
             ـَ
           </div>
@@ -383,7 +383,7 @@ export default function Day5Page() {
         <div className="flex items-center gap-3 mb-6">
           <div
             className="w-12 h-12 bg-emerald-500 text-white rounded-xl flex items-center justify-center text-2xl shadow-md"
-            style={{ fontFamily: "'Scheherazade New', 'Amiri', serif" }}
+            style={{ fontFamily: "'Amiri Quran', serif" }}
           >
             ـِ
           </div>
@@ -404,7 +404,7 @@ export default function Day5Page() {
         <div className="flex items-center gap-3 mb-6">
           <div
             className="w-12 h-12 bg-blue-500 text-white rounded-xl flex items-center justify-center text-2xl shadow-md"
-            style={{ fontFamily: "'Scheherazade New', 'Amiri', serif" }}
+            style={{ fontFamily: "'Amiri Quran', serif" }}
           >
             ـُ
           </div>
