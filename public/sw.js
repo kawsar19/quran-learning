@@ -7,7 +7,7 @@ const STATIC_ASSETS = [
   '/manifest.webmanifest',
 ];
 
-// Install event - cache static assets
+// Install  event - cache static assets
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
