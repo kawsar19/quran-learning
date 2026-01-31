@@ -181,7 +181,7 @@ export default function TanweenWords() {
           <div className="flex items-center justify-between">
             <div>
               <h3 className="text-xl font-bold">দুই পেশ</h3>
-              <p className="text-violet-100 text-sm">Dammatayn - Double Damma </p>
+              <p className="text-violet-100 text-sm">Dammatayn - Double Damma</p>
             </div>
             <div className="text-right">
               <div
