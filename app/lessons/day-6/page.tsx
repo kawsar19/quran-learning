@@ -111,16 +111,6 @@ export default function Day6Page() {
 
       {/* Quiz Section */}
       <div className="mt-24 space-y-12">
-        <div className="text-center max-w-2xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-black text-gray-800 mb-4 tracking-tight">
-            সবগুলো হরকত যাচাই করুন
-          </h2>
-          <div className="h-1.5 w-24 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full mb-6"></div>
-          <p className="text-gray-500 font-medium text-lg leading-relaxed">
-            আপনার শেখার মান যাচাই করতে এই কুইজটি দিন। এটি আপনাকে দ্রুত হরকত
-            চিনতে সাহায্য করবে।
-          </p>
-        </div>
         <HarakatQuiz />
       </div>
     </LessonLayout>
