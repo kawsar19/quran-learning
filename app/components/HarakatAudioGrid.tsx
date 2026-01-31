@@ -65,6 +65,37 @@ const JER_AUDIO: Record<string, { start: number; end: number }> = {
   ي: { start: 60.1, end: 63 },
 };
 
+const PESH_AUDIO: Record<string, { start: number; end: number }> = {
+  ا: { start: 1.4, end: 3.5 },
+  ب: { start: 4, end: 6 },
+  ت: { start: 6.3, end: 8.5 },
+  ث: { start: 9, end: 11.5 },
+  ج: { start: 11.5, end: 14 },
+  ح: { start: 14.3, end: 17 },
+  خ: { start: 17, end: 19.5 },
+  د: { start: 20, end: 22 },
+  ذ: { start: 23.1, end: 26 },
+  ر: { start: 26, end: 28 },
+  ز: { start: 28, end: 31 },
+  س: { start: 31, end: 34 },
+  ش: { start: 34, end: 36 },
+  ص: { start: 36, end: 40 },
+  ض: { start: 40, end: 43 },
+  ط: { start: 43, end: 45.5 },
+  ظ: { start: 45.5, end: 48 },
+  ع: { start: 48, end: 50.5 },
+  غ: { start: 50.8, end: 54 },
+  ف: { start: 54, end: 56.5 },
+  ق: { start: 57, end: 60 },
+  ك: { start: 60.5, end: 62.5 },
+  ل: { start: 63, end: 66 },
+  م: { start: 66.7, end: 69 },
+  ن: { start: 69.5, end: 72 },
+  و: { start: 73, end: 76 },
+  ه: { start: 76, end: 78 },
+  ي: { start: 82, end: 84 },
+};
+
 interface Letter {
   base: string;
   name: string;
@@ -76,7 +107,7 @@ interface Letter {
   dammaSound: string;
 }
 
-type HarakatType = "fatha" | "kasra";
+type HarakatType = "fatha" | "kasra" | "damma";
 
 interface HarakatAudioGridProps {
   letters: Letter[];
@@ -112,6 +143,21 @@ const config = {
       activeBg: "from-emerald-100 to-teal-100",
       activeBorder: "border-emerald-400",
       ring: "ring-emerald-300",
+    },
+  },
+  damma: {
+    audioSrc: "/audios/pesh.m4a",
+    segments: PESH_AUDIO,
+    letterKey: "damma" as const,
+    soundKey: "dammaSound" as const,
+    colors: {
+      bg: "from-blue-50 to-sky-50",
+      border: "border-blue-100",
+      hoverBorder: "hover:border-blue-300",
+      text: "text-blue-600",
+      activeBg: "from-blue-100 to-sky-100",
+      activeBorder: "border-blue-400",
+      ring: "ring-blue-300",
     },
   },
 };

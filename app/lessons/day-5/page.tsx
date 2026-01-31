@@ -417,30 +417,7 @@ export default function Day5Page() {
             </p>
           </div>
         </div>
-        <div
-          className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-7 gap-3"
-          dir="rtl"
-        >
-          {letters.map((letter, index) => (
-            <div
-              key={index}
-              className="bg-gradient-to-br from-blue-50 to-sky-50 border border-blue-100 rounded-xl p-3 text-center hover:shadow-lg hover:border-blue-300 transition-all"
-            >
-              <div
-                className="text-3xl md:text-4xl text-gray-800 mb-2"
-                style={{
-                  fontFamily: "'Scheherazade New', 'Amiri', serif",
-                  lineHeight: "2",
-                }}
-              >
-                {letter.damma}
-              </div>
-              <div className="text-sm font-bold text-blue-600 bg-white rounded-lg py-1 px-2">
-                {letter.dammaSound}
-              </div>
-            </div>
-          ))}
-        </div>
+        <HarakatAudioGrid letters={letters} type="damma" />
       </div>
 
       {/* Quiz Section */}
