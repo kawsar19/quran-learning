@@ -18,8 +18,7 @@ export default function HomePage() {
               কোরআন শিখুন
             </h1>
             <p className="text-emerald-100 text-lg mb-8 max-w-xl leading-relaxed">
-              ঘরে বসেই আরবি, হিজবুল্লাহ ও ইসলামিক স্টাডিজ ফাউন্ডেশন শিক্ষকদের
-              সাথে অনলাইনে নাজিরা কোর্স।
+              ঘরে বসেই আরবি শেখার অনলাইন কোর্স।
             </p>
             <div className="flex flex-wrap gap-4 mb-10">
               <Link
@@ -36,7 +35,7 @@ export default function HomePage() {
               </Link>
             </div>
             <div className="flex flex-wrap gap-6 text-sm">
-              <div className="flex items-center gap-2 bg-white/15 backdrop-blur-sm rounded-full px-4 py-2">
+              <div className="flex items-center gap-2 bg-white/15 backdrop-blur-sm rounded-full px-4 py-2 hidden">
                 <span className="text-lg">👨‍🎓</span>
                 <span>332+ শিক্ষার্থী ভর্তি হয়েছে</span>
               </div>
