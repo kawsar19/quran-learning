@@ -230,7 +230,7 @@ export default function HomePage() {
                 icon: "📝",
                 step: "ধাপ ১",
                 title: "রেজিস্ট্রেশন",
-                desc: "ফর্ম পূরণ করুন",
+                desc: "মোবাইল নাম্বার ও OTP দিয়ে রেজিষ্ট্রেশন করুন",
               },
               {
                 icon: "📞",
@@ -242,13 +242,13 @@ export default function HomePage() {
                 icon: "📚",
                 step: "ধাপ ৩",
                 title: "ক্লাস শুরু",
-                desc: "নিয়মিত পাঠদান",
+                desc: "প্রতিদিন একটি করে লেসন",
               },
               {
                 icon: "📊",
                 step: "ধাপ ৪",
                 title: "মূল্যায়ন",
-                desc: "সাপ্তাহিক পরীক্ষা",
+                desc: "লেসনের সাথে কুইজ",
               },
               {
                 icon: "🎓",
