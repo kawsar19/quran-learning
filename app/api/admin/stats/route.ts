@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import dbConnect from "@/lib/mongodb";
 import User from "@/lib/models/User";
 import QuizResult from "@/lib/models/QuizResult";
+import GlobalSetting from "@/lib/models/GlobalSetting";
 import { requireAdmin } from "@/lib/auth";
 
 export async function GET(req: NextRequest) {
@@ -18,11 +19,15 @@ export async function GET(req: NextRequest) {
       .limit(5)
       .select("name phoneNumber hasPaid createdAt completedDays");
 
+    const settings = await GlobalSetting.findOne({ key: "global_config" });
+    const currentUnlockedDay = settings?.currentUnlockedDay ?? 1;
+
     return NextResponse.json({
       totalUsers,
       paidUsers,
       totalQuizSubmissions,
       recentUsers,
+      currentUnlockedDay,
     });
   } catch (error) {
     const message = error instanceof Error ? error.message : "Internal server error";

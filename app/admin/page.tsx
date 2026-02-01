@@ -17,12 +17,14 @@ interface Stats {
   paidUsers: number;
   totalQuizSubmissions: number;
   recentUsers: User[];
+  currentUnlockedDay: number;
 }
 
 export default function AdminDashboard() {
   const [stats, setStats] = useState<Stats | null>(null);
   const [users, setUsers] = useState<User[]>([]);
-  const [tab, setTab] = useState<"overview" | "users">("overview");
+  const [tab, setTab] = useState<"overview" | "users" | "days">("overview");
+  const [unlocking, setUnlocking] = useState(false);
   const [loading, setLoading] = useState(true);
   const router = useRouter();
 
@@ -71,6 +73,29 @@ export default function AdminDashboard() {
     router.push("/admin/login");
   }
 
+  async function handleUnlockDay(day: number) {
+    const token = localStorage.getItem("adminToken");
+    if (!token) return;
+    setUnlocking(true);
+    try {
+      const res = await fetch("/api/admin/unlock-day", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ day }),
+      });
+      if (res.ok && stats) {
+        setStats({ ...stats, currentUnlockedDay: day });
+      }
+    } catch {
+      // ignore
+    } finally {
+      setUnlocking(false);
+    }
+  }
+
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-100">
@@ -116,6 +141,16 @@ export default function AdminDashboard() {
             }`}
           >
             Users ({users.length})
+          </button>
+          <button
+            onClick={() => setTab("days")}
+            className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+              tab === "days"
+                ? "bg-emerald-600 text-white"
+                : "bg-white text-gray-600 hover:bg-gray-50"
+            }`}
+          >
+            Days Control
           </button>
         </div>
 
@@ -192,6 +227,57 @@ export default function AdminDashboard() {
               </div>
             </div>
           </>
+        )}
+
+        {tab === "days" && stats && (
+          <div className="bg-white rounded-xl shadow-sm p-6">
+            <div className="flex items-center justify-between mb-6">
+              <div>
+                <h2 className="text-lg font-semibold text-gray-800">
+                  Days Control
+                </h2>
+                <p className="text-sm text-gray-400 mt-1">
+                  Currently unlocked up to: <span className="font-bold text-emerald-600">Day {stats.currentUnlockedDay}</span>
+                </p>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-5 sm:grid-cols-6 md:grid-cols-10 gap-3">
+              {Array.from({ length: 30 }, (_, i) => i + 1).map((day) => {
+                const isUnlocked = day <= stats.currentUnlockedDay;
+                return (
+                  <button
+                    key={day}
+                    disabled={unlocking}
+                    onClick={() => handleUnlockDay(isUnlocked && day !== 1 ? day - 1 : day)}
+                    className={`relative flex flex-col items-center justify-center p-3 rounded-xl border-2 transition-all disabled:opacity-50 ${
+                      isUnlocked
+                        ? "border-emerald-500 bg-emerald-50"
+                        : "border-gray-200 bg-gray-50 hover:border-gray-300"
+                    }`}
+                  >
+                    {isUnlocked && (
+                      <span className="absolute -top-1.5 -right-1.5 w-5 h-5 bg-emerald-500 rounded-full flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </span>
+                    )}
+                    <span className={`text-lg font-bold ${isUnlocked ? "text-emerald-700" : "text-gray-400"}`}>
+                      {day}
+                    </span>
+                    <span className={`text-[10px] ${isUnlocked ? "text-emerald-500" : "text-gray-300"}`}>
+                      {isUnlocked ? "Unlocked" : "Locked"}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+
+            <p className="text-xs text-gray-400 mt-4">
+              Click a locked day to unlock up to that day. Click an unlocked day to lock it.
+            </p>
+          </div>
         )}
 
         {tab === "users" && (
