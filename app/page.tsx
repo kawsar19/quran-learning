@@ -155,59 +155,7 @@ export default function HomePage() {
             </div>
 
             {/* Course 2 */}
-            <div className="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100">
-              <div className="bg-emerald-50 p-6 flex items-center gap-4">
-                <div className="text-4xl">📖</div>
-                <div>
-                  <span className="bg-emerald-600 text-white text-xs px-2 py-0.5 rounded-full">
-                    কুরআন হিফজ প্রোগ্রাম
-                  </span>
-                  <h3 className="text-lg font-bold text-gray-900 mt-2">
-                    কুরআন হিফজ প্রোগ্রাম
-                  </h3>
-                </div>
-              </div>
-              <div className="p-6">
-                <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                  এই কোর্সে আপনি পবিত্র কুরআনের নির্দিষ্ট সূরা ও আয়াত মুখস্থ
-                  করার কৌশল শিখবেন। Planned Hifz পদ্ধতিতে সহজে মুখস্থ করুন।
-                </p>
-                <div className="flex items-center gap-4 mb-4">
-                  <div>
-                    <span className="text-gray-400 text-xs">কোর্স ফি:</span>
-                    <p className="font-bold text-gray-900">৳ ৩,৫০০ টাকা</p>
-                  </div>
-                  <div className="border-l pl-4">
-                    <span className="text-gray-400 text-xs">মেয়াদ:</span>
-                    <p className="font-bold text-gray-900">৬০+</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-2 text-xs text-gray-500 mb-6">
-                  <span>👨‍🎓</span>
-                  <span>১০০+ শিক্ষার্থী ভর্তি হয়েছে</span>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  <Link
-                    href="/lessons"
-                    className="bg-emerald-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-emerald-700 transition-colors"
-                  >
-                    এখনই ভর্তি হোন
-                  </Link>
-                  <Link
-                    href="/lessons"
-                    className="border border-emerald-600 text-emerald-600 px-4 py-2 rounded-lg text-sm font-medium hover:bg-emerald-50 transition-colors"
-                  >
-                    বিস্তারিত দেখুন
-                  </Link>
-                  <Link
-                    href="/lessons"
-                    className="border border-gray-300 text-gray-600 px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors"
-                  >
-                    ফ্রি ক্লাস দেখুন
-                  </Link>
-                </div>
-              </div>
-            </div>
+
           </div>
         </div>
       </section>
