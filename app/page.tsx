@@ -71,7 +71,7 @@ export default function HomePage() {
                   "ছোট ব্যাচে পাঠদান",
                   "সাপ্তাহিক মূল্যায়ন পরীক্ষা",
                   "রেকর্ডেড ক্লাস সুবিধা",
-                  "ওয়ান-টু-ওয়ান সেশন সুবিধা",
+                  "ওয়ান-টু-ওয়ান সেশন সুবিধা ",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <span className="mt-0.5 w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-sm shrink-0">
