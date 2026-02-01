@@ -212,54 +212,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Trust Section */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
-                কেন আমাদের শিক্ষার্থী ও অভিভাবকগণের প্রথম পছন্দ
-              </h2>
-              <p className="text-gray-600 leading-relaxed mb-6">
-                Quran Learning-এ আমরা বিশ্বাস করি যে প্রতিটি শিক্ষার্থী আলাদা। তাই
-                আমাদের শিক্ষকরা প্রতিটি শিক্ষার্থীর দুর্বলতা চিহ্নিত করে বিশেষ
-                যত্নে পাঠদান করেন।
-              </p>
-              <ul className="space-y-3 text-gray-700">
-                {[
-                  "ব্যক্তিগত মনোযোগ ও ফিডব্যাক",
-                  "নিয়মিত অভিভাবক আপডেট",
-                  "ফ্লেক্সিবল ক্লাস সময়সূচী",
-                  "শিক্ষার্থীদের ধারাবাহিক মূল্যায়ন",
-                ].map((item) => (
-                  <li key={item} className="flex items-center gap-2">
-                    <span className="text-emerald-500">●</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="grid grid-cols-2 gap-4">
-              {[
-                { num: "332+", label: "শিক্ষার্থী" },
-                { num: "১০+", label: "অভিজ্ঞ শিক্ষক" },
-                { num: "৯৫%", label: "সন্তুষ্টি হার" },
-                { num: "২৪/৭", label: "সাপোর্ট" },
-              ].map((stat) => (
-                <div
-                  key={stat.label}
-                  className="bg-emerald-50 rounded-xl p-6 text-center"
-                >
-                  <p className="text-3xl font-bold text-emerald-700">
-                    {stat.num}
-                  </p>
-                  <p className="text-gray-600 text-sm mt-1">{stat.label}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Mentor Steps */}
       <section id="mentors" className="py-16 md:py-24 bg-gray-50">
