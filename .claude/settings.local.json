@@ -6,7 +6,11 @@
       "Bash(npx tsc:*)",
       "Bash(npm run build:*)",
       "Bash(git rm:*)",
-      "Bash(ffprobe:*)"
+      "Bash(ffprobe:*)",
+      "Bash(npm install:*)",
+      "Bash(npx next build:*)",
+      "Bash(curl:*)",
+      "Bash(kill:*)"
     ]
   }
 }

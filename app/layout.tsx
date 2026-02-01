@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 import Header from './components/Header'
 import PWAInstallPrompt from './components/PWAInstallPrompt'
+import AuthProvider from './components/AuthProvider'
 
 export const metadata: Metadata = {
   title: '30 Days Quran Learning',
@@ -40,9 +41,11 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       </head>
       <body className="min-h-screen bg-white text-gray-900" style={{ fontFamily: "'Tiro Bangla', serif" }}>
-        <Header />
-        <main>{children}</main>
-        <PWAInstallPrompt />
+        <AuthProvider>
+          <Header />
+          <main>{children}</main>
+          <PWAInstallPrompt />
+        </AuthProvider>
       </body>
     </html>
   )

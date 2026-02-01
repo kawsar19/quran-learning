@@ -1,5 +1,6 @@
 import LessonNavigation from "./LessonNavigation";
 import VideoPlayer from "./VideoPlayer";
+import PaymentGate from "./PaymentGate";
 
 interface LessonLayoutProps {
   dayNumber: number;
@@ -19,6 +20,7 @@ export default function LessonLayout({
   children,
 }: LessonLayoutProps) {
   return (
+    <PaymentGate>
     <div className="min-h-screen flex flex-col">
       {/* Sticky Header */}
       <header className="sticky top-0 z-30 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm">
@@ -55,5 +57,6 @@ export default function LessonLayout({
         </div>
       </nav>
     </div>
+    </PaymentGate>
   );
 }

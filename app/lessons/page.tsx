@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PaymentGate from "../components/PaymentGate";
 
 export const metadata: Metadata = {
   title: "All Lessons - 30 Days Quran Learning",
@@ -69,6 +70,7 @@ export default function LessonsPage() {
   const days = Array.from({ length: totalDays }, (_, i) => i + 1);
 
   return (
+    <PaymentGate>
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pb-20">
       {/* Hero Header */}
       <div className="relative bg-gradient-to-br from-emerald-700 via-emerald-600 to-teal-700 text-white pt-20 pb-28 px-4 overflow-hidden">
@@ -184,5 +186,6 @@ export default function LessonsPage() {
         </div>
       </div>
     </div>
+    </PaymentGate>
   );
 }
