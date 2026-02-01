@@ -58,7 +58,7 @@ export default function HomePage() {
                 কেন আমাদের কোর্স সেরা
               </h2>
               <p className="text-emerald-600 font-medium mb-8">
-                Baytul Quran-এ আপনাকে স্বাগতম!
+                Quran Learning-এ আপনাকে স্বাগতম!
               </p>
               <p className="text-gray-600 mb-8 leading-relaxed">
                 বিশুদ্ধ তাজবীদসহ কোরআন শেখার জন্য আমাদের কোর্স বিশেষভাবে ডিজাইন
@@ -236,7 +236,7 @@ export default function HomePage() {
                 কেন আমাদের শিক্ষার্থী ও অভিভাবকগণের প্রথম পছন্দ
               </h2>
               <p className="text-gray-600 leading-relaxed mb-6">
-                Baytul Quran-এ আমরা বিশ্বাস করি যে প্রতিটি শিক্ষার্থী আলাদা। তাই
+                Quran Learning-এ আমরা বিশ্বাস করি যে প্রতিটি শিক্ষার্থী আলাদা। তাই
                 আমাদের শিক্ষকরা প্রতিটি শিক্ষার্থীর দুর্বলতা চিহ্নিত করে বিশেষ
                 যত্নে পাঠদান করেন।
               </p>
@@ -351,12 +351,12 @@ export default function HomePage() {
       {/* Footer */}
       <footer className="bg-emerald-800 text-white py-10">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-lg font-bold mb-2">🕌 Baytul Quran</p>
+          <p className="text-lg font-bold mb-2">🕌 Quran Learning</p>
           <p className="text-emerald-200 text-sm">
             আপনার কোরআন শেখার বিশ্বস্ত সঙ্গী
           </p>
           <p className="text-emerald-300 text-xs mt-4">
-            © ২০২৫ Baytul Quran. সর্বস্বত্ব সংরক্ষিত।
+            © ২০২৫ Quran Learning. সর্বস্বত্ব সংরক্ষিত।
           </p>
         </div>
       </footer>

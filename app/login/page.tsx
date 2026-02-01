@@ -113,7 +113,7 @@ export default function LoginPage() {
           <Link href="/" className="inline-flex items-center gap-2">
             <span className="text-4xl">🕌</span>
             <span className="text-2xl font-bold text-emerald-700">
-              Baytul Quran
+              Quran Learning
             </span>
           </Link>
           <p className="text-gray-500 mt-2">৩০ দিনে কোরআন শিক্ষা কোর্স</p>

@@ -37,7 +37,7 @@ export default function Header() {
         <nav className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
             <span className="text-2xl">🕌</span>
-            <span className="text-lg font-bold text-emerald-700">Baytul Quran</span>
+            <span className="text-lg font-bold text-emerald-700">Quran Learning</span>
           </Link>
           <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-700">
             <Link href="/" className="hover:text-emerald-600 transition-colors">হোম</Link>
