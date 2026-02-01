@@ -1,6 +1,7 @@
 import LessonNavigation from "./LessonNavigation";
 import VideoPlayer from "./VideoPlayer";
 import PaymentGate from "./PaymentGate";
+import CompleteLessonButton from "./CompleteLessonButton";
 
 interface LessonLayoutProps {
   dayNumber: number;
@@ -47,6 +48,10 @@ export default function LessonLayout({
           </section>
 
           <section className="prose prose-lg max-w-none">{children}</section>
+
+          <section className="mt-10 mb-6">
+            <CompleteLessonButton day={dayNumber} />
+          </section>
         </article>
       </main>
 

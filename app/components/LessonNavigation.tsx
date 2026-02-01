@@ -13,17 +13,31 @@ export default function LessonNavigation({
   totalDays = 30,
 }: LessonNavigationProps) {
   const [unlockedDay, setUnlockedDay] = useState<number>(currentDay);
+  const [currentDayCompleted, setCurrentDayCompleted] = useState(false);
 
   useEffect(() => {
     fetch("/api/course/unlocked-day")
       .then((r) => r.json())
       .then((data) => setUnlockedDay(data.currentUnlockedDay))
       .catch(() => {});
-  }, []);
+
+    checkCompletion();
+
+    window.addEventListener("lesson-completed", checkCompletion);
+    return () => window.removeEventListener("lesson-completed", checkCompletion);
+  }, [currentDay]);
+
+  function checkCompletion() {
+    const saved = localStorage.getItem("user");
+    if (saved) {
+      const user = JSON.parse(saved);
+      setCurrentDayCompleted(user.completedDays?.includes(currentDay) ?? false);
+    }
+  }
 
   const hasPrevious = currentDay > 1;
   const hasNext = currentDay < totalDays;
-  const isNextLocked = currentDay + 1 > unlockedDay;
+  const isNextLocked = currentDay + 1 > unlockedDay || !currentDayCompleted;
   const progressPercentage = Math.round((currentDay / totalDays) * 100);
 
   return (

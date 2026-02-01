@@ -18,12 +18,19 @@ export default function LessonCards({
   totalDays: number;
 }) {
   const [unlockedDay, setUnlockedDay] = useState<number>(1);
+  const [completedDays, setCompletedDays] = useState<number[]>([]);
 
   useEffect(() => {
     fetch("/api/course/unlocked-day")
       .then((r) => r.json())
       .then((data) => setUnlockedDay(data.currentUnlockedDay))
       .catch(() => {});
+
+    const saved = localStorage.getItem("user");
+    if (saved) {
+      const user = JSON.parse(saved);
+      setCompletedDays(user.completedDays || []);
+    }
   }, []);
 
   const days = Array.from({ length: totalDays }, (_, i) => i + 1);
@@ -32,7 +39,9 @@ export default function LessonCards({
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
       {days.map((day) => {
         const lesson = lessonData.find((l) => l.day === day);
-        const isLocked = day > unlockedDay;
+        const adminLocked = day > unlockedDay;
+        const prevNotCompleted = day > 1 && !completedDays.includes(day - 1);
+        const isLocked = adminLocked || prevNotCompleted;
 
         if (isLocked) {
           return (
