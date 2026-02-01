@@ -5,6 +5,7 @@ import KasraWords from "@/app/components/KasraWords";
 import DammaWords from "@/app/components/DammaWords";
 import MixedHarakatWords from "@/app/components/MixedHarakatWords";
 import HarakatQuiz from "@/app/components/HarakatQuiz";
+import WordAudioPlayer from "@/app/components/WordAudioPlayer";
 
 export const metadata: Metadata = {
   title: "Day 6 -  Harakat Practice ( হরকত অনুশীলন) | 30 Days Quran Learning",
@@ -15,8 +16,6 @@ export const metadata: Metadata = {
 export default function Day6Page() {
   return (
     <LessonLayout dayNumber={6} title=" হরকত অনুশীলন" videoId="VIDEO_ID_HERE">
-      {/* Header with Premium Gradient */}
-
       {/* Three Harakat Overview Table-like Cards */}
       <div className="grid md:grid-cols-3 gap-6 mb-12">
         <div className="bg-white border border-red-100 rounded-3xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
