@@ -82,18 +82,7 @@ export default function HomePage() {
                 ))}
               </ul>
             </div>
-            <div className="bg-emerald-50 rounded-2xl p-8 flex flex-col items-center justify-center min-h-[350px]">
-              <div className="text-6xl mb-4">📖</div>
-              <div className="bg-emerald-600 text-white rounded-xl px-6 py-4 text-center max-w-xs">
-                <p className="font-bold text-lg mb-1">
-                  আপনার জীবন পরিবর্তন শুরু
-                </p>
-                <p className="text-emerald-100 text-sm">
-                  করুন কুরআনের সাথে এক নতুন যাত্রা!
-                </p>
-              </div>
-            </div>
-          </div>
+
         </div>
       </section>
 
