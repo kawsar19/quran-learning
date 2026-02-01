@@ -41,7 +41,7 @@ export default function HomePage() {
               </div>
               <div className="flex items-center gap-2 bg-white/15 backdrop-blur-sm rounded-full px-4 py-2">
                 <span className="text-lg">📅</span>
-                <span>মেয়াদ: ১ মাইনে ১ কোর্স</span>
+                <span>মেয়াদ: ১ মাস</span>
               </div>
             </div>
           </div>
@@ -61,15 +61,16 @@ export default function HomePage() {
               </p>
               <p className="text-gray-600 mb-8 leading-relaxed">
                 বিশুদ্ধ তাজবীদসহ কোরআন শেখার জন্য আমাদের কোর্স বিশেষভাবে ডিজাইন
-                করা হয়েছে। অভিজ্ঞ শিক্ষকদের তত্ত্বাবধানে আপনি সঠিকভাবে কোরআন
+                করা হয়েছে। অভিজ্ঞ শিক্ষকের তত্ত্বাবধানে আপনি সঠিকভাবে কোরআন
                 তিলাওয়াত শিখতে পারবেন।
               </p>
               <ul className="space-y-4">
                 {[
-                  "অভিজ্ঞ হাফেজ/আলেম শিক্ষকমণ্ডলী",
-                  "ছোট ব্যাচে পাঠদান",
-                  "সাপ্তাহিক মূল্যায়ন পরীক্ষা",
-                  "রেকর্ডেড ক্লাস সুবিধা",
+                  "অভিজ্ঞ শিক্ষক",
+                  "প্রি-রেকর্ডেট ক্লাশ",
+                  "লাইভ ক্লাশ",
+                  "ক্লিক-টু-অডিও",
+                  "কুইজ",
                   "ওয়ান-টু-ওয়ান সেশন সুবিধা ",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
