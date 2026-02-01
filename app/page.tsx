@@ -13,9 +13,9 @@ export default function HomePage() {
         <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
           <div className="max-w-3xl">
             <h1 className="text-3xl md:text-5xl font-extrabold leading-tight mb-6">
-              সহজে এবং সঠিকভাবে
+              সহজ কোরআন শিক্ষা 
               <br />
-              কোরআন শিখুন
+              রামাদান স্পেশাল
             </h1>
             <p className="text-emerald-100 text-lg mb-8 max-w-xl leading-relaxed">
               ঘরে বসেই আরবি শেখার অনলাইন কোর্স।
@@ -127,7 +127,7 @@ export default function HomePage() {
                     <p className="font-bold text-gray-900">৪০+</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-2 text-xs text-gray-500 mb-6">
+                <div className="flex items-center gap-2 text-xs text-gray-500 mb-6 hidden">
                   <span>👨‍🎓</span>
                   <span>১৫০+ শিক্ষার্থী ভর্তি হয়েছে</span>
                 </div>
