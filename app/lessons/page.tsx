@@ -191,7 +191,7 @@ const lessonData = [
   }
 ];
 
-const totalDays = 9;
+const totalDays = 30;
 
 export default function LessonsPage() {
   return (
