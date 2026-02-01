@@ -94,11 +94,7 @@ export default function HomePage() {
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
               আমাদের কোর্সসমূহ
             </h2>
-            <p className="text-gray-500">
-              কুরআনের আলোয়ান হৃদয়কে পরিবর্তন করে দিন।
-              <br />
-              প্রতিটি কোর্স সর্বোচ্চ মানের সেরা পরিচালনায় পরিচালিত হয়।
-            </p>
+
           </div>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Course 1 */}
