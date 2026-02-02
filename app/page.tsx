@@ -13,7 +13,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
           <div className="max-w-3xl">
             <h1 className="text-3xl md:text-5xl font-extrabold leading-tight mb-6">
-              সহজ কোরআন শিক্ষা 
+              সহজ কোরআন শিক্ষা
               <br />
               রামাদান স্পেশাল
             </h1>
@@ -82,7 +82,6 @@ export default function HomePage() {
                 ))}
               </ul>
             </div>
-
           </div>
         </div>
       </section>
@@ -94,7 +93,6 @@ export default function HomePage() {
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
               আমাদের কোর্সসমূহ
             </h2>
-
           </div>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Course 1 */}
@@ -106,21 +104,27 @@ export default function HomePage() {
                     30+ VIDEOS
                   </span>
                   <span className="bg-emerald-500 text-white text-xs px-2 py-0.5 rounded-full ml-2">
-                    5+ Live CLASS
+                    5+ LIVE CLASSES
                   </span>
                   <h3 className="text-lg font-bold text-gray-900 mt-2">
-                  সহজ কোরআন শিক্ষা – রামাদান স্পেশাল
+                    সহজ কোরআন শিক্ষা – রামাদান স্পেশাল
                   </h3>
                 </div>
               </div>
               <div className="p-6">
                 <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                 পবিত্র রামাদান উপলক্ষে বিশেষভাবে আয়ো জন করা হয়েছে সহজ কোরআন শিক্ষা কোর্স।
-এই কোর্সটি তাদের জন্য, যারা কোরআন পড়তে চান কিন্তু এখনো শুদ্ধভাবে পড়তে পারেন না অথবা কোরআন শরীফ অনেক আগে পড়েছেন এখন ভুলে গেছেন আবার প্রথম থেকে ভালো ভাবে কোরআন তেলাওয়াত শিখতে চান         </p>
+                  পবিত্র রামাদান উপলক্ষে বিশেষভাবে আয়ো জন করা হয়েছে সহজ কোরআন
+                  শিক্ষা কোর্স। এই কোর্সটি তাদের জন্য, যারা কোরআন পড়তে চান
+                  কিন্তু এখনো শুদ্ধভাবে পড়তে পারেন না অথবা কোরআন শরীফ অনেক আগে
+                  পড়েছেন এখন ভুলে গেছেন আবার প্রথম থেকে ভালো ভাবে কোরআন
+                  তেলাওয়াত শিখতে চান{" "}
+                </p>
                 <div className="flex items-center gap-4 mb-4">
                   <div>
                     <span className="text-gray-400 text-xs">কোর্স ফি:</span>
-                    <p className="font-bold text-gray-900">উন্মুক্ত, সর্বনিম্ন ১০ ৳</p>
+                    <p className="font-bold text-gray-900">
+                      উন্মুক্ত, সর্বনিম্ন ১০ ৳
+                    </p>
                   </div>
                   <div className="border-l pl-4">
                     <span className="text-gray-400 text-xs hidden">দিন:</span>
@@ -155,11 +159,9 @@ export default function HomePage() {
             </div>
 
             {/* Course 2 */}
-
           </div>
         </div>
       </section>
-
 
       {/* Mentor Steps */}
       <section id="mentors" className="py-16 md:py-24 bg-gray-50">
