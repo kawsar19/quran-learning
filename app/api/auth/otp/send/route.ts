@@ -12,6 +12,20 @@ export async function POST(req: NextRequest) {
 
     await dbConnect();
 
+    // Rate limit: block if OTP was sent within the last 5 minutes
+    const recentOtp = await Otp.findOne({ phoneNumber }).sort({ createdAt: -1 });
+    if (recentOtp) {
+      const elapsed = Date.now() - new Date(recentOtp.createdAt).getTime();
+      const cooldown = 5 * 60 * 1000; // 5 minutes
+      if (elapsed < cooldown) {
+        const remaining = Math.ceil((cooldown - elapsed) / 1000);
+        return NextResponse.json(
+          { error: `Please wait ${remaining} seconds before requesting another OTP` },
+          { status: 429 }
+        );
+      }
+    }
+
     // Delete any existing OTPs for this number
     await Otp.deleteMany({ phoneNumber });
 
