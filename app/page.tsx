@@ -103,10 +103,10 @@ export default function HomePage() {
                 <div className="text-4xl">📗</div>
                 <div>
                   <span className="bg-red-500 text-white text-xs px-2 py-0.5 rounded-full">
-                    85+ VIDEOS
+                    30+ VIDEOS
                   </span>
                   <span className="bg-emerald-500 text-white text-xs px-2 py-0.5 rounded-full ml-2">
-                    10+ HOURS
+                    5+ Live CLASSES 
                   </span>
                   <h3 className="text-lg font-bold text-gray-900 mt-2">
                   সহজ কোরআন শিক্ষা – রামাদান স্পেশাল
@@ -120,10 +120,10 @@ export default function HomePage() {
                 <div className="flex items-center gap-4 mb-4">
                   <div>
                     <span className="text-gray-400 text-xs">কোর্স ফি:</span>
-                    <p className="font-bold text-gray-900">৳ ২,৫০০ টাকা</p>
+                    <p className="font-bold text-gray-900">ফি উন্মুক্ত, সর্বনিম্ন ১০ টাকা</p>
                   </div>
                   <div className="border-l pl-4">
-                    <span className="text-gray-400 text-xs">মেয়াদ:</span>
+                    <span className="text-gray-400 text-xs hidden">মেয়াদ:</span>
                     <p className="font-bold text-gray-900">৪০+</p>
                   </div>
                 </div>
