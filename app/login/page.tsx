@@ -198,7 +198,10 @@ export default function LoginPage() {
                   value={otp}
                   onChange={(e) => setOtp(e.target.value.replace(/\D/g, ""))}
                   placeholder="4 সংখ্যার কোড"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none text-center text-2xl tracking-[0.5em] font-mono"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-xl
+    focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500
+    outline-none text-center text-2xl tracking-[0.5em] font-mono
+    placeholder:text-base placeholder:tracking-normal placeholder:font-sans"
                   required
                   maxLength={4}
                   autoFocus
