@@ -1,250 +1,263 @@
-import type { Metadata } from 'next'
-import LessonLayout from '@/app/components/LessonLayout'
-import ShiddatQuiz from '@/app/components/ShiddatQuiz'
+import type { Metadata } from "next";
+import LessonLayout from "@/app/components/LessonLayout";
+import SukunWords from "@/app/components/SukunWords";
 
 export const metadata: Metadata = {
-  title: 'Day 10 - Shiddat (শিদ্দাত) | 30 Days Quran Learning',
-  description: 'Learn Shiddat - the quality of strong/emphatic letters in Arabic Tajweed. Master the 8 letters of Shiddat.',
+  title: "Day 11 - Sukun Practice (সুকুন অনুশীলন) | 30 Days Quran Learning",
+  description:
+    "Learn Sukun - the sign of no vowel in Arabic. Practice words with Sukun and examples from Quran.",
   openGraph: {
-    title: 'Day 10 - Shiddat (শিদ্দাত) | 30 Days Quran Learning',
-    description: 'Learn Shiddat - the quality of strong/emphatic letters in Arabic Tajweed. Master the 8 letters of Shiddat.',
+    title: "Day 11 - Sukun Practice (সুকুন অনুশীলন) | 30 Days Quran Learning",
+    description:
+      "Learn Sukun - the sign of no vowel in Arabic. Practice words with Sukun and examples from Quran.",
   },
-}
+};
 
-export default function Day10Page() {
-  const shiddatLetters = [
-    { letter: 'أ', name: 'আলিফ', transliteration: 'Alif' },
-    { letter: 'ج', name: 'জীম', transliteration: 'Jeem' },
-    { letter: 'د', name: 'দাল', transliteration: 'Dal' },
-    { letter: 'ق', name: 'ক্বাফ', transliteration: 'Qaf' },
-    { letter: 'ط', name: 'ত্বা', transliteration: 'Ta' },
-    { letter: 'ب', name: 'বা', transliteration: 'Ba' },
-    { letter: 'ك', name: 'কাফ', transliteration: 'Kaf' },
-    { letter: 'ت', name: 'তা', transliteration: 'Ta' },
-  ]
-
-  const exampleWords = [
-    { word: 'رَبِّ', pronunciation: 'রাব্বি', meaning: 'প্রভুর', highlightLetter: 'بّ', source: 'رَبِّ الْعَالَمِينَ' },
-    { word: 'الْحَقُّ', pronunciation: 'আল-হাক্ব্ক্বু', meaning: 'সত্য', highlightLetter: 'قّ', source: 'وَالْحَقُّ أَقُولُ' },
-    { word: 'الْحَجُّ', pronunciation: 'আল-হাজ্জু', meaning: 'হজ্জ', highlightLetter: 'جّ', source: 'الْحَجُّ أَشْهُرٌ' },
-    { word: 'أَشَدُّ', pronunciation: 'আশাদ্দু', meaning: 'অধিক শক্তিশালী', highlightLetter: 'دّ', source: 'أَشَدُّ قُوَّةً' },
-    { word: 'يَحُطُّ', pronunciation: 'ইয়াহুত্ত্বু', meaning: 'নামিয়ে দেয়', highlightLetter: 'طّ', source: 'يَحُطُّ الْخَطَايَا' },
-    { word: 'الطَّامَّةُ', pronunciation: 'আত্ব-ত্বাম্মাতু', meaning: 'মহাবিপদ', highlightLetter: 'تّ', source: 'الطَّامَّةُ الْكُبْرَىٰ' },
-    { word: 'مَكَّةَ', pronunciation: 'মাক্কাতা', meaning: 'মক্কা', highlightLetter: 'كّ', source: 'بِبَطْنِ مَكَّةَ' },
-    { word: 'أُمَّةً', pronunciation: 'উম্মাতান', meaning: 'জাতি', highlightLetter: 'مّ', source: 'أُمَّةً وَاحِدَةً' },
-  ]
-
+export default function Day9Page() {
   return (
     <LessonLayout
-      dayNumber={10}
-      title="Shiddat - শিদ্দাত"
+      dayNumber={9}
+      title="Sukun - সুকুন অনুশীলন"
       videoId="VIDEO_ID_HERE"
     >
       {/* Header */}
-      <div className="bg-gradient-to-r from-purple-700 via-purple-600 to-indigo-700 text-white p-6 rounded-2xl shadow-xl text-center mb-8">
-        <h2 className="text-2xl font-bold mb-2">শিদ্দাত (الشِّدَّة)</h2>
-        <p className="text-purple-200">Shiddat - The Strong/Emphatic Letters | জোরদার অক্ষর</p>
+      <div className="bg-gradient-to-r from-slate-700 via-slate-600 to-zinc-700 text-white p-6 rounded-2xl shadow-xl text-center mb-8">
+        <h2 className="text-2xl font-bold mb-2">সুকুন (বিরাম চিহ্ন)</h2>
+        <p className="text-slate-300">
+          Sukun - The Sign of Rest | স্বরহীন অক্ষর
+        </p>
       </div>
 
-      {/* What is Shiddat */}
+      {/* What is Sukun */}
       <div className="bg-gradient-to-r from-amber-50 to-yellow-50 border-2 border-amber-200 rounded-xl p-5 mb-8">
         <h3 className="font-bold text-amber-800 text-lg mb-3 flex items-center gap-2">
-          <span className="text-2xl">📚</span> শিদ্দাত কী?
+          <span className="text-2xl">📚</span> সুকুন কী?
         </h3>
         <p className="text-gray-700 mb-3">
-          শিদ্দাত (الشِّدَّة) অর্থ &quot;শক্তি&quot; বা &quot;জোর&quot;। এটি তাজবীদের একটি গুরুত্বপূর্ণ সিফাত (গুণ)।
-          যখন শিদ্দাত অক্ষরে তাশদীদ (ّ) থাকে, তখন অক্ষরটি দুইবার জোর দিয়ে উচ্চারণ করতে হয় এবং শব্দ সম্পূর্ণভাবে আটকে যায়।
+          সুকুন (سُكُون) অর্থ &quot;বিশ্রাম&quot; বা &quot;স্থিরতা&quot;। এটি
+          অক্ষরের উপরে একটি ছোট বৃত্ত (
+          <span
+            className="text-2xl align-middle"
+            style={{
+              fontFamily: "'Amiri Quran', serif",
+            }}
+          >
+            ْ
+          </span>
+          ) যা বোঝায় যে এই অক্ষরে কোন স্বর (harakat) নেই।
         </p>
         <p className="text-gray-600 text-sm">
-          <strong>English:</strong> Shiddat (الشِّدَّة) means &quot;strength&quot; or &quot;intensity&quot;. When Shiddat letters have
-          Tashdid (ّ), the letter is pronounced twice with emphasis and the sound is completely stopped/blocked.
+          <strong>English:</strong> Sukun (سُكُون) means &quot;rest&quot; or
+          &quot;silence&quot;. It&apos;s a small circle (ْ) above a letter
+          indicating no vowel follows that consonant.
         </p>
       </div>
 
-      {/* The 8 Letters of Shiddat */}
-      <div className="bg-purple-50 border-2 border-purple-300 rounded-xl p-6 mb-8">
-        <h3 className="font-bold text-purple-800 text-xl mb-4 text-center">
-          শিদ্দাতের ৮টি অক্ষর
-        </h3>
-
-        {/* Mnemonic */}
-        <div className="bg-white rounded-xl p-4 mb-6 text-center shadow-sm">
-          <p className="text-gray-600 mb-2">মনে রাখার সূত্র:</p>
-          <div
-            dir="rtl"
-            className="text-4xl text-purple-700 font-bold mb-2"
-            style={{ fontFamily: "'Amiri Quran', serif" }}
-          >
-            أَجِدُ قَطٍ بَكَتْ
-          </div>
-          <p className="text-purple-600 font-medium">আজিদু ক্বাত্বিন বাকাত</p>
-          <p className="text-gray-500 text-sm mt-1">&quot;আমি পেয়েছি একটি বিড়াল যে কাঁদছিল&quot;</p>
+      {/* Sukun Symbol */}
+      <div className="bg-slate-100 border-2 border-slate-300 rounded-xl p-6 text-center mb-8">
+        <div
+          className="text-8xl text-slate-700 mb-4"
+          style={{
+            fontFamily: "'Amiri Quran', serif",
+          }}
+        >
+          ـْـ
         </div>
-
-        {/* Letters Grid */}
-        <div className="grid grid-cols-4 md:grid-cols-8 gap-3">
-          {shiddatLetters.map((item, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-xl p-3 text-center shadow-sm border border-purple-200 hover:border-purple-400 transition-colors"
-            >
-              <div
-                className="text-4xl text-purple-700 mb-1"
-                style={{ fontFamily: "'Amiri Quran', serif" }}
-              >
-                {item.letter}
-              </div>
-              <div className="text-xs text-gray-600">{item.name}</div>
-              <div className="text-xs text-gray-400">{item.transliteration}</div>
-            </div>
-          ))}
-        </div>
+        <h3 className="font-bold text-slate-800 text-xl">সুকুন চিহ্ন</h3>
+        <p className="text-slate-600 mt-2">অক্ষরের উপরে ছোট গোল বৃত্ত</p>
+        <p className="text-slate-500 text-sm mt-1">
+          A small circle above the letter
+        </p>
       </div>
 
-      {/* How Shiddat Works */}
-      <div className="bg-rose-50 border-2 border-rose-300 rounded-xl p-5 mb-8">
-        <h3 className="font-bold text-rose-800 text-lg mb-3 flex items-center gap-2">
-          <span className="text-xl">⚡</span> তাশদীদ সহ শিদ্দাত কিভাবে কাজ করে?
-        </h3>
-        <div className="space-y-3 text-gray-700">
-          <p>
-            <strong>১. দুইবার উচ্চারণ:</strong> তাশদীদ থাকলে অক্ষরটি দুইবার উচ্চারণ করতে হয়।
-          </p>
-          <p>
-            <strong>২. শব্দ আটকে যায়:</strong> শিদ্দাত অক্ষর উচ্চারণের সময় বাতাস সম্পূর্ণ আটকে যায়।
-          </p>
-          <p>
-            <strong>৩. জোর দিয়ে ছেড়ে দেওয়া:</strong> তারপর জোর দিয়ে ছেড়ে দেওয়া হয়।
-          </p>
-        </div>
-        <div className="mt-4 p-3 bg-white rounded-lg">
-          <p className="text-rose-700 text-sm text-center">
-            <strong>উদাহরণ:</strong> رَبِّ الْعَالَمِينَ (রাব্বিল আ'লামীন) - &quot;ب&quot; দুইবার জোর দিয়ে বলুন: রাব্ + বি = রাব্বি
-          </p>
-        </div>
-      </div>
-
-      {/* Comparison: Shiddat vs Rakhawat */}
+      {/* Harakat vs Sukun Comparison */}
       <div className="bg-gray-50 border border-gray-200 rounded-xl p-5 mb-8">
         <h3 className="font-bold text-gray-800 text-lg mb-4 text-center">
-          শিদ্দাত vs রাখাওয়াত তুলনা
+          হরকত vs সুকুন তুলনা
         </h3>
         <div className="overflow-x-auto">
           <table className="w-full text-center">
             <thead>
               <tr className="border-b-2 border-gray-300">
-                <th className="p-3 text-gray-700">বৈশিষ্ট্য</th>
-                <th className="p-3 text-purple-700">শিদ্দাত (জোর)</th>
-                <th className="p-3 text-teal-700">রাখাওয়াত (নরম)</th>
+                <th className="p-3 text-gray-700">হরকত সহ</th>
+                <th className="p-3 text-gray-700">উচ্চারণ</th>
+                <th className="p-3 text-gray-700">সুকুন সহ</th>
+                <th className="p-3 text-gray-700">উচ্চারণ</th>
               </tr>
             </thead>
-            <tbody>
-              <tr className="border-b border-gray-200">
-                <td className="p-3 font-medium">বাতাস</td>
-                <td className="p-3 text-purple-600">সম্পূর্ণ আটকে যায়</td>
-                <td className="p-3 text-teal-600">প্রবাহিত হয়</td>
-              </tr>
-              <tr className="border-b border-gray-200">
-                <td className="p-3 font-medium">শব্দ</td>
-                <td className="p-3 text-purple-600">থেমে যায়</td>
-                <td className="p-3 text-teal-600">চলতে থাকে</td>
-              </tr>
-              <tr className="border-b border-gray-200">
-                <td className="p-3 font-medium">উদাহরণ</td>
+            <tbody
+              style={{
+                fontFamily: "'Amiri Quran', serif",
+              }}
+            >
+              <tr className="border-b border-gray-200 bg-red-50">
                 <td className="p-3">
-                  <span
-                    className="text-2xl text-purple-700"
-                    style={{ fontFamily: "'Amiri Quran', serif" }}
-                  >
-                    رَبِّ ، الْحَقُّ ، أَشَدُّ
-                  </span>
+                  <span className="text-3xl text-red-600">بَ</span>
+                </td>
+                <td
+                  className="p-3 text-red-600 font-bold"
+                  style={{ fontFamily: "'Tiro Bangla', serif" }}
+                >
+                  বা
                 </td>
                 <td className="p-3">
-                  <span
-                    className="text-2xl text-teal-700"
-                    style={{ fontFamily: "'Amiri Quran', serif" }}
-                  >
-                    الرَّحْمٰنِ ، يَسْمَعُ ، الْعَزِيزُ
-                  </span>
+                  <span className="text-3xl text-slate-700">بْ</span>
+                </td>
+                <td
+                  className="p-3 text-slate-700 font-bold"
+                  style={{ fontFamily: "'Tiro Bangla', serif" }}
+                >
+                  ব্
                 </td>
               </tr>
-              <tr>
-                <td className="p-3 font-medium">অনুভূতি</td>
-                <td className="p-3 text-purple-600">বিস্ফোরণের মত</td>
-                <td className="p-3 text-teal-600">প্রবাহের মত</td>
+              <tr className="border-b border-gray-200 bg-green-50">
+                <td className="p-3">
+                  <span className="text-3xl text-green-600">مِ</span>
+                </td>
+                <td
+                  className="p-3 text-green-600 font-bold"
+                  style={{ fontFamily: "'Tiro Bangla', serif" }}
+                >
+                  মি
+                </td>
+                <td className="p-3">
+                  <span className="text-3xl text-slate-700">مْ</span>
+                </td>
+                <td
+                  className="p-3 text-slate-700 font-bold"
+                  style={{ fontFamily: "'Tiro Bangla', serif" }}
+                >
+                  ম্
+                </td>
+              </tr>
+              <tr className="bg-blue-50">
+                <td className="p-3">
+                  <span className="text-3xl text-blue-600">نُ</span>
+                </td>
+                <td
+                  className="p-3 text-blue-600 font-bold"
+                  style={{ fontFamily: "'Tiro Bangla', serif" }}
+                >
+                  নু
+                </td>
+                <td className="p-3">
+                  <span className="text-3xl text-slate-700">نْ</span>
+                </td>
+                <td
+                  className="p-3 text-slate-700 font-bold"
+                  style={{ fontFamily: "'Tiro Bangla', serif" }}
+                >
+                  ন্
+                </td>
               </tr>
             </tbody>
           </table>
         </div>
+        <p className="text-center text-gray-600 text-sm mt-4">
+          সুকুন থাকলে অক্ষরটি হসন্ত (্) দিয়ে পড়তে হয় - কোন স্বর যোগ হয় না
+        </p>
       </div>
 
-      {/* Example Words */}
-      <div className="bg-gradient-to-r from-indigo-50 to-purple-50 border border-indigo-200 rounded-xl p-5 mb-8">
-        <h3 className="font-bold text-indigo-800 text-lg mb-4 flex items-center gap-2">
-          <span className="text-xl">📝</span> কোরআন থেকে তাশদীদ সহ শিদ্দাত অক্ষর
+      {/* Key Rule */}
+      <div className="bg-rose-50 border-2 border-rose-300 rounded-xl p-5 mb-8">
+        <h3 className="font-bold text-rose-800 text-lg mb-2 flex items-center gap-2">
+          <span className="text-xl">⚠️</span> গুরুত্বপূর্ণ নিয়ম
         </h3>
-        <div className="grid md:grid-cols-2 gap-4">
-          {exampleWords.map((item, index) => (
-            <div key={index} className="bg-white rounded-lg p-4 shadow-sm">
-              <div className="flex items-center justify-between mb-2">
-                <div
-                  dir="rtl"
-                  className="text-3xl text-gray-800"
-                  style={{ fontFamily: "'Amiri Quran', serif" }}
-                >
-                  {item.word}
-                </div>
-                <div className="text-right">
-                  <p className="text-indigo-700 font-medium">{item.pronunciation}</p>
-                  <p className="text-gray-500 text-sm">{item.meaning}</p>
-                </div>
-              </div>
-              <div
-                dir="rtl"
-                className="text-lg text-emerald-700 bg-emerald-50 px-2 py-1 rounded mb-2"
-                style={{ fontFamily: "'Amiri Quran', serif" }}
-              >
-                {item.source}
-              </div>
-              <div className="text-xs text-purple-600 bg-purple-50 px-2 py-1 rounded inline-block">
-                শিদ্দাত অক্ষর: <span
-                  className="text-lg"
-                  style={{ fontFamily: "'Amiri Quran', serif" }}
-                >{item.highlightLetter}</span>
-              </div>
-            </div>
-          ))}
+        <div className="space-y-2 text-gray-700">
+          <p>
+            <strong>১.</strong> সুকুন শুধু শব্দের মাঝে বা শেষে আসে - কখনো শুরুতে
+            না।
+          </p>
+          <p>
+            <strong>২.</strong> সুকুনওয়ালা অক্ষর আগের অক্ষরের সাথে মিলে পড়তে
+            হয়।
+          </p>
+          <p>
+            <strong>৩.</strong> যেমন:{" "}
+            <span
+              className="text-2xl mx-1"
+              style={{
+                fontFamily: "'Amiri Quran', serif",
+              }}
+            >
+              مِنْ
+            </span>{" "}
+            = মি + ন্ = মিন (আলাদা আলাদা না, একসাথে)
+          </p>
         </div>
       </div>
 
-      {/* Letters with Tashdid Practice */}
+      {/* How to Read */}
+      <div className="bg-indigo-50 border border-indigo-200 p-4 rounded-xl mb-8">
+        <h3 className="font-bold text-indigo-800 mb-2 flex items-center gap-2">
+          <span className="text-xl">📖</span> কিভাবে পড়বেন
+        </h3>
+        <ul className="text-gray-700 space-y-1 text-sm">
+          <li>• অক্ষরের উপরে ছোট বৃত্ত (ْ) দেখলে বুঝবেন সুকুন</li>
+          <li>• সুকুনওয়ালা অক্ষর স্বরহীন - শুধু ব্যঞ্জনধ্বনি</li>
+          <li>• বাংলায় হসন্ত (্) এর মত পড়ুন</li>
+          <li>• আগের অক্ষরের সাথে মিলিয়ে একসাথে পড়ুন</li>
+        </ul>
+      </div>
+
+      {/* All Letters with Sukun */}
       <div className="bg-gradient-to-r from-slate-100 to-gray-100 border border-slate-200 rounded-xl p-5 mb-8">
         <h3 className="font-bold text-slate-800 text-lg mb-4 text-center">
-          শিদ্দাত অক্ষর তাশদীদ ও হরকত সহ
+          সকল অক্ষর সুকুন সহ
         </h3>
-        <p className="text-center text-gray-600 mb-4 text-sm">
-          এই অক্ষরগুলোতে তাশদীদ থাকলে দুইবার জোর দিয়ে পড়ুন
-        </p>
         <div
           dir="rtl"
-          className="flex flex-wrap justify-center gap-4 text-5xl leading-[1.6] text-purple-700"
-          style={{ fontFamily: "'Amiri Quran', serif" }}
+          className="flex flex-wrap justify-center gap-3 text-4xl leading-[1.6] text-slate-700"
+          style={{
+            fontFamily: "'Amiri Quran', serif",
+          }}
         >
-          <span className="bg-white px-4 py-3 rounded-xl shadow-sm border-2 border-purple-200">أَ</span>
-          <span className="bg-white px-4 py-3 rounded-xl shadow-sm border-2 border-purple-200">جَّ</span>
-          <span className="bg-white px-4 py-3 rounded-xl shadow-sm border-2 border-purple-200">دُّ</span>
-          <span className="bg-white px-4 py-3 rounded-xl shadow-sm border-2 border-purple-200">قُّ</span>
-          <span className="bg-white px-4 py-3 rounded-xl shadow-sm border-2 border-purple-200">طَّ</span>
-          <span className="bg-white px-4 py-3 rounded-xl shadow-sm border-2 border-purple-200">بِّ</span>
-          <span className="bg-white px-4 py-3 rounded-xl shadow-sm border-2 border-purple-200">كُّ</span>
-          <span className="bg-white px-4 py-3 rounded-xl shadow-sm border-2 border-purple-200">تَّ</span>
+          <span className="bg-white px-3 py-2 rounded-lg shadow-sm">اْ</span>
+          <span className="bg-white px-3 py-2 rounded-lg shadow-sm">بْ</span>
+          <span className="bg-white px-3 py-2 rounded-lg shadow-sm">تْ</span>
+          <span className="bg-white px-3 py-2 rounded-lg shadow-sm">ثْ</span>
+          <span className="bg-white px-3 py-2 rounded-lg shadow-sm">جْ</span>
+          <span className="bg-white px-3 py-2 rounded-lg shadow-sm">حْ</span>
+          <span className="bg-white px-3 py-2 rounded-lg shadow-sm">خْ</span>
+          <span className="bg-white px-3 py-2 rounded-lg shadow-sm">دْ</span>
+          <span className="bg-white px-3 py-2 rounded-lg shadow-sm">ذْ</span>
+          <span className="bg-white px-3 py-2 rounded-lg shadow-sm">رْ</span>
+          <span className="bg-white px-3 py-2 rounded-lg shadow-sm">زْ</span>
+          <span className="bg-white px-3 py-2 rounded-lg shadow-sm">سْ</span>
+          <span className="bg-white px-3 py-2 rounded-lg shadow-sm">شْ</span>
+          <span className="bg-white px-3 py-2 rounded-lg shadow-sm">صْ</span>
+          <span className="bg-white px-3 py-2 rounded-lg shadow-sm">ضْ</span>
+          <span className="bg-white px-3 py-2 rounded-lg shadow-sm">طْ</span>
+          <span className="bg-white px-3 py-2 rounded-lg shadow-sm">ظْ</span>
+          <span className="bg-white px-3 py-2 rounded-lg shadow-sm">عْ</span>
+          <span className="bg-white px-3 py-2 rounded-lg shadow-sm">غْ</span>
+          <span className="bg-white px-3 py-2 rounded-lg shadow-sm">فْ</span>
+          <span className="bg-white px-3 py-2 rounded-lg shadow-sm">قْ</span>
+          <span className="bg-white px-3 py-2 rounded-lg shadow-sm">كْ</span>
+          <span className="bg-white px-3 py-2 rounded-lg shadow-sm">لْ</span>
+          <span className="bg-white px-3 py-2 rounded-lg shadow-sm">مْ</span>
+          <span className="bg-white px-3 py-2 rounded-lg shadow-sm">نْ</span>
+          <span className="bg-white px-3 py-2 rounded-lg shadow-sm">هْ</span>
+          <span className="bg-white px-3 py-2 rounded-lg shadow-sm">وْ</span>
+          <span className="bg-white px-3 py-2 rounded-lg shadow-sm">يْ</span>
         </div>
       </div>
 
+      {/* Section Title */}
+      <h3 className="text-xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+        <span className="bg-slate-600 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm">
+          ১
+        </span>
+        সুকুন শব্দ অনুশীলন (২০টি শব্দ)
+      </h3>
+
+      {/* Sukun Words Component */}
+      <SukunWords />
+
       {/* Quran Examples */}
-      <div className="bg-gradient-to-r from-emerald-50 to-green-50 border border-emerald-200 rounded-xl p-5 mb-8">
+      <div className="bg-gradient-to-r from-emerald-50 to-green-50 border border-emerald-200 rounded-xl p-5 mt-10">
         <h3 className="font-bold text-emerald-800 text-lg mb-4 flex items-center gap-2">
-          <span className="text-xl">📖</span> কোরআন থেকে তাশদীদ সহ উদাহরণ
+          <span className="text-xl">📖</span> কোরআন থেকে উদাহরণ
         </h3>
         <div className="space-y-4">
           {/* Example 1 */}
@@ -252,20 +265,42 @@ export default function Day10Page() {
             <div
               dir="rtl"
               className="text-3xl text-gray-800 mb-3 text-center leading-loose"
-              style={{ fontFamily: "'Amiri Quran', serif" }}
+              style={{
+                fontFamily: "'Amiri Quran', serif",
+              }}
             >
-              الْحَمْدُ لِلّٰهِ رَبِّ الْعٰلَمِينَ
+              قُلْ هُوَ اللهُ أَحَدٌ
             </div>
             <div className="text-center">
-              <p className="text-gray-700 font-medium">আলহামদু লিল্লাহি রাব্বিল আ'লামীন</p>
-              <p className="text-gray-500 text-sm mt-1">সমস্ত প্রশংসা আল্লাহর জন্য</p>
+              <p className="text-gray-700 font-medium">
+                ক্বুল হুওয়াল্লাহু আহাদ
+              </p>
+              <p className="text-gray-500 text-sm mt-1">
+                বলুন, তিনি আল্লাহ, এক
+              </p>
             </div>
-            <div className="mt-3 p-2 bg-purple-50 rounded-lg">
-              <p className="text-purple-800 text-sm text-center">
+            <div className="mt-3 p-2 bg-amber-50 rounded-lg">
+              <p className="text-amber-800 text-sm text-center">
                 <span
                   className="text-xl"
-                  style={{ fontFamily: "'Amiri Quran', serif" }}
-                >رَبِّ</span> - بّ (বা) তাশদীদ সহ শিদ্দাত - দুইবার জোর দিয়ে পড়ুন
+                  style={{
+                    fontFamily:
+                      "'Amiri Quran', serif",
+                  }}
+                >
+                  قُلْ
+                </span>{" "}
+                - এখানে{" "}
+                <span
+                  className="text-xl"
+                  style={{
+                    fontFamily:
+                      "'Amiri Quran', serif",
+                  }}
+                >
+                  لْ
+                </span>{" "}
+                এ সুকুন আছে
               </p>
             </div>
           </div>
@@ -275,20 +310,52 @@ export default function Day10Page() {
             <div
               dir="rtl"
               className="text-3xl text-gray-800 mb-3 text-center leading-loose"
-              style={{ fontFamily: "'Amiri Quran', serif" }}
+              style={{
+                fontFamily: "'Amiri Quran', serif",
+              }}
             >
-              إِنَّ اللهَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ
+              الْحَمْدُ لِلّٰهِ رَبِّ الْعٰلَمِينَ
             </div>
             <div className="text-center">
-              <p className="text-gray-700 font-medium">ইন্নাল্লাহা আ'লা কুল্লি শাইয়িন ক্বাদীর</p>
-              <p className="text-gray-500 text-sm mt-1">নিশ্চয়ই আল্লাহ সব কিছুর উপর ক্ষমতাবান</p>
+              <p className="text-gray-700 font-medium">
+                আলহামদু লিল্লাহি রাব্বিল আ'লামীন
+              </p>
+              <p className="text-gray-500 text-sm mt-1">
+                সমস্ত প্রশংসা আল্লাহর জন্য, যিনি সৃষ্টিকুলের রব
+              </p>
             </div>
-            <div className="mt-3 p-2 bg-purple-50 rounded-lg">
-              <p className="text-purple-800 text-sm text-center">
+            <div className="mt-3 p-2 bg-amber-50 rounded-lg">
+              <p className="text-amber-800 text-sm text-center">
                 <span
                   className="text-xl"
-                  style={{ fontFamily: "'Amiri Quran', serif" }}
-                >كُلِّ</span> - كّ (কাফ) তাশদীদ সহ শিদ্দাত
+                  style={{
+                    fontFamily:
+                      "'Amiri Quran', serif",
+                  }}
+                >
+                  الْحَمْدُ
+                </span>{" "}
+                - এখানে{" "}
+                <span
+                  className="text-xl"
+                  style={{
+                    fontFamily:
+                      "'Amiri Quran', serif",
+                  }}
+                >
+                  لْ
+                </span>{" "}
+                ও{" "}
+                <span
+                  className="text-xl"
+                  style={{
+                    fontFamily:
+                      "'Amiri Quran', serif",
+                  }}
+                >
+                  مْ
+                </span>{" "}
+                এ সুকুন আছে
               </p>
             </div>
           </div>
@@ -298,20 +365,62 @@ export default function Day10Page() {
             <div
               dir="rtl"
               className="text-3xl text-gray-800 mb-3 text-center leading-loose"
-              style={{ fontFamily: "'Amiri Quran', serif" }}
+              style={{
+                fontFamily: "'Amiri Quran', serif",
+              }}
             >
-              وَالْحَقُّ أَقُولُ
+              بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيمِ
             </div>
             <div className="text-center">
-              <p className="text-gray-700 font-medium">ওয়াল হাক্ব্ক্বু আক্বূলু</p>
-              <p className="text-gray-500 text-sm mt-1">এবং সত্যই আমি বলছি</p>
+              <p className="text-gray-700 font-medium">
+                বিসমিল্লাহির রাহমানির রাহীম
+              </p>
+              <p className="text-gray-500 text-sm mt-1">
+                পরম করুণাময় অসীম দয়ালু আল্লাহর নামে
+              </p>
             </div>
-            <div className="mt-3 p-2 bg-purple-50 rounded-lg">
-              <p className="text-purple-800 text-sm text-center">
+            <div className="mt-3 p-2 bg-amber-50 rounded-lg">
+              <p className="text-amber-800 text-sm text-center">
                 <span
                   className="text-xl"
-                  style={{ fontFamily: "'Amiri Quran', serif" }}
-                >الْحَقُّ</span> - قّ (ক্বাফ) তাশদীদ সহ শিদ্দাত - দুইবার জোর দিয়ে পড়ুন
+                  style={{
+                    fontFamily:
+                      "'Amiri Quran', serif",
+                  }}
+                >
+                  بِسْمِ
+                </span>{" "}
+                - এখানে{" "}
+                <span
+                  className="text-xl"
+                  style={{
+                    fontFamily:
+                      "'Amiri Quran', serif",
+                  }}
+                >
+                  سْ
+                </span>{" "}
+                এ সুকুন,
+                <span
+                  className="text-xl mx-1"
+                  style={{
+                    fontFamily:
+                      "'Amiri Quran', serif",
+                  }}
+                >
+                  الرَّحْمٰنِ
+                </span>{" "}
+                - এখানে{" "}
+                <span
+                  className="text-xl"
+                  style={{
+                    fontFamily:
+                      "'Amiri Quran', serif",
+                  }}
+                >
+                  حْ
+                </span>{" "}
+                এ সুকুন
               </p>
             </div>
           </div>
@@ -321,198 +430,49 @@ export default function Day10Page() {
             <div
               dir="rtl"
               className="text-3xl text-gray-800 mb-3 text-center leading-loose"
-              style={{ fontFamily: "'Amiri Quran', serif" }}
+              style={{
+                fontFamily: "'Amiri Quran', serif",
+              }}
             >
-              وَلِلّٰهِ الْعِزَّةُ وَلِرَسُولِهِ
+              وَالْعَصْرِ ۙ إِنَّ الْإِنسَانَ لَفِي خُسْرٍ
             </div>
             <div className="text-center">
-              <p className="text-gray-700 font-medium">ওয়া লিল্লাহিল ইয্যাতু ওয়া লিরাসূলিহী</p>
-              <p className="text-gray-500 text-sm mt-1">এবং সম্মান আল্লাহ ও তাঁর রাসূলের জন্য</p>
-            </div>
-            <div className="mt-3 p-2 bg-purple-50 rounded-lg">
-              <p className="text-purple-800 text-sm text-center">
-                <span
-                  className="text-xl"
-                  style={{ fontFamily: "'Amiri Quran', serif" }}
-                >الْعِزَّةُ</span> - এখানে زّ তাশদীদ আছে (রাখাওয়াত অক্ষর - তুলনা করুন)
+              <p className="text-gray-700 font-medium">
+                ওয়াল আসর। ইন্নাল ইনসানা লাফী খুসর
+              </p>
+              <p className="text-gray-500 text-sm mt-1">
+                সময়ের কসম। নিশ্চয়ই মানুষ ক্ষতিতে আছে
               </p>
             </div>
-          </div>
-
-          {/* Example 5 */}
-          <div className="bg-white rounded-lg p-4 shadow-sm">
-            <div
-              dir="rtl"
-              className="text-3xl text-gray-800 mb-3 text-center leading-loose"
-              style={{ fontFamily: "'Amiri Quran', serif" }}
-            >
-              إِنَّا فَتَحْنَا لَكَ فَتْحًا مُّبِينًا
-            </div>
-            <div className="text-center">
-              <p className="text-gray-700 font-medium">ইন্না ফাতাহনা লাকা ফাতহাম মুবীনা</p>
-              <p className="text-gray-500 text-sm mt-1">নিশ্চয়ই আমি তোমাকে সুস্পষ্ট বিজয় দিয়েছি</p>
-            </div>
-            <div className="mt-3 p-2 bg-purple-50 rounded-lg">
-              <p className="text-purple-800 text-sm text-center">
+            <div className="mt-3 p-2 bg-amber-50 rounded-lg">
+              <p className="text-amber-800 text-sm text-center">
                 <span
                   className="text-xl"
-                  style={{ fontFamily: "'Amiri Quran', serif" }}
-                >مُّبِينًا</span> - مّ তাশদীদ, এবং <span
+                  style={{
+                    fontFamily:
+                      "'Amiri Quran', serif",
+                  }}
+                >
+                  الْعَصْرِ
+                </span>{" "}
+                এবং{" "}
+                <span
                   className="text-xl"
-                  style={{ fontFamily: "'Amiri Quran', serif" }}
-                >ب</span> শিদ্দাত অক্ষর
+                  style={{
+                    fontFamily:
+                      "'Amiri Quran', serif",
+                  }}
+                >
+                  خُسْرٍ
+                </span>{" "}
+                - দুটোতেই সুকুন আছে
               </p>
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Articulation Points */}
-      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-5 mb-8">
-        <h3 className="font-bold text-blue-800 text-lg mb-4 text-center">
-          শিদ্দাত অক্ষরের মাখরাজ (উচ্চারণ স্থান)
-        </h3>
-        <div className="grid md:grid-cols-2 gap-4">
-          <div className="bg-white rounded-lg p-4 shadow-sm">
-            <h4 className="font-bold text-gray-700 mb-3 flex items-center gap-2">
-              <span className="w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm">১</span>
-              ঠোঁট থেকে
-            </h4>
-            <div
-              dir="rtl"
-              className="text-3xl text-purple-700 text-center mb-2"
-              style={{ fontFamily: "'Amiri Quran', serif" }}
-            >
-              ب
-            </div>
-            <p className="text-sm text-gray-600 text-center">দুই ঠোঁট মিলিয়ে</p>
-          </div>
-
-          <div className="bg-white rounded-lg p-4 shadow-sm">
-            <h4 className="font-bold text-gray-700 mb-3 flex items-center gap-2">
-              <span className="w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm">২</span>
-              জিহ্বার আগা থেকে
-            </h4>
-            <div
-              dir="rtl"
-              className="text-3xl text-purple-700 text-center mb-2"
-              style={{ fontFamily: "'Amiri Quran', serif" }}
-            >
-              ت ، د ، ط
-            </div>
-            <p className="text-sm text-gray-600 text-center">দাঁতের গোড়ায় স্পর্শ করে</p>
-          </div>
-
-          <div className="bg-white rounded-lg p-4 shadow-sm">
-            <h4 className="font-bold text-gray-700 mb-3 flex items-center gap-2">
-              <span className="w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm">৩</span>
-              জিহ্বার মাঝখান থেকে
-            </h4>
-            <div
-              dir="rtl"
-              className="text-3xl text-purple-700 text-center mb-2"
-              style={{ fontFamily: "'Amiri Quran', serif" }}
-            >
-              ج
-            </div>
-            <p className="text-sm text-gray-600 text-center">তালুতে স্পর্শ করে</p>
-          </div>
-
-          <div className="bg-white rounded-lg p-4 shadow-sm">
-            <h4 className="font-bold text-gray-700 mb-3 flex items-center gap-2">
-              <span className="w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm">৪</span>
-              জিহ্বার পিছন থেকে
-            </h4>
-            <div
-              dir="rtl"
-              className="text-3xl text-purple-700 text-center mb-2"
-              style={{ fontFamily: "'Amiri Quran', serif" }}
-            >
-              ق ، ك
-            </div>
-            <p className="text-sm text-gray-600 text-center">গলার কাছে</p>
-          </div>
-        </div>
-      </div>
-
-      {/* Quick Reference */}
-      <div className="bg-gray-800 text-white rounded-xl p-5 mb-8">
-        <h3 className="font-bold text-lg mb-4 text-center">🎯 দ্রুত মনে রাখার সূত্র</h3>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-          <div className="bg-gray-700 rounded-lg p-3">
-            <div
-              className="text-2xl mb-1"
-              style={{ fontFamily: "'Amiri Quran', serif" }}
-            >
-              أَجِدُ
-            </div>
-            <div className="text-purple-400 font-bold text-sm">আজিদু</div>
-          </div>
-          <div className="bg-gray-700 rounded-lg p-3">
-            <div
-              className="text-2xl mb-1"
-              style={{ fontFamily: "'Amiri Quran', serif" }}
-            >
-              قَطٍ
-            </div>
-            <div className="text-purple-400 font-bold text-sm">ক্বাত্বিন</div>
-          </div>
-          <div className="bg-gray-700 rounded-lg p-3">
-            <div
-              className="text-2xl mb-1"
-              style={{ fontFamily: "'Amiri Quran', serif" }}
-            >
-              بَكَتْ
-            </div>
-            <div className="text-purple-400 font-bold text-sm">বাকাত</div>
-          </div>
-          <div className="bg-gray-700 rounded-lg p-3">
-            <div className="text-xl mb-1">৮ অক্ষর</div>
-            <div className="text-purple-400 font-bold text-sm">শিদ্দাত</div>
-          </div>
-        </div>
-        <p className="text-center text-gray-400 text-sm mt-4">
-          أَجِدُ قَطٍ بَكَتْ = &quot;আমি পেয়েছি একটি বিড়াল যে কাঁদছিল&quot;
-        </p>
       </div>
 
       {/* Practice Tips */}
-      <div className="bg-cyan-50 border border-cyan-200 p-5 rounded-xl">
-        <h3 className="font-bold text-cyan-800 mb-3 flex items-center gap-2">
-          <span className="text-xl">💡</span> অনুশীলনের টিপস
-        </h3>
-        <ul className="text-gray-700 space-y-2">
-          <li className="flex items-start gap-2">
-            <span className="text-cyan-500 mt-1">✓</span>
-            <span>তাশদীদ সহ শিদ্দাত অক্ষর দুইবার জোর দিয়ে পড়ুন</span>
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="text-cyan-500 mt-1">✓</span>
-            <span>رَبِّ الْعَالَمِينَ، الْحَقُّ، أَشَدُّ বারবার অনুশীলন করুন</span>
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="text-cyan-500 mt-1">✓</span>
-            <span>&quot;أَجِدُ قَطٍ بَكَتْ&quot; দিয়ে ৮টি অক্ষর মনে রাখুন</span>
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="text-cyan-500 mt-1">✓</span>
-            <span>কোরআনে তাশদীদ সহ এই অক্ষরগুলো খুঁজে পড়ুন</span>
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="text-cyan-500 mt-1">✓</span>
-            <span>শিদ্দাত vs রাখাওয়াত এর পার্থক্য বুঝুন</span>
-          </li>
-        </ul>
-      </div>
-
-      {/* Quiz Section */}
-      <div className="mt-12">
-        <h3 className="text-xl font-bold text-gray-800 mb-6 flex items-center gap-2">
-          <span className="bg-purple-600 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm">📝</span>
-          শিদ্দাত কুইজ
-        </h3>
-        <ShiddatQuiz />
-      </div>
     </LessonLayout>
-  )
+  );
 }

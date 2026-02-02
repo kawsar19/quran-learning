@@ -1,403 +1,542 @@
-import type { Metadata } from "next";
-import LessonLayout from "@/app/components/LessonLayout";
-import LeenQuiz from "@/app/components/LeenQuiz";
+import type { Metadata } from 'next'
+import LessonLayout from '@/app/components/LessonLayout'
 
 export const metadata: Metadata = {
-  title: "Day 12 - Leen Letters (লীন এর হরফ) | 30 Days Quran Learning",
-  description:
-    "Learn about Huruf al-Leen (Letters of Softness) - Waw Leen and Ya Leen with examples from Quran.",
+  title: 'Day 11 - Madd (মাদ্দ) | 30 Days Quran Learning',
+  description: 'Learn Madd - the elongation of vowels in Arabic Tajweed. Master Madd with Alif, Waw, and Ya.',
   openGraph: {
-    title: "Day 12 - Leen Letters (লীন এর হরফ) | 30 Days Quran Learning",
-    description:
-      "Learn about Huruf al-Leen (Letters of Softness) - Waw Leen and Ya Leen with examples from Quran.",
+    title: 'Day 11 - Madd (মাদ্দ) | 30 Days Quran Learning',
+    description: 'Learn Madd - the elongation of vowels in Arabic Tajweed. Master Madd with Alif, Waw, and Ya.',
   },
-};
+}
 
-// Leen examples with Waw
-const wawLeenWords = [
-  { arabic: "خَوْفٌ", bangla: "খাওফুন", meaning: "ভয়" },
-  { arabic: "قَوْمٌ", bangla: "ক্বাওমুন", meaning: "জাতি" },
-  { arabic: "يَوْمٌ", bangla: "ইয়াওমুন", meaning: "দিন" },
-  { arabic: "صَوْمٌ", bangla: "সাওমুন", meaning: "রোজা" },
-  { arabic: "نَوْمٌ", bangla: "নাওমুন", meaning: "ঘুম" },
-  { arabic: "لَوْحٌ", bangla: "লাওহুন", meaning: "ফলক" },
-  { arabic: "فَوْزٌ", bangla: "ফাওযুন", meaning: "সাফল্য" },
-  { arabic: "حَوْلٌ", bangla: "হাওলুন", meaning: "চারপাশ" },
-  { arabic: "مَوْتٌ", bangla: "মাওতুন", meaning: "মৃত্যু" },
-  { arabic: "سَوْفٌ", bangla: "সাওফুন", meaning: "শীঘ্রই" },
-  { arabic: "ضَوْءٌ", bangla: "দাওউন", meaning: "আলো" },
-  { arabic: "جَوْرٌ", bangla: "জাওরুন", meaning: "অত্যাচার" },
+export default function Day11Page() {
+  // Madd with Alif (after Fatha)
+  const maddAlif = [
+    { letter: 'ب', withMadd: 'بَا', pronunciation: 'বা-', bangla: 'বা টেনে' },
+    { letter: 'ت', withMadd: 'تَا', pronunciation: 'তা-', bangla: 'তা টেনে' },
+    { letter: 'ث', withMadd: 'ثَا', pronunciation: 'ছা-', bangla: 'ছা টেনে' },
+    { letter: 'ج', withMadd: 'جَا', pronunciation: 'জা-', bangla: 'জা টেনে' },
+    { letter: 'ح', withMadd: 'حَا', pronunciation: 'হা-', bangla: 'হা টেনে' },
+    { letter: 'خ', withMadd: 'خَا', pronunciation: 'খা-', bangla: 'খা টেনে' },
+    { letter: 'د', withMadd: 'دَا', pronunciation: 'দা-', bangla: 'দা টেনে' },
+    { letter: 'ر', withMadd: 'رَا', pronunciation: 'রা-', bangla: 'রা টেনে' },
+    { letter: 'س', withMadd: 'سَا', pronunciation: 'সা-', bangla: 'সা টেনে' },
+    { letter: 'ش', withMadd: 'شَا', pronunciation: 'শা-', bangla: 'শা টেনে' },
+    { letter: 'ص', withMadd: 'صَا', pronunciation: 'সা-', bangla: 'সা টেনে' },
+    { letter: 'ض', withMadd: 'ضَا', pronunciation: 'দা-', bangla: 'দা টেনে' },
+    { letter: 'ط', withMadd: 'طَا', pronunciation: 'ত্বা-', bangla: 'ত্বা টেনে' },
+    { letter: 'ع', withMadd: 'عَا', pronunciation: 'আ-', bangla: 'আ টেনে' },
+    { letter: 'ف', withMadd: 'فَا', pronunciation: 'ফা-', bangla: 'ফা টেনে' },
+    { letter: 'ق', withMadd: 'قَا', pronunciation: 'ক্বা-', bangla: 'ক্বা টেনে' },
+    { letter: 'ك', withMadd: 'كَا', pronunciation: 'কা-', bangla: 'কা টেনে' },
+    { letter: 'ل', withMadd: 'لَا', pronunciation: 'লা-', bangla: 'লা টেনে' },
+    { letter: 'م', withMadd: 'مَا', pronunciation: 'মা-', bangla: 'মা টেনে' },
+    { letter: 'ن', withMadd: 'نَا', pronunciation: 'না-', bangla: 'না টেনে' },
+    { letter: 'ه', withMadd: 'هَا', pronunciation: 'হা-', bangla: 'হা টেনে' },
+    { letter: 'و', withMadd: 'وَا', pronunciation: 'ওয়া-', bangla: 'ওয়া টেনে' },
+    { letter: 'ي', withMadd: 'يَا', pronunciation: 'ইয়া-', bangla: 'ইয়া টেনে' },
+  ]
 
-  // নতুন উদাহরণ
-  { arabic: "نَوْرٌ", bangla: "নাওরুন", meaning: "আলো" },
-  { arabic: "سَوْسٌ", bangla: "সাওসুন", meaning: "সরাসরি শব্দ" },
-  { arabic: "رَوْحٌ", bangla: "রাওহুন", meaning: "প্রাণ / আত্মা" },
-  { arabic: "دَوْلٌ", bangla: "দাওলুন", meaning: "রাষ্ট্র / দেশ" },
-  { arabic: "بَوْسٌ", bangla: "বাওসুন", meaning: "চুম্বন" },
-];
+  // Madd with Waw (after Damma)
+  const maddWaw = [
+    { letter: 'ب', withMadd: 'بُو', pronunciation: 'বূ-', bangla: 'বূ টেনে' },
+    { letter: 'ت', withMadd: 'تُو', pronunciation: 'তূ-', bangla: 'তূ টেনে' },
+    { letter: 'ج', withMadd: 'جُو', pronunciation: 'জূ-', bangla: 'জূ টেনে' },
+    { letter: 'ح', withMadd: 'حُو', pronunciation: 'হূ-', bangla: 'হূ টেনে' },
+    { letter: 'د', withMadd: 'دُو', pronunciation: 'দূ-', bangla: 'দূ টেনে' },
+    { letter: 'ر', withMadd: 'رُو', pronunciation: 'রূ-', bangla: 'রূ টেনে' },
+    { letter: 'س', withMadd: 'سُو', pronunciation: 'সূ-', bangla: 'সূ টেনে' },
+    { letter: 'ش', withMadd: 'شُو', pronunciation: 'শূ-', bangla: 'শূ টেনে' },
+    { letter: 'ق', withMadd: 'قُو', pronunciation: 'ক্বূ-', bangla: 'ক্বূ টেনে' },
+    { letter: 'ك', withMadd: 'كُو', pronunciation: 'কূ-', bangla: 'কূ টেনে' },
+    { letter: 'ل', withMadd: 'لُو', pronunciation: 'লূ-', bangla: 'লূ টেনে' },
+    { letter: 'م', withMadd: 'مُو', pronunciation: 'মূ-', bangla: 'মূ টেনে' },
+    { letter: 'ن', withMadd: 'نُو', pronunciation: 'নূ-', bangla: 'নূ টেনে' },
+    { letter: 'ه', withMadd: 'هُو', pronunciation: 'হূ-', bangla: 'হূ টেনে' },
+    { letter: 'ي', withMadd: 'يُو', pronunciation: 'ইয়ূ-', bangla: 'ইয়ূ টেনে' },
+  ]
 
-// Leen examples with Ya
-const yaLeenWords = [
-  { arabic: "بَيْتٌ", bangla: "বাইতুন", meaning: "ঘর" },
-  { arabic: "لَيْلٌ", bangla: "লাইলুন", meaning: "রাত" },
-  { arabic: "خَيْرٌ", bangla: "খাইরুন", meaning: "কল্যাণ" },
-  { arabic: "عَيْنٌ", bangla: "আইনুন", meaning: "চোখ" },
-  { arabic: "غَيْبٌ", bangla: "গাইবুন", meaning: "অদৃশ্য" },
-  { arabic: "شَيْء", bangla: "শাই", meaning: "জিনিস" }, // Tanween নেই
-  { arabic: "زَيْتٌ", bangla: "যাইতুন", meaning: "তেল" },
-  { arabic: "صَيْفٌ", bangla: "সাইফুন", meaning: "গ্রীষ্ম" },
-  { arabic: "سَيْفٌ", bangla: "সাইফুন", meaning: "তলোয়ার" },
-  { arabic: "كَيْف", bangla: "কাইফ", meaning: "কিভাবে" }, // Tanween নেই
-  { arabic: "رَيْبٌ", bangla: "রাইবুন", meaning: "সন্দেহ" },
-  { arabic: "غَيْرٌ", bangla: "গাইরুন", meaning: "ছাড়া" },
+  // Madd with Ya (after Kasra)
+  const maddYa = [
+    { letter: 'ب', withMadd: 'بِي', pronunciation: 'বী-', bangla: 'বী টেনে' },
+    { letter: 'ت', withMadd: 'تِي', pronunciation: 'তী-', bangla: 'তী টেনে' },
+    { letter: 'ج', withMadd: 'جِي', pronunciation: 'জী-', bangla: 'জী টেনে' },
+    { letter: 'ح', withMadd: 'حِي', pronunciation: 'হী-', bangla: 'হী টেনে' },
+    { letter: 'د', withMadd: 'دِي', pronunciation: 'দী-', bangla: 'দী টেনে' },
+    { letter: 'ر', withMadd: 'رِي', pronunciation: 'রী-', bangla: 'রী টেনে' },
+    { letter: 'س', withMadd: 'سِي', pronunciation: 'সী-', bangla: 'সী টেনে' },
+    { letter: 'ش', withMadd: 'شِي', pronunciation: 'শী-', bangla: 'শী টেনে' },
+    { letter: 'ق', withMadd: 'قِي', pronunciation: 'ক্বী-', bangla: 'ক্বী টেনে' },
+    { letter: 'ك', withMadd: 'كِي', pronunciation: 'কী-', bangla: 'কী টেনে' },
+    { letter: 'ل', withMadd: 'لِي', pronunciation: 'লী-', bangla: 'লী টেনে' },
+    { letter: 'م', withMadd: 'مِي', pronunciation: 'মী-', bangla: 'মী টেনে' },
+    { letter: 'ن', withMadd: 'نِي', pronunciation: 'নী-', bangla: 'নী টেনে' },
+    { letter: 'ه', withMadd: 'هِي', pronunciation: 'হী-', bangla: 'হী টেনে' },
+    { letter: 'ف', withMadd: 'فِي', pronunciation: 'ফী-', bangla: 'ফী টেনে' },
+  ]
 
-  // নতুন উদাহরণ
-  { arabic: "مَيْلٌ", bangla: "মাইলুন", meaning: "ঝোঁক / ঝক্কর" },
-  { arabic: "نَيْلٌ", bangla: "নাইলুন", meaning: "প্রাপ্তি" },
-  { arabic: "حَيْرٌ", bangla: "হাইরুন", meaning: "সঙ্কট / বিভ্রান্তি" },
-  { arabic: "رَيْح", bangla: "রাইহ", meaning: "গন্ধ / বাতাস" }, // Tanween নেই
-];
+  // Quranic examples
+  const quranicExamples = [
+    { word: 'قَالَ', pronunciation: 'ক্বা-লা', meaning: 'সে বলল', maddType: 'আলিফ', maddLetter: 'ا' },
+    { word: 'كِتَابٌ', pronunciation: 'কিতা-বুন', meaning: 'বই', maddType: 'আলিফ', maddLetter: 'ا' },
+    { word: 'نُورٌ', pronunciation: 'নূ-রুন', meaning: 'আলো', maddType: 'ওয়াও', maddLetter: 'و' },
+    { word: 'يَقُولُ', pronunciation: 'ইয়াক্বূ-লু', meaning: 'সে বলে', maddType: 'ওয়াও', maddLetter: 'و' },
+    { word: 'فِيهَا', pronunciation: 'ফী-হা', meaning: 'তার মধ্যে', maddType: 'ইয়া', maddLetter: 'ي' },
+    { word: 'كَرِيمٌ', pronunciation: 'কারী-মুন', meaning: 'সম্মানিত', maddType: 'ইয়া', maddLetter: 'ي' },
+    { word: 'الرَّحْمٰنِ', pronunciation: 'আর-রাহমা-নি', meaning: 'পরম করুণাময়', maddType: 'আলিফ', maddLetter: 'ا' },
+    { word: 'الرَّحِيمِ', pronunciation: 'আর-রাহী-মি', meaning: 'অসীম দয়ালু', maddType: 'ইয়া', maddLetter: 'ي' },
+  ]
 
-export default function Day12Page() {
   return (
     <LessonLayout
-      dayNumber={12}
-      title="লীন এর হরফ - Leen Letters"
+      dayNumber={11}
+      title="Madd - মাদ্দ (টানা)"
       videoId="VIDEO_ID_HERE"
     >
       {/* Header */}
-      <div className="bg-gradient-to-r from-amber-500 via-orange-500 to-red-500 text-white p-8 rounded-3xl shadow-xl text-center mb-10">
-        <h2 className="text-3xl font-bold mb-3">حُرُوْفُ اللِّيْن</h2>
-        <p className="text-amber-100 text-lg">
-          লীন এর হরফ - Letters of Softness
-        </p>
+      <div className="bg-gradient-to-r from-teal-700 via-teal-600 to-cyan-700 text-white p-6 rounded-2xl shadow-xl text-center mb-8">
+        <h2 className="text-2xl font-bold mb-2">মাদ্দ (المَدّ)</h2>
+        <p className="text-teal-200">Madd - Elongation of Vowels | স্বর টেনে পড়া</p>
       </div>
 
-      {/* What is Leen */}
-      <div className="bg-gradient-to-r from-amber-50 to-orange-50 border-2 border-amber-200 rounded-xl p-6 mb-10">
-        <h3 className="font-bold text-amber-800 text-xl mb-4 flex items-center gap-2">
-          <span className="text-2xl">📚</span> লীন কী?
+      {/* What is Madd */}
+      <div className="bg-gradient-to-r from-amber-50 to-yellow-50 border-2 border-amber-200 rounded-xl p-5 mb-8">
+        <h3 className="font-bold text-amber-800 text-lg mb-3 flex items-center gap-2">
+          <span className="text-2xl">📚</span> মাদ্দ কী?
         </h3>
-        <p className="text-gray-700 mb-4 leading-relaxed text-lg">
-          <strong className="text-amber-700">লীন</strong> শব্দের অর্থ{" "}
-          <strong>নরম</strong> বা <strong>কোমল</strong>। যখন{" "}
-          <span
-            className="text-2xl text-orange-600 mx-1"
-            style={{ fontFamily: "'Amiri Quran', serif" }}
-          >
-            وْ
-          </span>{" "}
-          (ওয়াও সাকিন) অথবা{" "}
-          <span
-            className="text-2xl text-orange-600 mx-1"
-            style={{ fontFamily: "'Amiri Quran', serif" }}
-          >
-            يْ
-          </span>{" "}
-          (ইয়া সাকিন) এর আগে{" "}
-          <strong className="text-red-600">যবর (ফাতহা)</strong> থাকে, তখন এদেরকে{" "}
-          <strong className="text-amber-700">লীন এর হরফ</strong> বলে।
+        <p className="text-gray-700 mb-3">
+          মাদ্দ (المَدّ) অর্থ &quot;টানা&quot; বা &quot;প্রসারিত করা&quot;। যখন কোন অক্ষরের পর মাদ্দের হরফ (ا و ي) আসে,
+          তখন সেই অক্ষরের স্বর টেনে পড়তে হয়।
         </p>
-        <div className="bg-white rounded-xl p-4 border border-amber-200">
-          <p className="text-gray-600 text-center">
-            <strong>সূত্র:</strong> যবর + ওয়াও/ইয়া সাকিন = লীন
-          </p>
-        </div>
+        <p className="text-gray-600 text-sm">
+          <strong>English:</strong> Madd means &quot;elongation&quot;. When a letter is followed by a Madd letter (ا و ي),
+          the vowel sound is stretched/prolonged.
+        </p>
       </div>
 
-      {/* Two Leen Letters */}
-      <div className="grid md:grid-cols-2 gap-6 mb-10">
-        {/* Waw Leen */}
-        <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-2 border-blue-200 rounded-2xl p-6 text-center">
-          <div
-            className="text-7xl text-blue-600 mb-4"
-            style={{ fontFamily: "'Amiri Quran', serif" }}
-          >
-            وْ
-          </div>
-          <h3 className="font-bold text-blue-800 text-xl mb-2">ওয়াও লীন</h3>
-          <p className="text-blue-600 font-medium mb-4">Waw Leen</p>
-          <div className="bg-white rounded-xl p-4 border border-blue-200">
-            <p className="text-gray-700">
-              <span className="text-red-500 font-bold">যবর</span> এর পরে{" "}
-              <span className="text-blue-600 font-bold">ওয়াও সাকিন</span>
-            </p>
-            <p className="text-2xl font-bold text-blue-700 mt-2">= আও / aw</p>
-          </div>
-          <div className="mt-4 bg-blue-100 rounded-lg p-3">
-            <p className="text-sm text-blue-700">
-              উদাহরণ:{" "}
-              <span
-                className="text-xl"
-                style={{ fontFamily: "'Amiri Quran', serif" }}
-              >
-                خَوْف
-              </span>{" "}
-              = খাওফ
-            </p>
-          </div>
-        </div>
+      {/* Three Types of Madd */}
+      <div className="bg-teal-50 border-2 border-teal-300 rounded-xl p-6 mb-8">
+        <h3 className="font-bold text-teal-800 text-xl mb-4 text-center">
+          মাদ্দের ৩টি হরফ (অক্ষর)
+        </h3>
 
-        {/* Ya Leen */}
-        <div className="bg-gradient-to-br from-purple-50 to-pink-50 border-2 border-purple-200 rounded-2xl p-6 text-center">
-          <div
-            className="text-7xl text-purple-600 mb-4"
-            style={{ fontFamily: "'Amiri Quran', serif" }}
-          >
-            يْ
-          </div>
-          <h3 className="font-bold text-purple-800 text-xl mb-2">ইয়া লীন</h3>
-          <p className="text-purple-600 font-medium mb-4">Ya Leen</p>
-          <div className="bg-white rounded-xl p-4 border border-purple-200">
-            <p className="text-gray-700">
-              <span className="text-red-500 font-bold">যবর</span> এর পরে{" "}
-              <span className="text-purple-600 font-bold">ইয়া সাকিন</span>
-            </p>
-            <p className="text-2xl font-bold text-purple-700 mt-2">= আই / ay</p>
-          </div>
-          <div className="mt-4 bg-purple-100 rounded-lg p-3">
-            <p className="text-sm text-purple-700">
-              উদাহরণ:{" "}
+        <div className="grid md:grid-cols-3 gap-4">
+          {/* Alif */}
+          <div className="bg-white rounded-xl p-4 text-center shadow-sm border-2 border-red-200">
+            <div
+              className="text-6xl text-red-600 mb-2"
+              style={{ fontFamily: "'Amiri Quran', serif" }}
+            >
+              ا
+            </div>
+            <h4 className="font-bold text-red-700 text-lg">আলিফ</h4>
+            <p className="text-gray-600 text-sm mt-1">ফাতহা (যবর) এর পরে</p>
+            <div className="mt-3 p-2 bg-red-50 rounded-lg">
               <span
-                className="text-xl"
+                className="text-3xl text-red-700"
                 style={{ fontFamily: "'Amiri Quran', serif" }}
               >
-                بَيْت
-              </span>{" "}
-              = বাইত
-            </p>
+                بَا
+              </span>
+              <p className="text-red-600 font-bold">বা-</p>
+            </div>
+          </div>
+
+          {/* Waw */}
+          <div className="bg-white rounded-xl p-4 text-center shadow-sm border-2 border-blue-200">
+            <div
+              className="text-6xl text-blue-600 mb-2"
+              style={{ fontFamily: "'Amiri Quran', serif" }}
+            >
+              و
+            </div>
+            <h4 className="font-bold text-blue-700 text-lg">ওয়াও</h4>
+            <p className="text-gray-600 text-sm mt-1">দাম্মা (পেশ) এর পরে</p>
+            <div className="mt-3 p-2 bg-blue-50 rounded-lg">
+              <span
+                className="text-3xl text-blue-700"
+                style={{ fontFamily: "'Amiri Quran', serif" }}
+              >
+                بُو
+              </span>
+              <p className="text-blue-600 font-bold">বূ-</p>
+            </div>
+          </div>
+
+          {/* Ya */}
+          <div className="bg-white rounded-xl p-4 text-center shadow-sm border-2 border-green-200">
+            <div
+              className="text-6xl text-green-600 mb-2"
+              style={{ fontFamily: "'Amiri Quran', serif" }}
+            >
+              ي
+            </div>
+            <h4 className="font-bold text-green-700 text-lg">ইয়া</h4>
+            <p className="text-gray-600 text-sm mt-1">কাসরা (যের) এর পরে</p>
+            <div className="mt-3 p-2 bg-green-50 rounded-lg">
+              <span
+                className="text-3xl text-green-700"
+                style={{ fontFamily: "'Amiri Quran', serif" }}
+              >
+                بِي
+              </span>
+              <p className="text-green-600 font-bold">বী-</p>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Important Rule */}
-      <div className="bg-rose-50 border-2 border-rose-300 rounded-xl p-5 mb-10">
+      <div className="bg-rose-50 border-2 border-rose-300 rounded-xl p-5 mb-8">
         <h3 className="font-bold text-rose-800 text-lg mb-3 flex items-center gap-2">
-          <span className="text-xl">⚠️</span> গুরুত্বপূর্ণ পার্থক্য
+          <span className="text-xl">⚠️</span> গুরুত্বপূর্ণ নিয়ম
+        </h3>
+        <div className="space-y-3 text-gray-700">
+          <p>
+            <strong>১. ফাতহা + আলিফ:</strong> যবর এর পর আলিফ আসলে &quot;আ&quot; টেনে পড়তে হয়
+          </p>
+          <p>
+            <strong>২. দাম্মা + ওয়াও:</strong> পেশ এর পর ওয়াও আসলে &quot;ঊ&quot; টেনে পড়তে হয়
+          </p>
+          <p>
+            <strong>৩. কাসরা + ইয়া:</strong> যের এর পর ইয়া আসলে &quot;ঈ&quot; টেনে পড়তে হয়
+          </p>
+        </div>
+        <div className="mt-4 p-3 bg-white rounded-lg">
+          <p className="text-rose-700 text-sm text-center">
+            <strong>মনে রাখুন:</strong> মাদ্দ = টানা। হরকত + মাদ্দের হরফ = টেনে পড়া
+          </p>
+        </div>
+      </div>
+
+      {/* Madd with Alif Section */}
+      <div className="mb-10">
+        <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+          <span className="bg-red-600 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm">১</span>
+          ফাতহা + আলিফ = আ- (টেনে)
+        </h3>
+        <div className="bg-red-50 border border-red-200 rounded-xl p-4">
+          <div className="flex items-center justify-center gap-4 mb-4">
+            <span
+              className="text-4xl text-red-600"
+              style={{ fontFamily: "'Amiri Quran', serif" }}
+            >
+              ـَ
+            </span>
+            <span className="text-2xl text-gray-500">+</span>
+            <span
+              className="text-4xl text-red-600"
+              style={{ fontFamily: "'Amiri Quran', serif" }}
+            >
+              ا
+            </span>
+            <span className="text-2xl text-gray-500">=</span>
+            <span className="text-2xl text-red-700 font-bold">আ- (টেনে)</span>
+          </div>
+          <div
+            dir="rtl"
+            className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-3"
+          >
+            {maddAlif.slice(0, 16).map((item, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-lg p-3 text-center shadow-sm border border-red-100"
+              >
+                <div
+                  className="text-3xl text-gray-800 mb-1"
+                  style={{ fontFamily: "'Amiri Quran', serif" }}
+                >
+                  {item.withMadd}
+                </div>
+                <div className="text-red-600 font-bold text-sm" style={{ direction: 'ltr' }}>{item.pronunciation}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Madd with Waw Section */}
+      <div className="mb-10">
+        <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+          <span className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm">২</span>
+          দাম্মা + ওয়াও = ঊ- (টেনে)
+        </h3>
+        <div className="bg-blue-50 border border-blue-200 rounded-xl p-4">
+          <div className="flex items-center justify-center gap-4 mb-4">
+            <span
+              className="text-4xl text-blue-600"
+              style={{ fontFamily: "'Amiri Quran', serif" }}
+            >
+              ـُ
+            </span>
+            <span className="text-2xl text-gray-500">+</span>
+            <span
+              className="text-4xl text-blue-600"
+              style={{ fontFamily: "'Amiri Quran', serif" }}
+            >
+              و
+            </span>
+            <span className="text-2xl text-gray-500">=</span>
+            <span className="text-2xl text-blue-700 font-bold">ঊ- (টেনে)</span>
+          </div>
+          <div
+            dir="rtl"
+            className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-8 gap-3"
+          >
+            {maddWaw.map((item, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-lg p-3 text-center shadow-sm border border-blue-100"
+              >
+                <div
+                  className="text-3xl text-gray-800 mb-1"
+                  style={{ fontFamily: "'Amiri Quran', serif" }}
+                >
+                  {item.withMadd}
+                </div>
+                <div className="text-blue-600 font-bold text-sm" style={{ direction: 'ltr' }}>{item.pronunciation}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Madd with Ya Section */}
+      <div className="mb-10">
+        <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+          <span className="bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm">৩</span>
+          কাসরা + ইয়া = ঈ- (টেনে)
+        </h3>
+        <div className="bg-green-50 border border-green-200 rounded-xl p-4">
+          <div className="flex items-center justify-center gap-4 mb-4">
+            <span
+              className="text-4xl text-green-600"
+              style={{ fontFamily: "'Amiri Quran', serif" }}
+            >
+              ـِ
+            </span>
+            <span className="text-2xl text-gray-500">+</span>
+            <span
+              className="text-4xl text-green-600"
+              style={{ fontFamily: "'Amiri Quran', serif" }}
+            >
+              ي
+            </span>
+            <span className="text-2xl text-gray-500">=</span>
+            <span className="text-2xl text-green-700 font-bold">ঈ- (টেনে)</span>
+          </div>
+          <div
+            dir="rtl"
+            className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-8 gap-3"
+          >
+            {maddYa.map((item, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-lg p-3 text-center shadow-sm border border-green-100"
+              >
+                <div
+                  className="text-3xl text-gray-800 mb-1"
+                  style={{ fontFamily: "'Amiri Quran', serif" }}
+                >
+                  {item.withMadd}
+                </div>
+                <div className="text-green-600 font-bold text-sm" style={{ direction: 'ltr' }}>{item.pronunciation}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Comparison: With and Without Madd */}
+      <div className="bg-gray-50 border border-gray-200 rounded-xl p-5 mb-8">
+        <h3 className="font-bold text-gray-800 text-lg mb-4 text-center">
+          মাদ্দ ছাড়া vs মাদ্দ সহ তুলনা
         </h3>
         <div className="overflow-x-auto">
           <table className="w-full text-center">
             <thead>
-              <tr className="border-b-2 border-rose-200">
-                <th className="p-3 text-rose-700">বিষয়</th>
-                <th className="p-3 text-rose-700">লীন</th>
-                <th className="p-3 text-rose-700">মদ্দ</th>
+              <tr className="border-b-2 border-gray-300">
+                <th className="p-3 text-gray-700">মাদ্দ ছাড়া</th>
+                <th className="p-3 text-gray-700">উচ্চারণ</th>
+                <th className="p-3 text-teal-700">মাদ্দ সহ</th>
+                <th className="p-3 text-teal-700">উচ্চারণ</th>
               </tr>
             </thead>
             <tbody style={{ fontFamily: "'Amiri Quran', serif" }}>
-              <tr className="border-b border-rose-100">
-                <td
-                  className="p-3 text-gray-700"
-                  style={{ fontFamily: "'Tiro Bangla', serif" }}
-                >
-                  আগের হরফে
+              <tr className="border-b border-gray-200 bg-red-50">
+                <td className="p-3">
+                  <span className="text-3xl text-gray-600">بَ</span>
                 </td>
-                <td className="p-3 text-red-600 font-bold">যবর (ফাতহা)</td>
-                <td className="p-3 text-gray-600">যবর/যের/পেশ</td>
+                <td className="p-3 text-gray-600 font-bold" style={{ fontFamily: 'system-ui' }}>বা</td>
+                <td className="p-3">
+                  <span className="text-3xl text-red-600">بَا</span>
+                </td>
+                <td className="p-3 text-red-600 font-bold" style={{ fontFamily: 'system-ui' }}>বা- (টেনে)</td>
               </tr>
-              <tr className="border-b border-rose-100">
-                <td
-                  className="p-3 text-gray-700"
-                  style={{ fontFamily: "'Tiro Bangla', serif" }}
-                >
-                  ওয়াও উদাহরণ
-                </td>
+              <tr className="border-b border-gray-200 bg-blue-50">
                 <td className="p-3">
-                  <span className="text-2xl text-blue-600">خَوْف</span>
+                  <span className="text-3xl text-gray-600">بُ</span>
                 </td>
+                <td className="p-3 text-gray-600 font-bold" style={{ fontFamily: 'system-ui' }}>বু</td>
                 <td className="p-3">
-                  <span className="text-2xl text-green-600">نُوْر</span>
+                  <span className="text-3xl text-blue-600">بُو</span>
                 </td>
+                <td className="p-3 text-blue-600 font-bold" style={{ fontFamily: 'system-ui' }}>বূ- (টেনে)</td>
               </tr>
-              <tr>
-                <td
-                  className="p-3 text-gray-700"
-                  style={{ fontFamily: "'Tiro Bangla', serif" }}
-                >
-                  ইয়া উদাহরণ
-                </td>
+              <tr className="bg-green-50">
                 <td className="p-3">
-                  <span className="text-2xl text-purple-600">بَيْت</span>
+                  <span className="text-3xl text-gray-600">بِ</span>
                 </td>
+                <td className="p-3 text-gray-600 font-bold" style={{ fontFamily: 'system-ui' }}>বি</td>
                 <td className="p-3">
-                  <span className="text-2xl text-green-600">فِيْ</span>
+                  <span className="text-3xl text-green-600">بِي</span>
                 </td>
+                <td className="p-3 text-green-600 font-bold" style={{ fontFamily: 'system-ui' }}>বী- (টেনে)</td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
 
-      {/* Waw Leen Examples Section */}
-      <div className="mb-12">
-        <div className="flex items-center gap-4 mb-6">
-          <div className="w-14 h-14 bg-blue-500 text-white rounded-2xl flex items-center justify-center text-2xl font-black shadow-lg">
-            <span style={{ fontFamily: "'Amiri Quran', serif" }}>وْ</span>
-          </div>
-          <div>
-            <h3 className="text-2xl font-bold text-gray-800">
-              ওয়াও লীন এর শব্দ
-            </h3>
-            <p className="text-blue-500 text-sm font-medium">Waw Leen Words</p>
-          </div>
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {wawLeenWords.map((word, index) => (
-            <div
-              key={index}
-              className="bg-gradient-to-br from-blue-50 to-cyan-50 border-2 border-blue-100 rounded-xl p-4 text-center hover:shadow-lg hover:border-blue-300 transition-all"
-            >
-              <div
-                dir="rtl"
-                className="text-4xl text-gray-800 mb-2"
-                style={{
-                  fontFamily: "'Amiri Quran', serif",
-                  lineHeight: "1.8",
-                }}
-              >
-                {word.arabic}
-              </div>
-              <div className="text-lg font-bold text-blue-600">
-                {word.bangla}
-              </div>
-              <div className="text-sm text-gray-500">{word.meaning}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Ya Leen Examples Section */}
-      <div className="mb-12">
-        <div className="flex items-center gap-4 mb-6">
-          <div className="w-14 h-14 bg-purple-500 text-white rounded-2xl flex items-center justify-center text-2xl font-black shadow-lg">
-            <span style={{ fontFamily: "'Amiri Quran', serif" }}>يْ</span>
-          </div>
-          <div>
-            <h3 className="text-2xl font-bold text-gray-800">
-              ইয়া লীন এর শব্দ
-            </h3>
-            <p className="text-purple-500 text-sm font-medium">Ya Leen Words</p>
-          </div>
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {yaLeenWords.map((word, index) => (
-            <div
-              key={index}
-              className="bg-gradient-to-br from-purple-50 to-pink-50 border-2 border-purple-100 rounded-xl p-4 text-center hover:shadow-lg hover:border-purple-300 transition-all"
-            >
-              <div
-                dir="rtl"
-                className="text-4xl text-gray-800 mb-2"
-                style={{
-                  fontFamily: "'Amiri Quran', serif",
-                  lineHeight: "1.8",
-                }}
-              >
-                {word.arabic}
-              </div>
-              <div className="text-lg font-bold text-purple-600">
-                {word.bangla}
-              </div>
-              <div className="text-sm text-gray-500">{word.meaning}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-
       {/* Quran Examples */}
-      <div className="bg-gradient-to-r from-emerald-50 to-green-50 border border-emerald-200 rounded-xl p-6 mb-10">
-        <h3 className="font-bold text-emerald-800 text-xl mb-6 flex items-center gap-2">
-          <span className="text-2xl">📖</span> কোরআন থেকে উদাহরণ
+      <div className="bg-gradient-to-r from-emerald-50 to-green-50 border border-emerald-200 rounded-xl p-5 mb-8">
+        <h3 className="font-bold text-emerald-800 text-lg mb-4 flex items-center gap-2">
+          <span className="text-xl">📖</span> কোরআন থেকে মাদ্দের উদাহরণ
+        </h3>
+        <div className="grid md:grid-cols-2 gap-4">
+          {quranicExamples.map((item, index) => (
+            <div key={index} className="bg-white rounded-lg p-4 shadow-sm">
+              <div className="flex items-center justify-between mb-2">
+                <div
+                  dir="rtl"
+                  className="text-3xl text-gray-800"
+                  style={{ fontFamily: "'Amiri Quran', serif" }}
+                >
+                  {item.word}
+                </div>
+                <div className="text-right">
+                  <p className="text-teal-700 font-medium">{item.pronunciation}</p>
+                  <p className="text-gray-500 text-sm">{item.meaning}</p>
+                </div>
+              </div>
+              <div className={`text-xs px-2 py-1 rounded inline-block ${
+                item.maddType === 'আলিফ' ? 'text-red-600 bg-red-50' :
+                item.maddType === 'ওয়াও' ? 'text-blue-600 bg-blue-50' :
+                'text-green-600 bg-green-50'
+              }`}>
+                মাদ্দ: {item.maddType} (<span
+                  className="text-lg"
+                  style={{ fontFamily: "'Amiri Quran', serif" }}
+                >{item.maddLetter}</span>)
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Full Surah Example */}
+      <div className="bg-gradient-to-r from-purple-50 to-indigo-50 border border-purple-200 rounded-xl p-5 mb-8">
+        <h3 className="font-bold text-purple-800 text-lg mb-4 text-center">
+          সূরা আল-ফাতিহায় মাদ্দ
         </h3>
         <div className="space-y-4">
-          <div className="bg-white rounded-xl p-5 border border-emerald-100">
+          <div className="bg-white rounded-lg p-4 shadow-sm">
             <div
               dir="rtl"
-              className="text-3xl text-gray-800 mb-3 text-center leading-loose"
+              className="text-2xl md:text-3xl text-gray-800 mb-3 text-center leading-loose"
               style={{ fontFamily: "'Amiri Quran', serif" }}
             >
-              لَا رَيْبَ فِيْهِ
+              بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيمِ
             </div>
-            <p className="text-center text-gray-600">
-              <span className="text-purple-600 font-bold">رَيْبَ</span> (রাইবা)
-              - এখানে <strong>ইয়া লীন</strong> আছে
-            </p>
+            <div className="text-center text-sm text-gray-600">
+              <span className="text-red-600">الرَّحْمٰنِ</span> = রাহমা<span className="text-red-600 font-bold">-</span>নি (আলিফ মাদ্দ) |
+              <span className="text-green-600 ml-2">الرَّحِيمِ</span> = রাহী<span className="text-green-600 font-bold">-</span>মি (ইয়া মাদ্দ)
+            </div>
           </div>
-          <div className="bg-white rounded-xl p-5 border border-emerald-100">
+          <div className="bg-white rounded-lg p-4 shadow-sm">
             <div
               dir="rtl"
-              className="text-3xl text-gray-800 mb-3 text-center leading-loose"
+              className="text-2xl md:text-3xl text-gray-800 mb-3 text-center leading-loose"
               style={{ fontFamily: "'Amiri Quran', serif" }}
             >
-              مٰلِكِ يَوْمِ الدِّيْنِ
+              الْحَمْدُ لِلّٰهِ رَبِّ الْعٰلَمِينَ
             </div>
-            <p className="text-center text-gray-600">
-              <span className="text-blue-600 font-bold">يَوْمِ</span> (ইয়াওমি)
-              - এখানে <strong>ওয়াও লীন</strong> আছে
-            </p>
-          </div>
-          <div className="bg-white rounded-xl p-5 border border-emerald-100">
-            <div
-              dir="rtl"
-              className="text-3xl text-gray-800 mb-3 text-center leading-loose"
-              style={{ fontFamily: "'Amiri Quran', serif" }}
-            >
-              وَاللَّيْلِ اِذَا يَغْشٰى
+            <div className="text-center text-sm text-gray-600">
+              <span className="text-red-600">الْعٰلَمِينَ</span> = আলামী<span className="text-green-600 font-bold">-</span>ন (ইয়া মাদ্দ)
             </div>
-            <p className="text-center text-gray-600">
-              <span className="text-purple-600 font-bold">اللَّيْلِ</span>{" "}
-              (আল-লাইলি) - এখানে <strong>ইয়া লীন</strong> আছে
-            </p>
           </div>
         </div>
       </div>
 
       {/* Quick Reference */}
-      <div className="bg-gray-800 text-white rounded-xl p-6 mb-10">
-        <h3 className="font-bold text-xl mb-4 text-center">
-          🎯 মনে রাখার সূত্র
-        </h3>
-        <div className="grid md:grid-cols-2 gap-6 text-center">
-          <div className="bg-gray-700/50 rounded-xl p-4">
+      <div className="bg-gray-800 text-white rounded-xl p-5 mb-8">
+        <h3 className="font-bold text-lg mb-4 text-center">🎯 দ্রুত মনে রাখার সূত্র</h3>
+        <div className="grid grid-cols-3 gap-4 text-center">
+          <div className="bg-gray-700 rounded-lg p-4">
             <div
-              className="text-4xl mb-2"
+              className="text-3xl mb-2"
               style={{ fontFamily: "'Amiri Quran', serif" }}
             >
-              ـَوْ
+              ـَا
             </div>
-            <div className="text-blue-400 font-bold text-lg">
-              যবর + ওয়াও সাকিন
-            </div>
-            <div className="text-gray-400 text-sm mt-1">= আও (aw) sound</div>
+            <div className="text-red-400 font-bold">যবর + আলিফ</div>
+            <div className="text-gray-400 text-sm">= আ- (টেনে)</div>
           </div>
-          <div className="bg-gray-700/50 rounded-xl p-4">
+          <div className="bg-gray-700 rounded-lg p-4">
             <div
-              className="text-4xl mb-2"
+              className="text-3xl mb-2"
               style={{ fontFamily: "'Amiri Quran', serif" }}
             >
-              ـَيْ
+              ـُو
             </div>
-            <div className="text-purple-400 font-bold text-lg">
-              যবর + ইয়া সাকিন
+            <div className="text-blue-400 font-bold">পেশ + ওয়াও</div>
+            <div className="text-gray-400 text-sm">= ঊ- (টেনে)</div>
+          </div>
+          <div className="bg-gray-700 rounded-lg p-4">
+            <div
+              className="text-3xl mb-2"
+              style={{ fontFamily: "'Amiri Quran', serif" }}
+            >
+              ـِي
             </div>
-            <div className="text-gray-400 text-sm mt-1">= আই (ay) sound</div>
+            <div className="text-green-400 font-bold">যের + ইয়া</div>
+            <div className="text-gray-400 text-sm">= ঈ- (টেনে)</div>
           </div>
         </div>
+        <p className="text-center text-gray-400 text-sm mt-4">
+          মাদ্দ = টানা | ৩টি হরফ: ا و ي
+        </p>
       </div>
 
-      {/* Quiz Section */}
-      <div className="mt-24 space-y-12">
-        <div className="text-center max-w-2xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-black text-gray-800 mb-4 tracking-tight">
-            লীন কুইজ
-          </h2>
-          <div className="h-1.5 w-24 bg-gradient-to-r from-amber-500 to-orange-500 mx-auto rounded-full mb-6"></div>
-          <p className="text-gray-500 font-medium text-lg leading-relaxed">
-            লীন এর হরফ চিনতে পারছেন কিনা যাচাই করুন
-          </p>
-        </div>
-        <LeenQuiz />
+      {/* Practice Tips */}
+      <div className="bg-cyan-50 border border-cyan-200 p-5 rounded-xl">
+        <h3 className="font-bold text-cyan-800 mb-3 flex items-center gap-2">
+          <span className="text-xl">💡</span> অনুশীলনের টিপস
+        </h3>
+        <ul className="text-gray-700 space-y-2">
+          <li className="flex items-start gap-2">
+            <span className="text-cyan-500 mt-1">✓</span>
+            <span>মাদ্দ থাকলে অন্তত ২ হরকত পরিমাণ টানুন</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-cyan-500 mt-1">✓</span>
+            <span>بَا، بُو، بِي বারবার অনুশীলন করুন</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-cyan-500 mt-1">✓</span>
+            <span>কোরআনে মাদ্দের হরফ খুঁজে টেনে পড়ুন</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-cyan-500 mt-1">✓</span>
+            <span>মাদ্দ ছাড়া এবং মাদ্দ সহ পার্থক্য বুঝুন</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-cyan-500 mt-1">✓</span>
+            <span>الرَّحْمٰنِ الرَّحِيمِ অনুশীলন করুন - দুই ধরনের মাদ্দ আছে</span>
+          </li>
+        </ul>
       </div>
     </LessonLayout>
-  );
+  )
 }
