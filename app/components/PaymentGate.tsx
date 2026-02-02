@@ -135,24 +135,7 @@ export default function PaymentGate({ children }: PaymentGateProps) {
             সকল পাঠ ও কুইজে প্রবেশ করতে কোর্সে ভর্তি হোন
           </p>
 
-          <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-4 mb-6">
-            <label className="text-emerald-600 text-sm block mb-2">
-              আপনার পরিমাণ লিখুন (সর্বনিম্ন ৳১০)
-            </label>
-            <div className="flex items-center justify-center gap-2">
-              <span className="text-emerald-700 font-bold text-2xl">৳</span>
-              <input
-                type="number"
-                min={10}
-                value={amount}
-                onChange={(e) => {
-                  const val = parseInt(e.target.value, 10);
-                  setAmount(isNaN(val) ? 10 : val);
-                }}
-                className="w-32 text-center text-2xl font-bold text-emerald-700 bg-white border border-emerald-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
-              />
-            </div>
-          </div>
+
 
           <ul className="text-left text-sm text-gray-600 space-y-2 mb-6">
             <li className="flex items-center gap-2">
