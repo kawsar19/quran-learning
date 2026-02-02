@@ -10,7 +10,7 @@ export async function sendOtpSms(phoneNumber: string, otp: string): Promise<bool
     const user = process.env.SMS_API_USER;
     const password = process.env.SMS_API_PASSWORD;
     const message = encodeURIComponent(
-      `Welcome to JGHealthcare. Your OTP is ${otp}.`
+      `Welcome to EasyQuran.bd. Your OTP is ${otp}.`
     );
 
     const url = `http://www.aamarsms.com/api?user=${user}&password=${password}&to=${phoneNumber}&text=${message}`;
