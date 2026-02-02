@@ -106,7 +106,8 @@ export default function Day4Page() {
     <LessonLayout
       dayNumber={4}
       title="অক্ষর চেনা ও সংযোগ অনুশীলন"
-      videoId="mBF9r_HzrmMshlKX"
+      videoId="6xVYNKhLS8Q"
+     
       
     >
       {/* Letter Combinations Grid */}
