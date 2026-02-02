@@ -120,7 +120,7 @@ export default function HomePage() {
                 <div className="flex items-center gap-4 mb-4">
                   <div>
                     <span className="text-gray-400 text-xs">কোর্স ফি:</span>
-                    <p className="font-bold text-gray-900">ফি উন্মুক্ত, সর্বনিম্ন ১০ টাকা</p>
+                    <p className="font-bold text-gray-900">উন্মুক্ত, সর্বনিম্ন ১০ ৳</p>
                   </div>
                   <div className="border-l pl-4">
                     <span className="text-gray-400 text-xs hidden">দিন:</span>
