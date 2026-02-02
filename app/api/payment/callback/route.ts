@@ -19,12 +19,12 @@ export async function POST(req: NextRequest) {
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 
     if (!tran_id) {
-      return NextResponse.redirect(`${baseUrl}/lessons?payment=fail`);
+      return NextResponse.redirect(`${baseUrl}/lessons?payment=fail`, 303);
     }
 
     const transaction = await Transaction.findOne({ tran_id });
     if (!transaction) {
-      return NextResponse.redirect(`${baseUrl}/lessons?payment=fail`);
+      return NextResponse.redirect(`${baseUrl}/lessons?payment=fail`, 303);
     }
 
     if (status === "VALID" || status === "VALIDATED") {
@@ -54,21 +54,21 @@ export async function POST(req: NextRequest) {
           accessExpiresAt: expiresAt,
         });
 
-        return NextResponse.redirect(`${baseUrl}/lessons?payment=success`);
+        return NextResponse.redirect(`${baseUrl}/lessons?payment=success`, 303);
       }
     }
 
     if (status === "CANCELLED") {
       transaction.status = "cancelled";
       await transaction.save();
-      return NextResponse.redirect(`${baseUrl}/lessons?payment=cancel`);
+      return NextResponse.redirect(`${baseUrl}/lessons?payment=cancel`, 303);
     }
 
     transaction.status = "failed";
     await transaction.save();
-    return NextResponse.redirect(`${baseUrl}/lessons?payment=fail`);
+    return NextResponse.redirect(`${baseUrl}/lessons?payment=fail`, 303);
   } catch {
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
-    return NextResponse.redirect(`${baseUrl}/lessons?payment=fail`);
+    return NextResponse.redirect(`${baseUrl}/lessons?payment=fail`, 303);
   }
 }
