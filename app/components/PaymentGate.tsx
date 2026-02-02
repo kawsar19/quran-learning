@@ -58,7 +58,7 @@ export default function PaymentGate({ children }: PaymentGateProps) {
     const token = localStorage.getItem("token");
 
     try {
-      const res = await fetch("/api/user/pay", {
+      const res = await fetch("/api/payment/init", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -67,15 +67,12 @@ export default function PaymentGate({ children }: PaymentGateProps) {
         body: JSON.stringify({ amount }),
       });
 
-      if (res.ok) {
-        // Update localStorage
-        const savedUser = localStorage.getItem("user");
-        if (savedUser) {
-          const parsed = JSON.parse(savedUser);
-          parsed.hasPaid = true;
-          localStorage.setItem("user", JSON.stringify(parsed));
-        }
-        setStatus("paid");
+      const data = await res.json();
+
+      if (res.ok && data.url) {
+        // Redirect to SSLCommerz payment gateway
+        window.location.href = data.url;
+        return;
       }
     } catch {
       // ignore

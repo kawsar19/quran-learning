@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import PaymentGate from "../components/PaymentGate";
 import LessonCards from "./LessonCards";
+import PaymentBanner from "./PaymentBanner";
 
 export const metadata: Metadata = {
   title: "All Lessons - 30 Days Quran Learning",
@@ -197,6 +199,12 @@ export default function LessonsPage() {
   return (
     <PaymentGate>
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pb-20">
+      {/* Payment status banner */}
+      <div className="container mx-auto max-w-5xl px-4 pt-4">
+        <Suspense fallback={null}>
+          <PaymentBanner />
+        </Suspense>
+      </div>
       {/* Hero Header */}
       <div className="relative bg-gradient-to-br from-emerald-700 via-emerald-600 to-teal-700 text-white pt-20 pb-28 px-4 overflow-hidden">
         {/* Decorative pattern */}
