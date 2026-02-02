@@ -19,8 +19,8 @@ export default function Day2Page() {
     <LessonLayout
       dayNumber={2}
       title=" আরবি অক্ষরের রূপ"
-      videoId="VIDEO_ID_HERE"
-      jumpshareId="UwL2GwVSMSXK4Lnaugmd"
+      videoId="i_Vt9Dch3fM"
+     
     >
       <ArabicAlphabetShapes />
 

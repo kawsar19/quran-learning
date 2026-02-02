@@ -120,8 +120,9 @@ export default function Day3Page() {
     <LessonLayout
       dayNumber={3}
       title="অক্ষর সংযোগ"
-      videoId="VIDEO_ID_HERE"
-      jumpshareId="V9RhzMeFpmdUhiWvwfKB"
+      videoId="qx2JjymRdCk"
+     
+     
     >
       {/* Letter Combinations Grid */}
       <LetterCombinationsGrid combinations={letterCombinations} />
