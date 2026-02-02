@@ -13,6 +13,8 @@ export const metadata: Metadata = {
   },
 };
 
+
+
 export default function Day4Page() {
   return (
     <LessonLayout dayNumber={4} title=" সূরা আল-ফাতিহা" videoId="p5JZisXpaQE">
