@@ -1,10 +1,17 @@
 @import "tailwindcss";
 
+@theme {
+  --color-background: #ffffff;
+  --color-foreground: #1a1a2e;
+  --color-primary: #047857;
+  --color-primary-foreground: #ffffff;
+  --color-border: #e5e7eb;
+}
+
 .arabic {
   font-family: 'Amiri Quran', 'Scheherazade New', 'Traditional Arabic', serif;
   font-size: 48px;
   line-height: 2;
-  /* Enable Arabic ligatures and proper text rendering */
   font-feature-settings: "liga" 1, "clig" 1, "calt" 1;
   -webkit-font-feature-settings: "liga" 1, "clig" 1, "calt" 1;
   text-rendering: optimizeLegibility;
@@ -14,7 +21,6 @@
 .haraf {
   position: relative;
   cursor: pointer;
-  /* Allow spans to connect Arabic letters */
   display: inline;
   font-feature-settings: inherit;
   -webkit-font-feature-settings: inherit;

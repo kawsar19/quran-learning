@@ -1,20 +1,33 @@
 import type { Metadata, Viewport } from 'next'
+import { Geist, Geist_Mono } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 import Header from './components/Header'
 import PWAInstallPrompt from './components/PWAInstallPrompt'
 import AuthProvider from './components/AuthProvider'
 
+const geist = Geist({ subsets: ["latin"] })
+const _geistMono = Geist_Mono({ subsets: ["latin"] })
+
 export const metadata: Metadata = {
-  title: '30 Days Quran Learning',
-  description: 'Learn the Quran in 30 days with structured daily lessons',
+  title: 'easyQuran.bd - সহজভাবে শুদ্ধ কুরআন শিক্ষা',
+  description: 'কম সময়ে সহজ উপায়ে সঠিক পদ্ধতিতে কুরআন শিখুন। মাত্র ২৪ ঘণ্টায় ফ্রিতে অভিজ্ঞ মেন্টরের সাথে কুরআন শেখার যাত্রা শুরু করুন।',
   manifest: '/manifest.json',
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
-    title: '30 Days Quran Learning',
+    title: 'easyQuran.bd',
   },
   formatDetection: {
     telephone: false,
+  },
+  icons: {
+    icon: [
+      { url: '/icon-light-32x32.png', media: '(prefers-color-scheme: light)' },
+      { url: '/icon-dark-32x32.png', media: '(prefers-color-scheme: dark)' },
+      { url: '/icon.svg', type: 'image/svg+xml' },
+    ],
+    apple: '/apple-icon.png',
   },
 }
 
@@ -31,7 +44,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="bn">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -40,12 +53,13 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       </head>
-      <body className="min-h-screen bg-white text-gray-900" style={{ fontFamily: "'Tiro Bangla', serif" }}>
+      <body className={`${geist.className} min-h-screen bg-background text-foreground antialiased`}>
         <AuthProvider>
           <Header />
           <main>{children}</main>
           <PWAInstallPrompt />
         </AuthProvider>
+        <Analytics />
       </body>
     </html>
   )

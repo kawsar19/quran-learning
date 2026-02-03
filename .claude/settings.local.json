@@ -10,7 +10,8 @@
       "Bash(npm install:*)",
       "Bash(npx next build:*)",
       "Bash(curl:*)",
-      "Bash(kill:*)"
+      "Bash(kill:*)",
+      "Bash(ls:*)"
     ]
   }
 }

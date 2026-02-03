@@ -37,22 +37,22 @@ export default function Header() {
         <nav className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
             <span className="text-2xl">🕌</span>
-            <span className="text-lg font-bold text-emerald-700">Quran Learning</span>
+            <span className="text-lg font-bold text-primary">easyQuran.bd</span>
           </Link>
-          <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-700">
-            <Link href="/" className="hover:text-emerald-600 transition-colors">হোম</Link>
-            <Link href="/lessons" className="hover:text-emerald-600 transition-colors">কোর্সসমূহ</Link>
-            <Link href="#mentors" className="hover:text-emerald-600 transition-colors">মেন্টর</Link>
-            <Link href="#faq" className="hover:text-emerald-600 transition-colors">FAQ</Link>
+          <div className="hidden md:flex items-center gap-8 text-sm font-medium text-foreground/70">
+            <Link href="/" className="hover:text-primary transition-colors">হোম</Link>
+            <Link href="/lessons" className="hover:text-primary transition-colors">কোর্সসমূহ</Link>
+            <Link href="#mentor" className="hover:text-primary transition-colors">মেন্টর</Link>
+            <Link href="#hadiya" className="hover:text-primary transition-colors">হাদিয়া</Link>
           </div>
 
           {user ? (
             <div className="relative">
               <button
                 onClick={() => setShowMenu(!showMenu)}
-                className="flex items-center gap-2 bg-emerald-50 text-emerald-700 px-4 py-2 rounded-lg text-sm font-medium hover:bg-emerald-100 transition-colors"
+                className="flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-lg text-sm font-medium hover:bg-primary/20 transition-colors"
               >
-                <span className="w-7 h-7 bg-emerald-600 text-white rounded-full flex items-center justify-center text-xs font-bold">
+                <span className="w-7 h-7 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-xs font-bold">
                   {user.name.charAt(0).toUpperCase()}
                 </span>
                 <span className="hidden sm:inline max-w-[100px] truncate">{user.name}</span>
@@ -65,14 +65,14 @@ export default function Header() {
                     <Link
                       href="/profile"
                       onClick={() => setShowMenu(false)}
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/5"
                     >
                       প্রোফাইল
                     </Link>
                     <Link
                       href="/lessons"
                       onClick={() => setShowMenu(false)}
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/5"
                     >
                       আমার কোর্স
                     </Link>
@@ -90,7 +90,7 @@ export default function Header() {
           ) : (
             <Link
               href="/login"
-              className="bg-emerald-600 text-white px-5 py-2 rounded-lg text-sm font-medium hover:bg-emerald-700 transition-colors"
+              className="bg-primary text-primary-foreground px-5 py-2 rounded-lg text-sm font-medium hover:bg-primary/90 transition-colors"
             >
               লগইন
             </Link>
